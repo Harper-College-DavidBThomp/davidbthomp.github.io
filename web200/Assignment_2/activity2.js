@@ -6,7 +6,7 @@ function main(){
     let seconds = processSeconds(age);
     let hours = processHours(age);
     let days = processDays(age);
-    let months = processDays(age);
+    let months = processMonths(age);
     timeResponse(seconds,hours,days,months);
 }
 
