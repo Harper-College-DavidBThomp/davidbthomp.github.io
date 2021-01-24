@@ -1,26 +1,31 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>This is an HTML page</title>
-    <script>document.write("Using Document Write")</script>
+    <script>
+        document.write("Using Document Write")
+    </script>
     <!-- JS Script in head -->
 </head>
 
 <body>
     <h1 id="hello"></h1>
-    
+
     <script src="script.js"></script>
     <!-- External JS Body -->
     <noscript>This browser does not support JavaScript</noscript>
     <!-- JS works best at the bottom and external (Cacheing) of the body because intepretation takes processing, when the website should be loading other elements (HTML CSS) -->
 
-    <script>window.alert("Using Window.Alert")</script>
+    <script>
+        window.alert("Using Window.Alert")
+    </script>
     <!-- JS Script in body -->
 </body>
 
 </html>
 
-    <!-- To disable JS in browser go to chrome web tools and press ctrl + shift + p and search for javascript -->
-    <!-- async means scripts execute as soon as loaded -->
-    <!-- defer means the broser should executre after document is parsed -->
+<!-- To disable JS in browser go to chrome web tools and press ctrl + shift + p and search for javascript -->
+<!-- async means scripts execute as soon as loaded -->
+<!-- defer means the broser should executre after document is parsed -->
