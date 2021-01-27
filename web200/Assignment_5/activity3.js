@@ -18,18 +18,18 @@ function processDistance(yard, foot, inches, kilometer, meters, centimeters, cho
 	switch (choice) {
 		case ('US'):
 		case ('us'):
-            document.getElementById("yard").innerHTML = ("Yards: " + yard);
-            document.getElementById("foot").innerHTML = ("Feet: " + foot);
-            document.getElementById("inches").innerHTML = ("Inches " + inches);
+            document.getElementById("result1").innerHTML = ("Yards: " + yard);
+            document.getElementById("result2").innerHTML = ("Feet: " + foot);
+            document.getElementById("result3").innerHTML = ("Inches " + inches);
 			break;
 		case ('metric'):
 		case ('Metric'):
-            document.getElementById("kilometer").innerHTML = ("Kilometers: " + kilometer);
-            document.getElementById("meter").innerHTML = ("Meters: " + meters);
-            document.getElementById("centimeters").innerHTML = ("Centimeters: " + centimeters);			
+            document.getElementById("result1").innerHTML = ("Kilometers: " + kilometer);
+            document.getElementById("result2").innerHTML = ("Meters: " + meters);
+            document.getElementById("result3").innerHTML = ("Centimeters: " + centimeters);			
             break;
 		default:
-			document.getElementById("mistake").innerHTML = ("Refresh page to reset results");
+			document.getElementById("mistake").innerHTML = ("Thank you for using program!");
 	}
 }
 
