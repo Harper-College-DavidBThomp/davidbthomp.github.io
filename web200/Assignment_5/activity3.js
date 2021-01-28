@@ -72,12 +72,3 @@ function getCentimeters(meters) {
     centimeters = meters * 100;
     return centimeters;
 }
-
-function result(yard, foot, inches, kilometer, meters, centimeters) {
-    document.getElementById("yard").innerHTML = ("Yards: " + yard);
-    document.getElementById("foot").innerHTML = ("Feet: " + foot);
-    document.getElementById("inches").innerHTML = ("Inches " + inches);
-    document.getElementById("kilometer").innerHTML = ("Kilometers: " + kilometer);
-    document.getElementById("meter").innerHTML = ("Meters: " + meters);
-    document.getElementById("centimeters").innerHTML = ("Centimeters: " + centimeters);
-}
