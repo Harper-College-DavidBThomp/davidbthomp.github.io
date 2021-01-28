@@ -35,7 +35,7 @@ function processDistance(yard, foot, inches, kilometer, meters, centimeters, cho
 
 function getMile() {
     mile = document.getElementById('input1').value;
-    return mile
+    return mile;
 }
 
 function unitChoice() {
