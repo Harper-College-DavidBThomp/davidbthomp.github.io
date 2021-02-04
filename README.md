@@ -28,3 +28,7 @@ In this session, we studied the application of using loops in JavaScript. We use
 ## Assignment 7
 
 In this session, we learned about loops and their purpose. Rather than while loops, for loops, typically have multiple conditions for a program to keep running until those conditions that are defined are met. These loops execute that specified amount of times and allow us to skip numbers or start and numbers. This allows nested loops to execute a certain amount of times within the parent loop so that the condition of the parent loop is dependent on the child. This means that we can run a loop within a loop. In the future for loops will be useful for managing code, because it seems more compact than while loops. I know each has a specific application so learning more will be critical. 
+
+## Assignment 8
+
+In this session, we learned about arrays and their abilities. This allows us to transport multiple values that we get from one function to another. Storing these values is as simple as pushing the data into the array that we create. Using template literals and extracting that information for use is also done using other methods. I also learned that arrays don't start with 1 but rather 0 for the first value entered. This is important because it could cause you to use or put in incorrect data. This is useful because most data that we get won't be one simple answer but rather multiple answers we will have to pass between multiple functions. In the future storing data with arrays becomes more important because most stuff we create won't be so dimensional.
