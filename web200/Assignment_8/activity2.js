@@ -1,6 +1,6 @@
 // Calculates the average of numbers entered.
-   
-main();   
+
+main();
 
 function main() {
     doClean();
@@ -20,15 +20,15 @@ function getAmount() {
 
 function getAverage(amount) {
     let total = 0;
-    var count; 
+    var count;
     scoreCount = [];
-    
-    for (count = 0;count < amount; count++) {
+
+    for (count = 0; count < amount; count++) {
         scores = prompt("Please input scores");
         total += Number(scores);
         scoreCount.push(scores);
     }
-    average = total/amount;
+    average = total / amount;
     document.getElementById("array").innerHTML += (`The numbers entered in an array were ${scoreCount}.`)
     return average;
 }
