@@ -1,9 +1,9 @@
-
 body {
     background-color: black;
     margin: auto;
-    width: 60%;
+    width: 1000px;
     color: white;
+    font-family: 'Open Sans', sans-serif;
 }
 
 ul {
@@ -17,8 +17,6 @@ li {
 }
 
 nav {
-    padding-top: 15px;
-    padding-bottom: 15px;
     margin: auto;
     background-color: black;
     text-align: center;
@@ -46,16 +44,19 @@ h2 {
     text-transform: uppercase;
     text-align: center;
     margin: 33.2px 0 0 0;
+    font-family: 'Lemonada', cursive;
 }
 
 .bannerimage {
     position: absolute;
-    top: 5%;
+    top: -10000px;
     right: 5%;
 }
 
 .banner {
     position: relative;
+    background-image: url(basketball_logo.png);
+    background-repeat: no-repeat;
 }
 
 .skip-to-content-link {
@@ -94,7 +95,15 @@ th {
     margin: 10px;
 }
 
+.textindent {
+    text-indent: -10000px;
+    margin: 0;
+}
+
 img {
-    width: 100px;
-    height: 100px;
+    width: 600px;
+    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
