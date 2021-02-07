@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accessible Form</title>
+    <link rel="stylesheet" href="thompson1.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main>
+            <form method="POST" action="http://webdevbasics.net/scripts/demo.php">
+                <a class="skip-to-content-link visuallyhidden" href="#main">Skip to content</a>
+                <h1>Contact Form</h1>
+
+                <div class="bottompadding">
+                    <label for="firstName">First Name:</label><br>
+                    <input id="firstName" type="text" maxlength="50" value="" aria-label="First Name Input Box">
+                </div>
+
+                <div class="bottompadding">
+                    <label for="lastName">Last Name:</label><br>
+                    <input id="lastName" type="text" maxlength="50" value="" aria-label="Last Name Input Box">
+                </div>
+
+                <div class="bottompadding">
+                    <label for="email">Email:</label><br>
+                    <input id="email" type="text" maxlength="150" value="" aria-label="Email Input Box">
+                </div>
+
+                <div class="bottompadding">
+                    <label for="foundPage">How did you find us?</label><br>
+                    <select id="foundPage" name="foundPage">
+                        <option value="1">Search Engine</option>
+                        <option value="2">Referred by a Friend</option>
+                        <option value="3">Twitter</option>
+                        <option value="4">Other</option>
+                    </select>
+                </div>
+
+                <div class="bottompadding">
+                    <label for="comments">Comments or Questions<br></label>
+                    <textarea id="comments" aria-label="Comments and Questions Input Box"></textarea>
+                </div>
+
+                <div>
+                    <button type="button" onclick="submit()">Submit</button>
+                    <button type="button" onclick="reset()">Reset</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+
+<script>
+    function reset() {
+        document.getElementsByTagName("input").value = ''
+        document.getElementsByTagName("textarea").value = ''
+    }
+</script>
+
+
+</html>
