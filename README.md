@@ -32,3 +32,8 @@ In this session, we learned about loops and their purpose. Rather than while loo
 ## Assignment 8
 
 In this session, we learned about arrays and their abilities. This allows us to transport multiple values that we get from one function to another. Storing these values is as simple as pushing the data into the array that we create. Using template literals and extracting that information for use is also done using other methods. I also learned that arrays don't start with 1 but rather 0 for the first value entered. This is important because it could cause you to use or put in incorrect data. This is useful because most data that we get won't be one simple answer but rather multiple answers we will have to pass between multiple functions. In the future storing data with arrays becomes more important because most stuff we create won't be so dimensional.
+
+## Assignment 9
+
+In this assignment, I learned a lot about how time and date works using JavaScript. One thing that gave me trouble was converting or managing the default UTC when getting the date as an ISO default. I learned to fix this that I can simply input the user's local hour and then it will use their time instead of UTC. I also learned how to manage dates piece by piece instead of as a whole. The methods I learned were intuitive and most of the time self-explanatory for what they did. In the future, I will be able to use dates and their abilities to make pages more interactive as well as create sites that might use dates and times to change various aspects of the page. 
+
