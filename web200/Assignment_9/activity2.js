@@ -10,7 +10,7 @@ function main() {
 }
 
 function doClean() {
-    cleanResult = document.getElementById("date").innerHTML = "";
+    document.getElementById("date").innerHTML = "";
 }
 
 function getDate() {
@@ -20,13 +20,15 @@ function getDate() {
 
 function convertDate(date) {
     let currentTime = new Date().getHours();
-    date = `${date}T${currentTime}:00:00`
+
+    date = `${date}T${currentTime}:00:00Z`
+
     let goodDate = new Date(date);
     let month = goodDate.getMonth();
-    let day = goodDate.getDay();
+    let day = goodDate.getDate();
     let year = goodDate.getFullYear();
 
     let nameMonths = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    
+
     document.getElementById("date").innerHTML = `The date is ${nameMonths[month]} ${day}, ${year}`;
 }
