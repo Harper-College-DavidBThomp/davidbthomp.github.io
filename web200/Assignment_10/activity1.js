@@ -1,30 +1,34 @@
- // Take input from HTML and formats Publisher
+ // Take input from HTML and create Biblography
 
  main();
 
  function main() {
-     getDate();
+     doClean();
+     let inputs = getValues();
+     biblio(inputs);
  }
 
+ function doClean() {
+    cleanDiv= document.getElementById('bibliography').innerHTML = "";
+}
+ 
+ function getValues() {
+     inputs = {};
+     inputs.title = document.getElementById('title').value.trim();
+     inputs.fname = document.getElementById('fname').value.trim();
+     inputs.lname = document.getElementById('lname').value.trim();
+     inputs.year = new Date(document.getElementById('date').value.trim());
+     inputs.pub = document.getElementById('pub').value.trim();
+     inputs.city = document.getElementById('city').value.trim();
+     inputs.state = document.getElementById('state').value.trim();
 
- function getDate() {
-     date = new Date();
-     let hourTime = date.getHours();
-     let minTime = date.getMinutes();
-     let secTime = date.getSeconds();
-     let year = date.getFullYear();
-     let getMonths = date.getMonth();
-     let day = date.getDate();
-     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-     var meridiem;
-
-     if (hourTime >= 12) {
-         meridiem = "PM";
-     } else {
-         meridiem = "AM";
+     if (Number(inputs.title.length) <= 0 || Number(inputs.fname.length) <= 0 || Number(inputs.lname.length) <= 0 || Number(inputs.year.length) <= 0 || Number(inputs.pub.length) <= 0 || Number(inputs.city.length) <= 0 || Number(inputs.state.length) <= 0) {
+        document.getElementById("bibliography").innerHTML = ("Make sure inputs are filled");
+        return;
      }
+    return inputs;
+}
 
-     document.getElementById("date").innerHTML = `The date is ${months[getMonths]} ${day}, ${year}`;
-     document.getElementById("time").innerHTML = `The time is ${hourTime - 12}:${minTime}:${secTime} ${meridiem}`;
-     setInterval(getDate, 1000);
- }
+function biblio(inputs) {
+    document.getElementById("bibliography").innerHTML = (`${inputs.lname}, ${inputs.fname.substring(0, 1).toUpperCase()}. (${inputs.year.getFullYear()}) ${inputs.title}. ${inputs.city}, ${inputs.state.toUpperCase()}: ${inputs.pub}.`);
+}
