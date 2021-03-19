@@ -40,3 +40,7 @@ In this assignment, I learned a lot about how time and date works using JavaScri
 ## Assignment 10
 
 In this session, I used objects to create and manage data. Using objects is new to me, so I learned how to create and use them. Objects are useful because they allow us to create and manipulate data in a way that is much more manageable. I also learned that everything except primitive data types is objects, meaning that they can be used to augment other objects. This helps me understand the purpose of object-oriented programming more because objects allow for interactions in the code. In the future, I will be able to use objects to create expansive and manageable code. The standard today is to understand and know object-oriented programming. 
+
+## Assignment 11
+
+In this lesson, we learned about the HTML DOM and the interactions we can have with the DOM by using JavaScript. I have to admit that I was at a point where I should have had an in-depth understanding of what the DOM is, but the terminology confused and scared me a little bit. I learned that the DOM is the way that the documents are formatted, the "o" being the objects in the documents, and the "m" is the model which operated like a tree. In the future, using the DOM will allow me to modify and interpret pages using JavaScript.
