@@ -44,3 +44,7 @@ In this session, I used objects to create and manage data. Using objects is new 
 ## Assignment 11
 
 In this lesson, we learned about the HTML DOM and the interactions we can have with the DOM by using JavaScript. I have to admit that I was at a point where I should have had an in-depth understanding of what the DOM is, but the terminology confused and scared me a little bit. I learned that the DOM is the way that the documents are formatted, the "o" being the objects in the documents, and the "m" is the model which operated like a tree. In the future, using the DOM will allow me to modify and interpret pages using JavaScript.
+
+## Assignment 12 
+
+In this session, I learned how to dynamically update HTML content. In conjunction with learning this, I also finally made it so that I can take multiple inputs from a single HTML textbox. This taught me how to use hidden elements, as well as get information from within tags in HTML. This is useful because storing data on the page may not be the most efficient, but it useful to store small amounts of data. I will be able to use this in the future by when I need to store small values of data temporarily for users, rather than server use. 
