@@ -1,4 +1,4 @@
-// Gets data from form and responds that data has been recieved.
+// Gets data from form and responds that data has been recieved. With HTML Validation
 
 main();
 
