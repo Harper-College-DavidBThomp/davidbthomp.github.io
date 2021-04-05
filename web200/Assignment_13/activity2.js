@@ -3,24 +3,16 @@
 main();
 
 function main() {
-    let data = getData();
+    getData();
 }
 
 function getData() {
     const form = document.getElementById('form');
-    const firstName = document.getElementById('firstName');
-    const lastName = document.getElementById('lastName');
-    const address = document.getElementById('address');
-    const city = document.getElementById('city');
-    const state = document.getElementById('state');
-    const postCode = document.getElementById('postCode');
-    const email = document.getElementById('email');
-    const phone = document.getElementById('phone');
-    const dateOB = document.getElementById('dateOB');
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault()
-    });
+    e.preventDefault();
 
-    
+    let firstName = document.getElementById('firstName').value; //get the value for firstname
+    document.getElementById('inputs').innerHTML = ("Form has been submitted.");
+});
 }
