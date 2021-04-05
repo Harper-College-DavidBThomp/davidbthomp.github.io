@@ -1,78 +1,26 @@
-// Calculates the average of numbers entered.
+// Gets data from form and responds that data has been recieved.
 
 main();
 
-function doClean() {
-    document.getElementById("average").innerHTML = "";
-    document.getElementById("hidden").innerHTML = "";
-    document.getElementById("numbers").innerHTML = "";
-    document.getElementById("total").innerHTML = "";
-    document.getElementById("average").innerHTML = "";
-}
-
 function main() {
-    getInputs();
-    let array = getArray();
-    display(array);
-    let total = getTotal(array);
-    average(array, total);
+    let data = getData();
 }
 
-function getInputs() {
-    let userInputs = (document.getElementById('input1').value);
-    if (userInputs != "") {
-        document.getElementById("hidden").innerHTML += `${userInputs};`;
-    } else {
-        document.getElementById("done").innerHTML = `Please press reset button to reset`
-    }
+function getData() {
+    const form = document.getElementById('form');
+    const firstName = document.getElementById('firstName');
+    const lastName = document.getElementById('lastName');
+    const address = document.getElementById('address');
+    const city = document.getElementById('city');
+    const state = document.getElementById('state');
+    const postCode = document.getElementById('postCode');
+    const email = document.getElementById('email');
+    const phone = document.getElementById('phone');
+    const dateOB = document.getElementById('dateOB');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+    });
+
+    
 }
-
-function getArray() {
-    let arrayValues = document.getElementById("hidden").innerHTML;
-    let array = arrayValues.split(";")
-    for (var i = 0; i < array.length; i++) {
-        array[i] = +array[i];
-    }
-    array.pop();
-    return array;
-}
-
-function display(array) {
-    document.getElementById("numbers").innerHTML = `The numbers entered so far are ${array}`;
-}
-
-function getTotal(array) {
-    let total = array.reduce(function (a, b) {
-        return a + b;
-    }, 0);
-
-    document.getElementById("total").innerHTML = `The total of numbers entered is ${total}`;
-    return total;
-}
-
-function average(array, total) {
-    let average = total / array.length;
-    document.getElementById("average").innerHTML = `The average of numbers so far are ${average.toFixed(2)}`;
-}
-
-
-
-
-// function getAverage(amount) {
-//     let total = 0;
-//     var count;
-//     scoreCount = [];
-
-//     for (count = 0; count < amount; count++) {
-//         scores = prompt("Please input scores");
-//         total += Number(scores);
-//         scoreCount.push(scores);
-//     }
-//     average = total / amount;
-//     document.getElementById("array").innerHTML = (`The numbers entered in an array were ${scoreCount}.`)
-//     return average;
-// }
-
-// function displayAverage(average) {
-//     document.getElementById("result").innerHTML = (`The average is ${average}.`);
-// }

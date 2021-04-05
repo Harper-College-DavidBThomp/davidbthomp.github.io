@@ -7,17 +7,37 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-    <h1>Averages scores given</h1>
-    <h2>Input Scores Belows</h2>
-    <input type="number" id="input1">
-    <button onclick="main();">Submit Number</button>
-    <p id="hidden"></p>
-    <p id="numbers"></p>
-    <p id="average"></p>
-    <p id="total"></p>
-    <h2 id="done"></h2>
-    <button onclick="doClean();">RESET</button>
+<body> 
+    <form action="/" method="POST" id="form">
+        <p><label for="firstName">First Name:</label><br>
+            <input type="text" id="firstName" name="firstName" required>
+        </p>
+        <p><label for="lastName">Last Name:</label><br>
+            <input type="text" id="lastName" name="lastName" required>
+        </p>
+        <p><label for="address">Address:</label><br>
+            <input type="text" id="address" name="address" required>
+        </p>
+        <p><label for="city">City:</label><br>
+            <input type="text" id="city" name="city" required>
+        </p>
+        <p><label for="state">State:</label><br>
+            <input type="text" id="state" name="state" required>
+        </p>
+        <p><label for="postCode">Postal Code:</label><br>
+            <input type="number" id="postCode" name="postCode" required>
+        </p>
+        <p><label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+        <p><label for="phone">Phone:</label><br>
+            <input type="text" id="phone" name="phone" required>
+        </p>
+        <p><label for="dateOB">Date of Birth:</label><br>
+            <input type="date" id="dateOB" name="dateOB" required>
+        </p>
+        <p><input type="submit" name="submit" value="Submit"></p>
+    </form>    
 
 
     <script src="activity1.js"></script>
