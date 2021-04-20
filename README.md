@@ -48,3 +48,8 @@ In this lesson, we learned about the HTML DOM and the interactions we can have w
 ## Assignment 12 
 
 In this session, I learned how to dynamically update HTML content. In conjunction with learning this, I also finally made it so that I can take multiple inputs from a single HTML textbox. This taught me how to use hidden elements, as well as get information from within tags in HTML. This is useful because storing data on the page may not be the most efficient, but it useful to store small amounts of data. I will be able to use this in the future by when I need to store small values of data temporarily for users, rather than server use. 
+
+## Assignment 13
+
+In this session, I learned about forms and security. The different attributes and rules that apply specifically to forms include syntax and validation. The primary attributes to a from are method and action. I learned that the method is either typically GET or POST. The action is what the form will direct you to once completed. I also learned about how to make a form have default values, radio buttons, and multiple-choice options. The security I learned about was mostly down in the HTML, such as validating that input has information. I peeked into validation using JavaScript as well. Overall, the ability to capture information from a user via a form is critical to building accounts for a database.
+
