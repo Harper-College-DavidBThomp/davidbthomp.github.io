@@ -1,0 +1,15 @@
+[
+    {
+    "fName": "User0First",
+    "lName": "User0Last",
+    "email": "User0@gmail.com",
+    "phone": "0-000-000-0000",
+    "dOB": "0000-00-00",
+    "location": {
+        "address": "123 Not Read Road",
+        "city": "Not a City",
+        "state": "State Fake",
+        "postal": "00000"
+    }
+    }
+]
