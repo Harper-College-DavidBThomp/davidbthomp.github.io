@@ -67,7 +67,7 @@ function createBasicInfo() {
 
 function getFocus() {
     document.getElementById("url").innerText =
-        "https://raw.githubusercontent.com/DavidBThomp/davidbthomp.github.io/main/web200/Assignment_14/test.json";
+        "https://jsonplaceholder.typicode.com/users";
 
     document.getElementById("data").innerText = "";
     document.getElementById("response").innerText = "";
