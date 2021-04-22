@@ -5,10 +5,12 @@
     "email": "User0@gmail.com",
     "phone": "0-000-000-0000",
     "dOB": "0000-00-00",
-    "address": "0 Not Read Road",
-    "city": "0Not a City",
-    "state": "0State Fake",
-    "postal": "00000"
+    "location": {
+        "address": "0 Not Read Road",
+        "city": "0Not a City",
+        "state": "0State Fake",
+        "postal": "00000"
+        }
     },
     {
     "fName": "User1First",
@@ -16,9 +18,11 @@
     "email": "User1@gmail.com",
     "phone": "1-000-000-0000",
     "dOB": "1000-00-00",
-    "address": "1 Not Read Road",
-    "city": "1Not a City",
-    "state": "1State Fake",
-    "postal": "10000"
+    "location": {
+        "address": "1 Not Read Road",
+        "city": "1Not a City",
+        "state": "1State Fake",
+        "postal": "10000"
+        }
     }
 ]
