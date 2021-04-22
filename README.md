@@ -53,3 +53,7 @@ In this session, I learned how to dynamically update HTML content. In conjunctio
 
 In this session, I learned about forms and security. The different attributes and rules that apply specifically to forms include syntax and validation. The primary attributes to a from are method and action. I learned that the method is either typically GET or POST. The action is what the form will direct you to once completed. I also learned about how to make a form have default values, radio buttons, and multiple-choice options. The security I learned about was mostly down in the HTML, such as validating that input has information. I peeked into validation using JavaScript as well. Overall, the ability to capture information from a user via a form is critical to building accounts for a database.
 
+## Assignment 14
+
+In this session, I learned about AJAX and JSON. I learned how JSON is formatted and why the lightweight data interchange format is preferred. I also learned about JSON by working with MongoDB, I am concurrently doing WEB 250 and this class. While both classes are different in many ways, learning about JSON has taught me how to access JSON from pure JavaScript, which will be useful when trying to access a database JSON in WEB 250. I also learned about AJAX, which is the method used to access information over the web, typically information in JSON format. 
+
