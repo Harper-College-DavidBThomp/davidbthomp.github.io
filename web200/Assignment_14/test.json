@@ -1,5 +1,6 @@
 [
     {
+    "id": "1",
     "fName": "User0First",
     "lName": "User0Last",
     "email": "User0@gmail.com",
@@ -13,16 +14,17 @@
         }
     },
     {
-        "fName": "User1First",
-        "lName": "User1Last",
-        "email": "User1@gmail.com",
-        "phone": "1-000-000-0000",
-        "dOB": "1000-00-00",
-        "location": {
-            "address": "1 Not Read Road",
-            "city": "1Not a City",
-            "state": "1State Fake",
-            "postal": "10000"
-            }
+    "id": "2",
+    "fName": "User1First",
+    "lName": "User1Last",
+    "email": "User1@gmail.com",
+    "phone": "1-000-000-0000",
+    "dOB": "1000-00-00",
+    "location": {
+        "address": "1 Not Read Road",
+        "city": "1Not a City",
+        "state": "1State Fake",
+        "postal": "10000"
         }
+    }
 ]
