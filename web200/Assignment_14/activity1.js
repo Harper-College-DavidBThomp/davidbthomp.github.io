@@ -62,14 +62,14 @@ function createBasicInfo() {
         "Illinois",
         "12345");
 
-    return user;
+    return basic;
 }
 
 // GET
 
 function getFocus() {
     document.getElementById("url").innerText =
-        "https://raw.githubusercontent.com/DavidBThomp/davidbthomp.github.io/main/web200/Assignment_14/test.json";
+        "https://raw.githubusercontent.com/DavidBThomp/davidbthomp.github.io/main/web200/Assignment_14/test.json?fName=User0First";
 
     document.getElementById("data").innerText = "";
     document.getElementById("response").innerText = "";
@@ -90,10 +90,10 @@ function getClick() {
 
 function postFocus() {
     document.getElementById("url").innerText =
-        "./";
+        "https://raw.githubusercontent.com/DavidBThomp/davidbthomp.github.io/main/web200/Assignment_14/test.json";
 
-    let user = createUser();
-    document.getElementById("data").innerText = JSON.stringify(user, null, 2);
+    let basic = createBasicInfo();
+    document.getElementById("data").innerText = JSON.stringify(basic, null, 2);
     document.getElementById("response").innerText = "";
 }
 
