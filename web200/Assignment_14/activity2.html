@@ -10,54 +10,53 @@
 <body>
 
     <h1>JSON and AJAX</h1>
+    <p>Use GET to get information and POST to send form data. Click on each twice to complete operation.</p>
 
     <h2>URL</h2>
     <pre id="url"></pre>
-  
+
     <h2>Data</h2>
     <pre id="data"></pre>
-  
+
     <h2>Response</h2>
     <pre id="response"></pre>
 
-    <input id="get" type="button" value="GET"/>
-    <input id="post" type="button" value="POST"/>
+    <input id="get" type="button" value="GET" />
+    <input id="post" type="button" value="POST" />
 
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <p><label for="firstName">First Name:</label><br>
-        <input type="text" id="firstName" name="firstName">
-    </p>
-    <p><label for="lastName">Last Name:</label><br>
-        <input type="text" id="lastName" name="lastName">
-    </p>
-    <p><label for="address">Address:</label><br>
-        <input type="text" id="address" name="address">
-    </p>
-    <p><label for="city">City:</label><br>
-        <input type="text" id="city" name="city">
-    </p>
-    <p><label for="state">State:</label><br>
-        <input type="text" id="state" name="state">
-    </p>
-    <p><label for="postCode">Postal Code:</label><br>
-        <input type="number" id="postCode" name="postCode">
-    </p>
-    <p><label for="email">Email:</label><br>
-        <input type="email" id="email" name="email">
-    </p>
-    <p><label for="phone">Phone:</label><br>
-        <input type="text" id="phone" name="phone">
-    </p>
-    <p><label for="dateOB">Date of Birth:</label><br>
-        <input type="date" id="dateOB" name="dateOB">
-    </p>
+    <div>
+        <div class="split">
+            <p><label for="firstName">First Name:</label><br>
+                <input type="text" id="firstName" name="firstName">
+            </p>
+            <p><label for="lastName">Last Name:</label><br>
+                <input type="text" id="lastName" name="lastName">
+            </p>
+            <p><label for="address">Address:</label><br>
+                <input type="text" id="address" name="address">
+            </p>
+            <p><label for="city">City:</label><br>
+                <input type="text" id="city" name="city">
+            </p>
+        </div>
+        <div class="split">
+            <p><label for="state">State:</label><br>
+                <input type="text" id="state" name="state">
+            </p>
+            <p><label for="postCode">Postal Code:</label><br>
+                <input type="number" id="postCode" name="postCode">
+            </p>
+            <p><label for="email">Email:</label><br>
+                <input type="email" id="email" name="email">
+            </p>
+            <p><label for="phone">Phone:</label><br>
+                <input type="text" id="phone" name="phone">
+            </p>
+            <p><label for="dateOB">Date of Birth:</label><br>
+                <input type="date" id="dateOB" name="dateOB">
+            </p>
+        </div>
+    </div>
 
 
     <div id="inputs"></div>

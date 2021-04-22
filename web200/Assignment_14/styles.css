@@ -4,4 +4,19 @@ body {
     width: 800px;
     margin: 0 auto;
     font-size: 20px;
+    text-align: center;
+}
+
+.split {
+    display: inline-block;
+    width: 45%;
+}
+
+#url {
+    font-size: 12px;
+}
+
+#response {
+    text-align: left;
+    
 }

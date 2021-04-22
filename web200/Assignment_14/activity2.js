@@ -42,34 +42,32 @@ window.addEventListener("load", function () {
 
     document.getElementById("get").addEventListener("click", getClick);
     document.getElementById("post").addEventListener("click", postClick);
-
-    document.getElementById("get").focus();
 });
 
 // Creates a user
 
 function createBasicInfo() {
-    let basic = new basicInfo(
-        "John",
-        "Smith",
-        "jsmith@example.com",
-        "123-555-1234",
-        "2000-03-20");
+    let dataInput = new basicInfo(
+        `${document.getElementById("firstName").value}`,
+        `${document.getElementById("lastName").value}`,
+        `${document.getElementById("email").value}`,
+        `${document.getElementById("phone").value}`,
+        `${document.getElementById("dateOB").value}`);
 
-    basic.address = new Location(
-        "123 Any Street",
-        "Hoffman Estates",
-        "Illinois",
-        "12345");
+    dataInput.location = new Location(
+        `${document.getElementById("address").value}`,
+        `${document.getElementById("city").value}`,
+        `${document.getElementById("state").value}`,
+        `${document.getElementById("postCode").value}`);
 
-    return basic;
+    return dataInput;
 }
 
 // GET
 
 function getFocus() {
     document.getElementById("url").innerText =
-        "https://raw.githubusercontent.com/DavidBThomp/davidbthomp.github.io/main/web200/Assignment_14/test.json?id=1";
+        "https://raw.githubusercontent.com/DavidBThomp/davidbthomp.github.io/main/web200/Assignment_14/test.json";
 
     document.getElementById("data").innerText = "";
     document.getElementById("response").innerText = "";
@@ -80,6 +78,8 @@ function getClick() {
     let request = new XMLHttpRequest();
     request.open("GET", url);
     request.onload = function () {
+        let JSONResponse = request.responseText;
+        JSONResponse = JSON.parse(JSONResponse);
         document.getElementById("response").innerText = "status: " + request.status + "\n";
         document.getElementById("response").innerText += "responseText:\n" + request.responseText;
     };
@@ -92,8 +92,8 @@ function postFocus() {
     document.getElementById("url").innerText =
         "https://raw.githubusercontent.com/DavidBThomp/davidbthomp.github.io/main/web200/Assignment_14/test.json";
 
-    let basic = createBasicInfo();
-    document.getElementById("data").innerText = JSON.stringify(basic, null, 2);
+    let dataInput = createBasicInfo();
+    document.getElementById("data").innerText = JSON.stringify(dataInput, null, 2);
     document.getElementById("response").innerText = "";
 }
 
