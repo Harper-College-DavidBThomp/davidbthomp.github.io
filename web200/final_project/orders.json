@@ -1,0 +1,14 @@
+[
+    {
+        "firstName": "David",
+        "lastName": "Thomspon",
+        "email": "dbt59@rocketmail.com",
+        "phone": "12345678910",
+        "location": {
+          "address": "1545 Fairfield Lane",
+          "city": "Hoffman Estates",
+          "state": "IL",
+          "postal": "60169"
+        }
+      }
+]
