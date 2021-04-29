@@ -7,7 +7,13 @@
 // Your solution will include an Order object, which contains a Customer object, an array of Pizza objects, and a nested array of toppings for each pizza.
 // Use AJAX and JSON to submit order information.
 
+// Refernce:
+
 "use strict";
+
+// Full JSON Array 
+
+let data = [];
 
 // Creates Basic JSON Layout
 
@@ -38,23 +44,9 @@ function Location(
 // Listens and updates based on focus and click
 
 window.addEventListener("load", function () {
-    getJSONInfo();
     document.getElementById("post").addEventListener("click", postClick);
+    document.getElementById("login").addEventListener("click", getCust);
 });
-
-// Gets information from webpage or local file
-
-function getJSONInfo() {
-    let url = "/order.json";
-    let request = new XMLHttpRequest();
-    request.open("GET", url);
-    request.onload = function () {
-        let JSONResponse = request.responseText;
-        JSONResponse = JSON.parse(JSONResponse);
-        console.log(JSONResponse);
-    };
-    request.send(null);
-}
 
 // Creates a user
 
@@ -74,20 +66,60 @@ function createBasicInfo() {
     return dataInput;
 }
 
-// POST
+// Gets all JSON Info
 
+function getFullData(data) {
+    let datafull = data;
+    return datafull;
+}
+
+
+// POST
 
 function postClick() {
     let dataInput = createBasicInfo();
-    let JSONdataInput = JSON.stringify(dataInput, null, 2);
-    console.log(JSONdataInput);
-    
-    let request = new XMLHttpRequest();
-    request.open("POST", url, true);
-    request.setRequestHeader("Content-Type", "application/json");
-    request.onreadystatechange = function () {
-        document.getElementById("response").innerText = "status: " + request.status + "\n";
-        document.getElementById("response").innerText += "responseText:\n" + request.responseText;
-    };
-    request.send(data);
+    let dataFull = getFullData(data);
+
+    // Gets Phone Numbers for possible Logins into possible logins array
+    let possibleLogins = [];
+    var i;
+    for (i = 0; i < data.length; i++) {
+        possibleLogins.push(dataFull[i].phone);
+    }
+
+
+    // Checks Phone Numbers against customer input login phone number
+    let requestLogin = possibleLogins.indexOf(dataInput.phone);
+
+    if (requestLogin < 0) {
+        data.push(dataInput);
+        document.getElementById("CreateAccount").innerHTML = "<h2>Customer Account Created.</h2>"
+    } else {
+        document.getElementById("CreateAccount").innerHTML = "<h2>Customer already exists.</h2>";
+    }
+}
+
+// Reads Full Data and parses by Phone Number
+
+function getCust() {
+    let login = document.getElementById("phone2").value;
+    let dataFull = getFullData(data);
+
+    // Gets Phone Numbers for possible Logins into possible logins array
+    let possibleLogins = [];
+    var i;
+    for (i = 0; i < data.length; i++) {
+        possibleLogins.push(dataFull[i].phone);
+    }
+
+
+    // Checks Phone Numbers against customer input login phone number
+    let goodLogin = possibleLogins.indexOf(login);
+
+    if (goodLogin < 0) {
+        document.getElementById("CustomerData").innerHTML = "<h2>User doesn't exist, please create an account and try again.</h2>"
+    } else {
+        document.getElementById("CustomerData").innerHTML = "<h2>Customer Information and Pizza's Ordered:</h2>"
+    }
+
 }
