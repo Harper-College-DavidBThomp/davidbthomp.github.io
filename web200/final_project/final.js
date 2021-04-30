@@ -44,8 +44,9 @@ function Location(
 // Listens and updates based on focus and click
 
 window.addEventListener("load", function () {
-    document.getElementById("post").addEventListener("click", postClick);
+    document.getElementById("createAccount").addEventListener("click", postClick);
     document.getElementById("login").addEventListener("click", getCust);
+    document.getElementById("order").addEventListener("click", orderClick);
 });
 
 // Creates a user
@@ -73,6 +74,10 @@ function getFullData(data) {
     return datafull;
 }
 
+function getOrderFull(orders) {
+    let orderFull = orders;
+    return orderFull;
+}
 
 // POST
 
@@ -93,6 +98,18 @@ function postClick() {
 
     if (requestLogin < 0) {
         data.push(dataInput);
+
+        // Clears inputs
+        document.getElementById("firstName").value = "";
+        document.getElementById("lastName").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("address").value = "";
+        document.getElementById("city").value = "";
+        document.getElementById("state").value = "";
+        document.getElementById("postCode").value = "";
+
+
         document.getElementById("CreateAccount").innerHTML = "<h2>Customer Account Created.</h2>"
     } else {
         document.getElementById("CreateAccount").innerHTML = "<h2>Customer already exists.</h2>";
@@ -104,6 +121,7 @@ function postClick() {
 function getCust() {
     let login = document.getElementById("phone2").value;
     let dataFull = getFullData(data);
+    let orderFull = getOrderFull(orders);
 
     // Gets Phone Numbers for possible Logins into possible logins array
     let possibleLogins = [];
@@ -116,10 +134,101 @@ function getCust() {
     // Checks Phone Numbers against customer input login phone number
     let goodLogin = possibleLogins.indexOf(login);
 
+
     if (goodLogin < 0) {
-        document.getElementById("CustomerData").innerHTML = "<h2>User doesn't exist, please create an account and try again.</h2>"
+        document.getElementById("CustomerData").innerHTML = "<h2>User doesn't exist, please create an account and try again.</h2>";
     } else {
-        document.getElementById("CustomerData").innerHTML = "<h2>Customer Information and Pizza's Ordered:</h2>"
+
+        console.log(data);
+
+        document.getElementById("CustomerData").innerHTML = `<h2>Customer Information:</h2><br>`;
+        document.getElementById("CustomerData").innerHTML += `First Name: ${dataFull[goodLogin].firstName}<br>`;
+        document.getElementById("CustomerData").innerHTML += `Last Name: ${dataFull[goodLogin].lastName}<br>`;
+        document.getElementById("CustomerData").innerHTML += `Address: ${dataFull[goodLogin].location.address}, ${dataFull[goodLogin].location.city}, ${dataFull[goodLogin].location.state}<br><br>`;
+        document.getElementById("CustomerData").innerHTML += `<h2>Pizza's Ordered:</h2><br>`;
+        document.getElementById("CustomerData").innerHTML += `Pizza:<br>Size:${orderFull[0].size}<br>`;
     }
 
+}
+
+
+
+
+
+
+
+
+
+let orders = [];
+
+// Creates Basic Order JSON Layout
+
+function pizzaInfo(
+    size = null,
+    toppings = null) {
+    this.phone = phone;
+    this.size = size;
+    this.toppings = toppings;
+}
+
+function Toppings(
+    pepperoni = null,
+    bacon = null,
+    sausage = null,
+    pineapple = null,
+    onions = null,
+    olives = null,
+    bellpepper = null,
+    mushrooms = null) {
+    this.pepperoni = pepperoni;
+    this.bacon = bacon;
+    this.sausage = sausage;
+    this.pineapple = pineapple;
+    this.onions = onions;
+    this.olives = olives;
+    this.bellpepper = bellpepper;
+    this.mushrooms = mushrooms;
+}
+
+
+function createBasicOrder() {
+    let orderInput = new pizzaInfo(
+        `${document.getElementById("size").value}`);
+
+
+    orderInput.toppings = new Toppings(
+        `${document.getElementById("pepperoni").checked}`,
+        `${document.getElementById("bacon").checked}`,
+        `${document.getElementById("sausage").checked}`,
+        `${document.getElementById("pineapple").checked}`,
+        `${document.getElementById("onions").checked}`,
+        `${document.getElementById("olives").checked}`,
+        `${document.getElementById("bellpepper").checked}`,
+        `${document.getElementById("mushrooms").checked}`);
+
+    return orderInput;
+}
+
+function orderClick() {
+    let orderInput = createBasicOrder();
+
+    let dataFull = getFullData(data);
+    let customer = document.getElementById("phone3").value;
+
+    // Gets Phone Numbers for possible Logins into possible logins array
+    let possibleLogins = [];
+    var i;
+    for (i = 0; i < data.length; i++) {
+        possibleLogins.push(dataFull[i].phone);
+    }
+
+    // Checks Phone Numbers against customer input login phone number
+    let goodLogin = possibleLogins.indexOf(customer);
+
+    if (goodLogin < 0) {
+        console.log("User not real, Please check phone Number");
+    } else {
+        console.log("User real, push to user");
+        data[goodLogin].push(orderInput)
+    }
 }
