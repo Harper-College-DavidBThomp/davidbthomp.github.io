@@ -43,27 +43,36 @@ function createCust() {
 function orderClick() {
 
     let indexUser = getUserPhone();
+
     if (indexUser < 0) {
         console.log("Customer not real");
     } else {
         console.log("Customer real");
 
+        let size = document.getElementById("size").value;
+
+        let pepperoni = document.getElementById("pepperoni").checked;
+        let bacon = document.getElementById("bacon").checked;
+        let sausage = document.getElementById("sausage").checked;
+        let pineapple = document.getElementById("pineapple").checked;
+        let onions = document.getElementById("onions").checked;
+        let olives = document.getElementById("olives").checked;
+        let bellpepper = document.getElementById("bellpepper").checked;
+        let mushrooms = document.getElementById("mushrooms").checked;
+
 
 
         //Get the amount of pizzas ordered and add one
         let order1 = {
-            "pizza3": {
+            "pizza1": {
                 "topping": "topping",
-                "size": "size"
+                "size": `${size}`
             },
-            "pizza4": {
-                "topping": "topping",
-                "size": "size"
-            }
         }
        userData[indexUser].pizzas.push(order1);
     }
 
+    console.log(userData);
 
 }
 
