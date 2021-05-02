@@ -32,7 +32,7 @@ function createCust() {
             "state": `${document.getElementById("state").value}`,
             "postCode": `${document.getElementById("postCode").value}`
         },
-        "pizzas": {
+        "pizzas": [{
             "pizza1": {
                 "topping": "topping",
                 "size": "size"
@@ -41,7 +41,7 @@ function createCust() {
                 "topping": "topping",
                 "size": "size"
             }
-        }
+        }]
     };
 
     userData.push(dataInput);
@@ -56,30 +56,22 @@ function orderClick() {
     } else {
         console.log("Customer real");
 
+
+
         //Get the amount of pizzas ordered and add one
         let order1 = {
-            "pizza1": [{
-                "Size": "Small",
-                "Toppings": "Pepperoni"
-            }]
-        };
+            "pizza3": {
+                "topping": "topping",
+                "size": "size"
+            },
+            "pizza4": {
+                "topping": "topping",
+                "size": "size"
+            }
+        }
+       userData[indexUser].pizzas.push(order1);
 
-        console.log(userData);
-        console.log(userData[indexUser]);
-
-        // var obj = JSON.parse(userData);
-        // obj[indexUser].push(orderInfo);
-        // userData = JSON.stringify(obj);
-
-        // console.log(userData);
-
-        // let orderArray = [];
-        // orderArray.push(orderInfo);
-        // userData[0].push(orderArray);
-        // console.log(userData);
-
-
-        // Then take the array and put it in that users dataInput
+       console.log(userData);
 
     }
 
