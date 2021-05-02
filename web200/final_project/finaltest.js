@@ -20,6 +20,8 @@ window.addEventListener("load", function () {
 
 // Creates the values for 
 function createCust() {
+    let indexUser = getUserPhone();
+    if (indexUser < 0) {
 
     let dataInput = {
         "firstName": `${document.getElementById("firstName").value}`,
@@ -38,6 +40,24 @@ function createCust() {
 
     userData.push(dataInput);
 
+    // Clears inputs
+    document.getElementById("firstName").value = "";
+    document.getElementById("lastName").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("address").value = "";
+    document.getElementById("city").value = "";
+    document.getElementById("state").value = "";
+    document.getElementById("postCode").value = "";
+
+    document.getElementById("createInfo").innerHTML = "Account Created.";
+
+
+} else {
+
+    document.getElementById("createInfo").innerHTML = "Account Already Exists.";
+
+}
 }
 
 function orderClick() {
@@ -87,26 +107,19 @@ function orderClick() {
             toppings += "Mushrooms ";
         }
 
-
         toppings = toppings.trim();
-
 
         //Get the amount of pizzas ordered and add one
 
-
-        let order1 = {
+        let order = {
             "pizza1": {
                 "topping": `${toppings}`,
                 "size": `${size}`
             },
         }
-       userData[indexUser].pizzas.push(order1);
+       userData[indexUser].pizzas.push(order);
        
     }
-
-
-
-    console.log(userData);
 
 }
 
@@ -114,8 +127,21 @@ function orderClick() {
 // Checks if the customer exists, and if so their index number in userdata
 
 function getUserPhone() {
+    let login = "";
 
-    let login = document.getElementById("phone1").value;
+    let login1 = document.getElementById("phone").value;
+    let login2 = document.getElementById("phone1").value;
+    let login3 = document.getElementById("phone2").value;
+
+    if (login1 === "" && login2 === "") {
+        login = login3;
+    } else if (login2 === "" && login3 === "") {
+        login = login1;
+    } else if (login1 === "" && login3 === "") {
+        login = login2;
+    } else {
+        document.getElementById("createAccount").innerHTML = "Only 1 login field may have a value at a time, please try again.";
+    }
 
     let phoneNumbers = [];
     var i;
