@@ -60,17 +60,51 @@ function orderClick() {
         let bellpepper = document.getElementById("bellpepper").checked;
         let mushrooms = document.getElementById("mushrooms").checked;
 
+        let toppings = "";
+
+        if (pepperoni) {
+            toppings += "Pepperoni ";
+        } 
+        if (bacon) {
+            toppings += "Bacon ";
+        }
+        if (sausage) {
+            toppings += "Sausage ";
+        }
+        if (pineapple) {
+            toppings += "Pineapple ";
+        }
+        if (onions) {
+            toppings += "Onions ";
+        }
+        if (olives) {
+            toppings += "Olives ";
+        }
+        if (bellpepper) {
+            toppings += "Bellpepper ";
+        }
+        if (mushrooms) {
+            toppings += "Mushrooms ";
+        }
+
+
+        toppings = toppings.trim();
 
 
         //Get the amount of pizzas ordered and add one
+
+
         let order1 = {
             "pizza1": {
-                "topping": "topping",
+                "topping": `${toppings}`,
                 "size": `${size}`
             },
         }
        userData[indexUser].pizzas.push(order1);
+       
     }
+
+
 
     console.log(userData);
 
