@@ -41,6 +41,37 @@ function Location(
     this.postal = postal;
 }
 
+let orders = [];
+
+// Creates Basic Order JSON Layout
+
+function pizzaInfo(
+    size = null,
+    toppings = null) {
+    this.phone = phone;
+    this.size = size;
+    this.toppings = toppings;
+}
+
+function Toppings(
+    pepperoni = null,
+    bacon = null,
+    sausage = null,
+    pineapple = null,
+    onions = null,
+    olives = null,
+    bellpepper = null,
+    mushrooms = null) {
+    this.pepperoni = pepperoni;
+    this.bacon = bacon;
+    this.sausage = sausage;
+    this.pineapple = pineapple;
+    this.onions = onions;
+    this.olives = olives;
+    this.bellpepper = bellpepper;
+    this.mushrooms = mushrooms;
+}
+
 // Listens and updates based on focus and click
 
 window.addEventListener("load", function () {
@@ -67,6 +98,24 @@ function createBasicInfo() {
     return dataInput;
 }
 
+function createBasicOrder() {
+    let orderInput = new pizzaInfo(
+        `${document.getElementById("size").value}`);
+
+
+    orderInput.toppings = new Toppings(
+        `${document.getElementById("pepperoni").checked}`,
+        `${document.getElementById("bacon").checked}`,
+        `${document.getElementById("sausage").checked}`,
+        `${document.getElementById("pineapple").checked}`,
+        `${document.getElementById("onions").checked}`,
+        `${document.getElementById("olives").checked}`,
+        `${document.getElementById("bellpepper").checked}`,
+        `${document.getElementById("mushrooms").checked}`);
+
+    return orderInput;
+}
+
 // Gets all JSON Info
 
 function getFullData(data) {
@@ -82,7 +131,8 @@ function getOrderFull(orders) {
 // POST
 
 function postClick() {
-    let dataInput = createBasicInfo();
+    let dataInput = createB
+    letasicInfo();
     let dataFull = getFullData(data);
 
     // Gets Phone Numbers for possible Logins into possible logins array
@@ -151,63 +201,6 @@ function getCust() {
 
 }
 
-
-
-
-
-
-
-
-
-let orders = [];
-
-// Creates Basic Order JSON Layout
-
-function pizzaInfo(
-    size = null,
-    toppings = null) {
-    this.phone = phone;
-    this.size = size;
-    this.toppings = toppings;
-}
-
-function Toppings(
-    pepperoni = null,
-    bacon = null,
-    sausage = null,
-    pineapple = null,
-    onions = null,
-    olives = null,
-    bellpepper = null,
-    mushrooms = null) {
-    this.pepperoni = pepperoni;
-    this.bacon = bacon;
-    this.sausage = sausage;
-    this.pineapple = pineapple;
-    this.onions = onions;
-    this.olives = olives;
-    this.bellpepper = bellpepper;
-    this.mushrooms = mushrooms;
-}
-
-
-function createBasicOrder() {
-    let orderInput = new pizzaInfo(
-        `${document.getElementById("size").value}`);
-
-
-    orderInput.toppings = new Toppings(
-        `${document.getElementById("pepperoni").checked}`,
-        `${document.getElementById("bacon").checked}`,
-        `${document.getElementById("sausage").checked}`,
-        `${document.getElementById("pineapple").checked}`,
-        `${document.getElementById("onions").checked}`,
-        `${document.getElementById("olives").checked}`,
-        `${document.getElementById("bellpepper").checked}`,
-        `${document.getElementById("mushrooms").checked}`);
-
-    return orderInput;
-}
 
 function orderClick() {
     let orderInput = createBasicOrder();
