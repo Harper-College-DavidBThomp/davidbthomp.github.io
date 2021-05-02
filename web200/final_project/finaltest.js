@@ -26,12 +26,22 @@ function createCust() {
         "lastName": `${document.getElementById("lastName").value}`,
         "email": `${document.getElementById("email").value}`,
         "phone": `${document.getElementById("phone").value}`,
-        "location": [{
+        "location": {
             "address": `${document.getElementById("address").value}`,
             "city": `${document.getElementById("city").value}`,
             "state": `${document.getElementById("state").value}`,
             "postCode": `${document.getElementById("postCode").value}`
-        }],
+        },
+        "pizzas": {
+            "pizza1": {
+                "topping": "topping",
+                "size": "size"
+            },
+            "pizza2": {
+                "topping": "topping",
+                "size": "size"
+            }
+        }
     };
 
     userData.push(dataInput);
@@ -46,7 +56,6 @@ function orderClick() {
     } else {
         console.log("Customer real");
 
-        let orderInfo = [];
         //Get the amount of pizzas ordered and add one
         let order1 = {
             "pizza1": [{
@@ -55,13 +64,8 @@ function orderClick() {
             }]
         };
 
-        orderInfo.push(order1);
-
-        let order = {
-            "pizzas": `{${orderInfo}}`
-        }
-
-        console.log(order);
+        console.log(userData);
+        console.log(userData[indexUser]);
 
         // var obj = JSON.parse(userData);
         // obj[indexUser].push(orderInfo);
