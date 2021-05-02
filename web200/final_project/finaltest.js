@@ -21,9 +21,6 @@ window.addEventListener("load", function () {
 // Creates the values for 
 function createCust() {
 
-    let orderInfo = orderClick();
-
-
     let dataInput = {
         "firstName": `${document.getElementById("firstName").value}`,
         "lastName": `${document.getElementById("lastName").value}`,
@@ -35,34 +32,78 @@ function createCust() {
             "state": `${document.getElementById("state").value}`,
             "postCode": `${document.getElementById("postCode").value}`
         }],
-        "pizzas": `${orderArray}`
     };
 
     userData.push(dataInput);
-    console.log(userData);
-
-    let phone = `${document.getElementById("phone").value}`
-
-    return phone;
 
 }
 
 function orderClick() {
-    let customer = document.getElementById("phone3").value;
+
+    let indexUser = getUserPhone();
+    if (indexUser < 0) {
+        console.log("Customer not real");
+    } else {
+        console.log("Customer real");
+
+        let orderInfo = [];
+        //Get the amount of pizzas ordered and add one
+        let order1 = {
+            "pizza1": [{
+                "Size": "Small",
+                "Toppings": "Pepperoni"
+            }]
+        };
+
+        orderInfo.push(order1);
+
+        let order = {
+            "pizzas": `{${orderInfo}}`
+        }
+
+        console.log(order);
+
+        // var obj = JSON.parse(userData);
+        // obj[indexUser].push(orderInfo);
+        // userData = JSON.stringify(obj);
+
+        // console.log(userData);
+
+        // let orderArray = [];
+        // orderArray.push(orderInfo);
+        // userData[0].push(orderArray);
+        // console.log(userData);
+
+
+        // Then take the array and put it in that users dataInput
+
+    }
+
+
+}
+
+
+// Checks if the customer exists, and if so their index number in userdata
+
+function getUserPhone() {
+
+    let login = document.getElementById("phone1").value;
 
     let phoneNumbers = [];
     var i;
     for (i = 0; i < userData.length; i++) {
-
+        phoneNumbers.push(userData[i].phone);
     }
 
-    let orderInfo = {
-        "Size": "Small",
-        "Toppings": "Pepperoni"
-    };
+    // Checks Phone Numbers against customer input login phone number
+    let indexUser = phoneNumbers.indexOf(login);
 
-    let orderArray = [];
-    orderArray.push(orderInfo);
+    // if (indexUser< 0) {
+    //     console.log("Customer not real");
+    // } else {
+    //     console.log("Customer real");
+    // }
 
-    return orderInfo;
+    return indexUser;
+
 }
