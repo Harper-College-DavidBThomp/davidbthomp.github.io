@@ -32,16 +32,8 @@ function createCust() {
             "state": `${document.getElementById("state").value}`,
             "postCode": `${document.getElementById("postCode").value}`
         },
-        "pizzas": [{
-            "pizza1": {
-                "topping": "topping",
-                "size": "size"
-            },
-            "pizza2": {
-                "topping": "topping",
-                "size": "size"
-            }
-        }]
+        "pizzas": [
+        ]
     };
 
     userData.push(dataInput);
@@ -70,9 +62,6 @@ function orderClick() {
             }
         }
        userData[indexUser].pizzas.push(order1);
-
-       console.log(userData);
-
     }
 
 
