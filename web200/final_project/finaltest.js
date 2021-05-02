@@ -118,6 +118,12 @@ function orderClick() {
             },
         }
        userData[indexUser].pizzas.push(order);
+
+       var i;
+       for (i = 0; i < userData[indexUser].pizzas.length; i++) {
+
+        document.getElementById("orderPizzas").innerHTML = `You have ordered ${i + 1} Pizzas.`;
+       }
        
     }
 
