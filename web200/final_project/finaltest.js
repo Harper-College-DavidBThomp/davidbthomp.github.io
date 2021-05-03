@@ -1,9 +1,6 @@
 // To Do:
-// Include fields for name, address, and phone number.
-// Allow for multiple toppings per pizza, with at least six toppings to choose from.
-// Allow for multiple pizzas per order.
 // Include support for at least three pizza sizes, with different prices for toppings based on pizza size.
-// Dynamically display order information and price total as pizzas and toppings are added.
+// Dynamically display order information and such as price total as pizzas and toppings are added.
 // Include 10% sales tax.
 // Include a comments section for special notes and/or delivery instructions.
 // Your solution will include an Order object, which contains a Customer object, an array of Pizza objects, and a nested array of toppings for each pizza.
@@ -49,12 +46,12 @@ function createCust() {
         document.getElementById("state").value = "";
         document.getElementById("postCode").value = "";
 
-        document.getElementById("createInfo").innerHTML = "Account Created.";
+        document.getElementById("createInfo").innerHTML = "<h2>Account Created.</h2>";
 
 
     } else {
 
-        document.getElementById("createInfo").innerHTML = `Account linked with phone number "${document.getElementById("phone").value}" Already Exists.`;
+        document.getElementById("createInfo").innerHTML = `<h2>Account linked with phone number "${document.getElementById("phone").value}" already exists.</h2>`;
         document.getElementById("phone").value = "";
 
     }
@@ -64,9 +61,8 @@ function orderClick() {
     let indexUser = getUserPhone();
 
     if (indexUser < 0) {
-        console.log("Customer not real");
+        document.getElementById("orderPizzas").innerHTML = `<h2>Customer doesn't exist for phone number "${document.getElementById("phone1").value}".</h2>`;
     } else {
-        console.log("Customer real");
 
         let size = document.getElementById("size").value;
 
@@ -112,7 +108,7 @@ function orderClick() {
 
         toppings = toppings.trim();
 
-        //Get the amount of pizzas ordered and add one
+        //Get the amount of pizzas ordered and add one to array in JSON
 
         let order = {
             "pizza": {
@@ -127,7 +123,7 @@ function orderClick() {
         var i;
         for (i = 0; i < userData[indexUser].pizzas.length; i++) {
 
-            document.getElementById("orderPizzas").innerHTML = `You have ordered ${i + 1} Pizzas for phone number "${document.getElementById("phone1").value}"`;
+            document.getElementById("orderPizzas").innerHTML = `<h2>You have ordered ${i + 1} Pizzas for phone number "${document.getElementById("phone1").value}".</h2>`;
 
         }
         document.getElementById("phone1").value = "";
@@ -147,23 +143,23 @@ function getCust() {
     let indexUser = getUserPhone();
 
     if (indexUser < 0) {
-        document.getElementById("CustomerData").innerHTML = `<h2>Phone #${document.getElementById("phone2").value} doesn't exist, please create an account and try again.</h2>`;
+        document.getElementById("CustomerData").innerHTML = `<h2>Phone number: "${document.getElementById("phone2").value}" doesn't exist, please create an account and try again.</h2>`;
         document.getElementById("phone2").value = "";
     } else {
         document.getElementById("CustomerData").innerHTML = `<h2>Customer Information:</h2><br>`;
-        document.getElementById("CustomerData").innerHTML += `First Name: ${userData[indexUser].firstName}<br>`;
-        document.getElementById("CustomerData").innerHTML += `Last Name: ${userData[indexUser].lastName}<br>`;
-        document.getElementById("CustomerData").innerHTML += `Phone Number: ${userData[indexUser].phone}<br>`;
-        document.getElementById("CustomerData").innerHTML += `Address: ${userData[indexUser].location.address}, ${userData[indexUser].location.city}, ${userData[indexUser].location.state}<br><br>`;
+        document.getElementById("CustomerData").innerHTML += `<h3>First Name: ${userData[indexUser].firstName}</h3><br>`;
+        document.getElementById("CustomerData").innerHTML += `<h3>Last Name: ${userData[indexUser].lastName}</h3><br>`;
+        document.getElementById("CustomerData").innerHTML += `<h3>Phone Number: ${userData[indexUser].phone}</h3><br>`;
+        document.getElementById("CustomerData").innerHTML += `<h3>Address: ${userData[indexUser].location.address}, ${userData[indexUser].location.city}, ${userData[indexUser].location.state}</h3><br><br>`;
         document.getElementById("CustomerData").innerHTML += `<h2>Pizza's Ordered:</h2><br>`;
 
 
         // Read out Pizzas and Toppings
         var i;
         for (i = 0; i < userData[indexUser].pizzas.length; i++) {
-            document.getElementById("CustomerData").innerHTML += `Pizza #${i + 1}<br>`;
-            document.getElementById("CustomerData").innerHTML += `Toppings: ${userData[indexUser].pizzas[i].pizza.topping}<br>`;
-            document.getElementById("CustomerData").innerHTML += `Size: ${userData[indexUser].pizzas[i].pizza.size}<br><br>`;
+            document.getElementById("CustomerData").innerHTML += `<h3>Pizza #${i + 1}</h3><br>`;
+            document.getElementById("CustomerData").innerHTML += `<h3>Toppings: ${userData[indexUser].pizzas[i].pizza.topping}</h3><br>`;
+            document.getElementById("CustomerData").innerHTML += `<h3>Size: ${userData[indexUser].pizzas[i].pizza.size}</h3><br><br>`;
         }
         document.getElementById("phone2").value = "";
     }
