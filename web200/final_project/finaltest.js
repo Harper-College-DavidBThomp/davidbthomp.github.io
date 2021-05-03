@@ -23,42 +23,41 @@ function createCust() {
     let indexUser = getUserPhone();
     if (indexUser < 0) {
 
-    let dataInput = {
-        "firstName": `${document.getElementById("firstName").value}`,
-        "lastName": `${document.getElementById("lastName").value}`,
-        "email": `${document.getElementById("email").value}`,
-        "phone": `${document.getElementById("phone").value}`,
-        "location": {
-            "address": `${document.getElementById("address").value}`,
-            "city": `${document.getElementById("city").value}`,
-            "state": `${document.getElementById("state").value}`,
-            "postCode": `${document.getElementById("postCode").value}`
-        },
-        "pizzas": [
-        ]
-    };
+        let dataInput = {
+            "firstName": `${document.getElementById("firstName").value}`,
+            "lastName": `${document.getElementById("lastName").value}`,
+            "email": `${document.getElementById("email").value}`,
+            "phone": `${document.getElementById("phone").value}`,
+            "location": {
+                "address": `${document.getElementById("address").value}`,
+                "city": `${document.getElementById("city").value}`,
+                "state": `${document.getElementById("state").value}`,
+                "postCode": `${document.getElementById("postCode").value}`
+            },
+            "pizzas": []
+        };
 
-    userData.push(dataInput);
+        userData.push(dataInput);
 
-    // Clears inputs
-    document.getElementById("firstName").value = "";
-    document.getElementById("lastName").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("phone").value = "";
-    document.getElementById("address").value = "";
-    document.getElementById("city").value = "";
-    document.getElementById("state").value = "";
-    document.getElementById("postCode").value = "";
+        // Clears inputs
+        document.getElementById("firstName").value = "";
+        document.getElementById("lastName").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone").value = "";
+        document.getElementById("address").value = "";
+        document.getElementById("city").value = "";
+        document.getElementById("state").value = "";
+        document.getElementById("postCode").value = "";
 
-    document.getElementById("createInfo").innerHTML = "Account Created.";
+        document.getElementById("createInfo").innerHTML = "Account Created.";
 
 
-} else {
+    } else {
 
-    document.getElementById("createInfo").innerHTML = `Account linked with phone number "${document.getElementById("phone").value}" Already Exists.`;
-    document.getElementById("phone").value = "";
+        document.getElementById("createInfo").innerHTML = `Account linked with phone number "${document.getElementById("phone").value}" Already Exists.`;
+        document.getElementById("phone").value = "";
 
-}
+    }
 }
 
 function orderClick() {
@@ -84,7 +83,7 @@ function orderClick() {
 
         if (pepperoni) {
             toppings += "Pepperoni ";
-        } 
+        }
         if (bacon) {
             toppings += "Bacon ";
         }
@@ -117,14 +116,17 @@ function orderClick() {
                 "size": `${size}`
             },
         }
-       userData[indexUser].pizzas.push(order);
+        userData[indexUser].pizzas.push(order);
 
-       var i;
-       for (i = 0; i < userData[indexUser].pizzas.length; i++) {
 
-        document.getElementById("orderPizzas").innerHTML = `You have ordered ${i + 1} Pizzas.`;
-       }
-       
+
+        var i;
+        for (i = 0; i < userData[indexUser].pizzas.length; i++) {
+
+            document.getElementById("orderPizzas").innerHTML = `You have ordered ${i + 1} Pizzas for phone number "${document.getElementById("phone1").value}"`;
+
+        }
+        document.getElementById("phone1").value = "";
     }
 
 }
