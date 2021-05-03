@@ -108,6 +108,25 @@ function orderClick() {
 
         toppings = toppings.trim();
 
+
+        let salad = document.getElementById("salad").checked;
+        let wings = document.getElementById("wings").checked;
+        let fries = document.getElementById("fries").checked;
+
+        let sides = "";
+
+        if (salad) {
+            sides += "salad ";
+        }
+        if (wings) {
+            sides += "wings ";
+        }
+        if (fries) {
+            sides += "fires ";
+        }
+
+
+
         //Get the amount of pizzas ordered and add one to array in JSON
 
         let order = {
