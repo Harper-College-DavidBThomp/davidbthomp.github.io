@@ -1,6 +1,11 @@
 // To Do:
 // Style Page!
 
+
+// Program: Listens for clicks on buttons and processes information depending on the fields.
+// Then stores the user information into a JSON array. This array can be updated with Pizza information
+// and the note and prices from the order.
+
 "use strict";
 let userData = [];
 
