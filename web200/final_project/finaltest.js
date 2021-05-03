@@ -1,7 +1,3 @@
-// To Do:
-// Style Page!
-
-
 // Program: Listens for clicks on buttons and processes information depending on the fields.
 // Then stores the user information into a JSON array. This array can be updated with Pizza information
 // and the note and prices from the order.
@@ -22,20 +18,28 @@ function createCust() {
     // Create Account Form Validation
     if (document.getElementById("firstName").value.length < 2) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid First Name</h2>";
+        document.getElementById("phone").value = "";
     } else if (document.getElementById("lastName").value.length < 2) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid Last Name</h2>";
+        document.getElementById("phone").value = "";
     } else if (document.getElementById("address").value.length < 6) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid Address</h2>";
+        document.getElementById("phone").value = "";
     } else if (document.getElementById("city").value.length < 2) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid City</h2>";
+        document.getElementById("phone").value = "";
     } else if (document.getElementById("state").value.length < 2 || document.getElementById("state").value.length > 2) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid State in 2 letter form (example: IL)</h2>";
+        document.getElementById("phone").value = "";
     } else if (document.getElementById("postCode").value.length < 5 || document.getElementById("postCode").value.length > 5) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid USA Postal Code (12345)</h2>";
+        document.getElementById("phone").value = "";
     } else if (document.getElementById("email").value.length < 3) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid Email (ABC@123.org)</h2>";
+        document.getElementById("phone").value = "";
     } else if (document.getElementById("phone").value / length < 7) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid Phone Number (12345678910), no dashes are neeeded</h2>";
+        document.getElementById("phone").value = "";
     } else {
         if (indexUser < 0) {
 
@@ -208,8 +212,8 @@ function orderClick() {
         for (i = 0; i < userData[indexUser].pizzas.length; i++) {
             price = Number(userData[indexUser].pizzas[i].pizza.price);
             fullPrice += price;
-            document.getElementById("orderPizzas").innerHTML = `<h2>You have ordered ${i + 1} Pizzas for phone number "${document.getElementById("phone1").value}".</h2>`;
-            document.getElementById("orderPizzas").innerHTML += `<h2>The price for the order is: $${fullPrice.toFixed(2)}.</h2>`;
+            document.getElementById("orderPizzas").innerHTML = `<h3>You have ordered ${i + 1} Pizzas <br>for phone number "${document.getElementById("phone1").value}".</h3>`;
+            document.getElementById("orderPizzas").innerHTML += `<h3>The price for the order is: $${fullPrice.toFixed(2)}.</h3>`;
         }
 
         // Sets values back to defaults
