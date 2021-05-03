@@ -1,6 +1,5 @@
 // To Do:
-// Include a comments section for special notes and/or delivery instructions.
-// Add Prices to Page
+// Style Page!
 
 "use strict";
 let userData = [];
