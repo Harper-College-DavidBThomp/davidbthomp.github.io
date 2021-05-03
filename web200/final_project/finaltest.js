@@ -14,7 +14,27 @@ window.addEventListener("load", function () {
 // Creates the values for 
 function createCust() {
     let indexUser = getUserPhone();
-    if (indexUser < 0) {
+
+    // Create Account Form Validation
+    if (document.getElementById("firstName").value.length < 2) {
+        document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid First Name</h2>";
+    } else if (document.getElementById("lastName").value.length < 2) {
+        document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid Last Name</h2>";
+    } else if ( document.getElementById("address").value.length < 6) {
+        document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid Address</h2>";
+    } else if (document.getElementById("city").value.length < 2) {
+        document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid City</h2>";
+    } else if (document.getElementById("state").value.length < 2 || document.getElementById("state").value.length > 2) {
+        document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid State in 2 letter form (example: IL)</h2>";
+    } else if (document.getElementById("postCode").value.length < 5 || document.getElementById("postCode").value.length > 5) {
+        document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid USA Postal Code (12345)</h2>";
+    } else if (document.getElementById("email").value.length < 3) {
+        document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid Email (ABC@123.org)</h2>";
+    } else if (document.getElementById("phone").value/length < 7 ) {
+        document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid Phone Number (12345678910), no dashes are neeeded</h2>";
+    }
+    else {    
+        if (indexUser < 0) {
 
         let dataInput = {
             "firstName": `${document.getElementById("firstName").value}`,
@@ -50,7 +70,12 @@ function createCust() {
         document.getElementById("createInfo").innerHTML = `<h2>Account linked with phone number "${document.getElementById("phone").value}" already exists.</h2>`;
         document.getElementById("phone").value = "";
 
-    }
+    }}
+
+
+
+
+
 }
 
 function orderClick() {
