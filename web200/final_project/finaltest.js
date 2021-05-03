@@ -146,8 +146,6 @@ function orderClick() {
 function getCust() {
     let indexUser = getUserPhone();
 
-    // Doesn't Work yet
-
     if (indexUser < 0) {
         document.getElementById("CustomerData").innerHTML = `<h2>Phone #${document.getElementById("phone2").value} doesn't exist, please create an account and try again.</h2>`;
         document.getElementById("phone2").value = "";
@@ -155,6 +153,7 @@ function getCust() {
         document.getElementById("CustomerData").innerHTML = `<h2>Customer Information:</h2><br>`;
         document.getElementById("CustomerData").innerHTML += `First Name: ${userData[indexUser].firstName}<br>`;
         document.getElementById("CustomerData").innerHTML += `Last Name: ${userData[indexUser].lastName}<br>`;
+        document.getElementById("CustomerData").innerHTML += `Phone Number: ${userData[indexUser].phone}<br>`;
         document.getElementById("CustomerData").innerHTML += `Address: ${userData[indexUser].location.address}, ${userData[indexUser].location.city}, ${userData[indexUser].location.state}<br><br>`;
         document.getElementById("CustomerData").innerHTML += `<h2>Pizza's Ordered:</h2><br>`;
 
@@ -166,6 +165,7 @@ function getCust() {
             document.getElementById("CustomerData").innerHTML += `Toppings: ${userData[indexUser].pizzas[i].pizza.topping}<br>`;
             document.getElementById("CustomerData").innerHTML += `Size: ${userData[indexUser].pizzas[i].pizza.size}<br><br>`;
         }
+        document.getElementById("phone2").value = "";
     }
 }
 
@@ -186,7 +186,7 @@ function getUserPhone() {
     } else if (login1 === "" && login3 === "") {
         login = login2;
     } else {
-        document.getElementById("createAccount").innerHTML = "Only 1 login field may have a value at a time, please try again.";
+        document.getElementById("CustomerData").innerHTML = "Only 1 phone field may have a value at a time, please try again.";
     }
 
     let phoneNumbers = [];
