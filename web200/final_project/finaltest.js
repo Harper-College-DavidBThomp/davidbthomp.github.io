@@ -58,15 +58,13 @@ function createCust() {
 
 function orderClick() {
     let indexUser = getUserPhone();
+
     var price;
-    let fullPrice = orderPrice();
 
     if (price === undefined || price === "") {
         price = +0;
     }
-
-
-
+    
     if (indexUser < 0) {
         document.getElementById("orderPizzas").innerHTML = `<h2>Customer doesn't exist for phone number "${document.getElementById("phone1").value}".</h2>`;
     } else {
@@ -171,12 +169,13 @@ function orderClick() {
         userData[indexUser].pizzas.push(order);
 
 
-
+        let fullPrice = 0;
         var i;
         for (i = 0; i < userData[indexUser].pizzas.length; i++) {
-
+            price = Number(userData[indexUser].pizzas[i].pizza.price);
+            fullPrice += price;
             document.getElementById("orderPizzas").innerHTML = `<h2>You have ordered ${i + 1} Pizzas for phone number "${document.getElementById("phone1").value}".</h2>`;
-            document.getElementById("orderPizzas").innerHTML += `<h2>The price for the order is: $${price}.</h2>`;
+            document.getElementById("orderPizzas").innerHTML += `<h2>The price for the order is: $${fullPrice}.</h2>`;
         }
 
         document.getElementById("phone1").value = "";
@@ -212,7 +211,6 @@ function getCust() {
 
 
         // Read out Pizzas and Toppings
-        let fullPrice = orderPrice();
         var i;
         for (i = 0; i < userData[indexUser].pizzas.length; i++) {
             document.getElementById("CustomerData").innerHTML += `<h3>Pizza #${i + 1}</h3><br>`;
@@ -221,9 +219,10 @@ function getCust() {
             document.getElementById("CustomerData").innerHTML += `<h3>Sides: ${userData[indexUser].pizzas[i].pizza.sides}</h3><br><br>`;
         }
 
+        
         // document.getElementById("CustomerData").innerHTML += `<h3>Price: ${userData[indexUser].pizzas[i].pizza.price}</h3><br><br>`
-        document.getElementById("CustomerData").innerHTML += `<h2>You have ordered ${i + 1} Pizzas for phone number "${document.getElementById("phone1").value}".</h2>`;
-        document.getElementById("CustomerData").innerHTML += fullPrice;
+        document.getElementById("CustomerData").innerHTML += `<h2>You have ordered ${i + 1} Pizzas for phone number "${document.getElementById("phone2").value}".</h2>`;
+        document.getElementById("CustomerData").innerHTML += `Price: $`;
 
 
         document.getElementById("phone2").value = "";
@@ -237,10 +236,9 @@ function orderPrice() {
     var fullPrice;
     var i;
     for (i = 0; i < userData[indexUser].pizzas.length; i++) {
-        price = userData[indexUser].pizzas[i].pizza.price;
+
         fullPrice = Number(price) + Number(price);
     }
-    console.log(fullPrice);
     return fullPrice;
 }
 
