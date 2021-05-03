@@ -1,5 +1,4 @@
 // To Do:
-// Include support for at least three pizza sizes, with different prices for toppings based on pizza size.
 // Dynamically display order information and such as price total as pizzas and toppings are added.
 // Include 10% sales tax.
 // Include a comments section for special notes and/or delivery instructions.
@@ -59,12 +58,36 @@ function createCust() {
 
 function orderClick() {
     let indexUser = getUserPhone();
+    var price;
+    price = document.getElementById("pricehidden").innerText;
+
+    if (price === undefined || price === "") {
+        price = 0;
+    } else {
+    price = document.getElementById("pricehidden").innerText;
+    price = parseFloat(price);
+    document.getElementById("pricehidden").innerText = "";
+    }
+    
+
+
 
     if (indexUser < 0) {
         document.getElementById("orderPizzas").innerHTML = `<h2>Customer doesn't exist for phone number "${document.getElementById("phone1").value}".</h2>`;
     } else {
 
         let size = document.getElementById("size").value;
+
+        if (size ==="Small") {
+            price = price + 5.99
+        } else if (size === "Medium") {
+            price = price + 7.99
+        } else if (size === "Large") {
+            price = price + 9.99
+        } else if (size === "X-Large") {
+            price = price + 12.99
+        }
+        
 
         let pepperoni = document.getElementById("pepperoni").checked;
         let bacon = document.getElementById("bacon").checked;
@@ -151,6 +174,11 @@ function orderClick() {
             document.getElementById("orderPizzas").innerHTML = `<h2>You have ordered ${i + 1} Pizzas for phone number "${document.getElementById("phone1").value}".</h2>`;
 
         }
+
+        document.getElementById("orderPizzas").innerHTML += `<h2>The price for the order is: $${price}.</h2>`;
+
+        document.getElementById("pricehidden").innerHTML = price;
+
         document.getElementById("phone1").value = "";
         pepperoni = document.getElementById("pepperoni").checked = false;
         bacon = document.getElementById("bacon").checked = false;
@@ -192,6 +220,8 @@ function getCust() {
             document.getElementById("CustomerData").innerHTML += `<h3>Sides: ${userData[indexUser].pizzas[i].pizza.sides}</h3><br><br>`;
 
         }
+        document.getElementById("orderPizzas").innerHTML = `<h2>You have ordered ${i + 1} Pizzas for phone number "${document.getElementById("phone1").value}".</h2>`;
+
         document.getElementById("phone2").value = "";
     }
 }
