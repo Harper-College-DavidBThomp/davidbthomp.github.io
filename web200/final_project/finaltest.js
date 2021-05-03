@@ -1,9 +1,6 @@
 // To Do:
-// Include 10% sales tax.
 // Include a comments section for special notes and/or delivery instructions.
 // Add Prices to Page
-// Your solution will include an Order object, which contains a Customer object, an array of Pizza objects, and a nested array of toppings for each pizza.
-// Use AJAX and JSON to submit order information.
 
 "use strict";
 let userData = [];
@@ -142,12 +139,15 @@ function orderClick() {
 
         if (salad) {
             sides += "salad ";
+            price += 5.99;
         }
         if (wings) {
             sides += "wings ";
+            price += 3.99;
         }
         if (fries) {
             sides += "fires ";
+            price += 4.99;
         }
         if (sides === ""){
             sides += "None";
@@ -155,7 +155,10 @@ function orderClick() {
 
         sides = sides.trim();
 
-
+        let notes = document.getElementById("notes").value;
+        if (notes === "") {
+            notes = `Blank`;
+        }
 
         //Get the amount of pizzas ordered and add one to array in JSON
 
@@ -164,7 +167,8 @@ function orderClick() {
                 "topping": `${toppings}`,
                 "size": `${size}`,
                 "sides": `${sides}`,
-                "price": `${price}`
+                "price": `${price}`,
+                "notes": `${notes}`
             },
         }
         userData[indexUser].pizzas.push(order);
@@ -179,6 +183,7 @@ function orderClick() {
             document.getElementById("orderPizzas").innerHTML += `<h2>The price for the order is: $${fullPrice.toFixed(2)}.</h2>`;
         }
 
+        // Sets values back to defaults
         document.getElementById("phone1").value = "";
         pepperoni = document.getElementById("pepperoni").checked = false;
         bacon = document.getElementById("bacon").checked = false;
@@ -192,6 +197,10 @@ function orderClick() {
         salad = document.getElementById("salad").checked = false;
         wings = document.getElementById("wings").checked = false;
         fries = document.getElementById("fries").checked = false;
+
+        document.getElementById("notes").value = "";
+        document.getElementById("size").value = "Small"
+
     }
 
 }
@@ -210,20 +219,20 @@ function getCust() {
         document.getElementById("CustomerData").innerHTML += `<h3>Address: ${userData[indexUser].location.address}, ${userData[indexUser].location.city}, ${userData[indexUser].location.state}</h3><br><br>`;
         document.getElementById("CustomerData").innerHTML += `<h2>Pizza's Ordered:</h2>`;
 
-
         // Read out Pizzas and Toppings
         var i;
         for (i = 0; i < userData[indexUser].pizzas.length; i++) {
             document.getElementById("CustomerData").innerHTML += `<h3>Pizza #${i + 1}</h3>`;
             document.getElementById("CustomerData").innerHTML += `<h3>Size: ${userData[indexUser].pizzas[i].pizza.size}</h3>`;
             document.getElementById("CustomerData").innerHTML += `<h3>Toppings: ${userData[indexUser].pizzas[i].pizza.topping}</h3>`;
-            document.getElementById("CustomerData").innerHTML += `<h3>Sides: ${userData[indexUser].pizzas[i].pizza.sides}</h3><br><br>`;
+            document.getElementById("CustomerData").innerHTML += `<h3>Sides: ${userData[indexUser].pizzas[i].pizza.sides}</h3>`;
+            document.getElementById("CustomerData").innerHTML += `<h3>Notes for order: "${userData[indexUser].pizzas[i].pizza.notes}".</h3><br>`;
         }
 
         
         let orderPrice1 = orderPrice();
         // document.getElementById("CustomerData").innerHTML += `<h3>Price: ${userData[indexUser].pizzas[i].pizza.price}</h3><br><br>`
-        document.getElementById("CustomerData").innerHTML += `<h2>You have ordered ${i} Pizzas for phone number "${document.getElementById("phone2").value}".</h2>`;
+        document.getElementById("CustomerData").innerHTML += `<br><h2>You have ordered ${i} Pizzas for phone number "${document.getElementById("phone2").value}".</h2>`;
         document.getElementById("CustomerData").innerHTML += `<h2>Price: $${orderPrice1.toFixed(2)}</h2>`;
         document.getElementById("CustomerData").innerHTML += `<h2>Price + Tax : $${(orderPrice1 * 1.1).toFixed(2)}</h2><br><br>`;
 
