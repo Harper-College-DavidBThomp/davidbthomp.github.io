@@ -1,7 +1,7 @@
 // To Do:
-// Dynamically display order information and such as price total as pizzas and toppings are added.
 // Include 10% sales tax.
 // Include a comments section for special notes and/or delivery instructions.
+// Add Prices to Page
 // Your solution will include an Order object, which contains a Customer object, an array of Pizza objects, and a nested array of toppings for each pizza.
 // Use AJAX and JSON to submit order information.
 
@@ -176,7 +176,7 @@ function orderClick() {
             price = Number(userData[indexUser].pizzas[i].pizza.price);
             fullPrice += price;
             document.getElementById("orderPizzas").innerHTML = `<h2>You have ordered ${i + 1} Pizzas for phone number "${document.getElementById("phone1").value}".</h2>`;
-            document.getElementById("orderPizzas").innerHTML += `<h2>The price for the order is: $${fullPrice}.</h2>`;
+            document.getElementById("orderPizzas").innerHTML += `<h2>The price for the order is: $${fullPrice.toFixed(2)}.</h2>`;
         }
 
         document.getElementById("phone1").value = "";
@@ -224,7 +224,8 @@ function getCust() {
         let orderPrice1 = orderPrice();
         // document.getElementById("CustomerData").innerHTML += `<h3>Price: ${userData[indexUser].pizzas[i].pizza.price}</h3><br><br>`
         document.getElementById("CustomerData").innerHTML += `<h2>You have ordered ${i} Pizzas for phone number "${document.getElementById("phone2").value}".</h2>`;
-        document.getElementById("CustomerData").innerHTML += `<h2>Price: $${orderPrice1}</h2><br><br>`;
+        document.getElementById("CustomerData").innerHTML += `<h2>Price: $${orderPrice1.toFixed(2)}</h2>`;
+        document.getElementById("CustomerData").innerHTML += `<h2>Price + Tax : $${(orderPrice1 * 1.1).toFixed(2)}</h2><br><br>`;
 
 
         document.getElementById("phone2").value = "";
