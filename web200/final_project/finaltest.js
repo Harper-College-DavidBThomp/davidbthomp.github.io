@@ -19,7 +19,7 @@ function createCust() {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid First Name</h2>";
     } else if (document.getElementById("lastName").value.length < 2) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid Last Name</h2>";
-    } else if ( document.getElementById("address").value.length < 6) {
+    } else if (document.getElementById("address").value.length < 6) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid Address</h2>";
     } else if (document.getElementById("city").value.length < 2) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid City</h2>";
@@ -29,47 +29,47 @@ function createCust() {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid USA Postal Code (12345)</h2>";
     } else if (document.getElementById("email").value.length < 3) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid Email (ABC@123.org)</h2>";
-    } else if (document.getElementById("phone").value/length < 7 ) {
+    } else if (document.getElementById("phone").value / length < 7) {
         document.getElementById("createInfo").innerHTML = "<h2>Please Input Valid Phone Number (12345678910), no dashes are neeeded</h2>";
-    }
-    else {    
+    } else {
         if (indexUser < 0) {
 
-        let dataInput = {
-            "firstName": `${document.getElementById("firstName").value}`,
-            "lastName": `${document.getElementById("lastName").value}`,
-            "email": `${document.getElementById("email").value}`,
-            "phone": `${document.getElementById("phone").value}`,
-            "location": {
-                "address": `${document.getElementById("address").value}`,
-                "city": `${document.getElementById("city").value}`,
-                "state": `${document.getElementById("state").value}`,
-                "postCode": `${document.getElementById("postCode").value}`
-            },
-            "pizzas": []
-        };
+            let dataInput = {
+                "firstName": `${document.getElementById("firstName").value}`,
+                "lastName": `${document.getElementById("lastName").value}`,
+                "email": `${document.getElementById("email").value}`,
+                "phone": `${document.getElementById("phone").value}`,
+                "location": {
+                    "address": `${document.getElementById("address").value}`,
+                    "city": `${document.getElementById("city").value}`,
+                    "state": `${document.getElementById("state").value}`,
+                    "postCode": `${document.getElementById("postCode").value}`
+                },
+                "pizzas": []
+            };
 
-        userData.push(dataInput);
+            userData.push(dataInput);
 
-        // Clears inputs
-        document.getElementById("firstName").value = "";
-        document.getElementById("lastName").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("phone").value = "";
-        document.getElementById("address").value = "";
-        document.getElementById("city").value = "";
-        document.getElementById("state").value = "";
-        document.getElementById("postCode").value = "";
+            // Clears inputs
+            document.getElementById("firstName").value = "";
+            document.getElementById("lastName").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("address").value = "";
+            document.getElementById("city").value = "";
+            document.getElementById("state").value = "";
+            document.getElementById("postCode").value = "";
 
-        document.getElementById("createInfo").innerHTML = "<h2>Account Created.</h2>";
+            document.getElementById("createInfo").innerHTML = "<h2>Account Created.</h2>";
 
 
-    } else {
+        } else {
 
-        document.getElementById("createInfo").innerHTML = `<h2>Account linked with phone number "${document.getElementById("phone").value}" already exists.</h2>`;
-        document.getElementById("phone").value = "";
+            document.getElementById("createInfo").innerHTML = `<h2>Account linked with phone number "${document.getElementById("phone").value}" already exists.</h2>`;
+            document.getElementById("phone").value = "";
 
-    }}
+        }
+    }
 
 
 
@@ -85,7 +85,7 @@ function orderClick() {
     if (price === undefined || price === "") {
         price = +0;
     }
-    
+
     if (indexUser < 0) {
         document.getElementById("orderPizzas").innerHTML = `<h2>Customer doesn't exist for phone number "${document.getElementById("phone1").value}".</h2>`;
         document.getElementById("phone1").value = "";
@@ -93,7 +93,7 @@ function orderClick() {
 
         let size = document.getElementById("size").value;
 
-        if (size ==="Small") {
+        if (size === "Small") {
             price += +5.99
         } else if (size === "Medium") {
             price += +7.99
@@ -102,7 +102,7 @@ function orderClick() {
         } else if (size === "X-Large") {
             price += +12.99
         }
-        
+
 
         let pepperoni = document.getElementById("pepperoni").checked;
         let bacon = document.getElementById("bacon").checked;
@@ -148,7 +148,7 @@ function orderClick() {
             price += 0.99;
         }
 
-        if (toppings === ""){
+        if (toppings === "") {
             toppings += "None";
         }
 
@@ -173,7 +173,7 @@ function orderClick() {
             sides += "fires ";
             price += 4.99;
         }
-        if (sides === ""){
+        if (sides === "") {
             sides += "None";
         }
 
@@ -253,7 +253,7 @@ function getCust() {
             document.getElementById("CustomerData").innerHTML += `<h3>Notes for order: "${userData[indexUser].pizzas[i].pizza.notes}".</h3><br>`;
         }
 
-        
+
         let orderPrice1 = orderPrice();
         // document.getElementById("CustomerData").innerHTML += `<h3>Price: ${userData[indexUser].pizzas[i].pizza.price}</h3><br><br>`
         document.getElementById("CustomerData").innerHTML += `<br><h2>You have ordered ${i} Pizzas for phone number "${document.getElementById("phone2").value}".</h2>`;
@@ -295,7 +295,9 @@ function getUserPhone() {
     } else if (login1 === "" && login3 === "") {
         login = login2;
     } else {
-        document.getElementById("CustomerData").innerHTML = "Only 1 phone field may have a value at a time, please try again.";
+        document.getElementById("CustomerData").innerHTML = "<h2>Only 1 phone field may have a value at a time, please try again.<h2>";
+        document.getElementById("createInfo").innerHTML = "<h2>Only 1 phone field may have a value at a time, please try again.<h2>";
+        document.getElementById("orderPizzas").innerHTML = "<h2>Only 1 phone field may have a value at a time, please try again.<h2>";
     }
 
     let phoneNumbers = [];
