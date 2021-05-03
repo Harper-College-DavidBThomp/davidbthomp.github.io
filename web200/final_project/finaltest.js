@@ -67,6 +67,7 @@ function orderClick() {
     
     if (indexUser < 0) {
         document.getElementById("orderPizzas").innerHTML = `<h2>Customer doesn't exist for phone number "${document.getElementById("phone1").value}".</h2>`;
+        document.getElementById("phone1").value = "";
     } else {
 
         let size = document.getElementById("size").value;
@@ -220,9 +221,10 @@ function getCust() {
         }
 
         
+        let orderPrice1 = orderPrice();
         // document.getElementById("CustomerData").innerHTML += `<h3>Price: ${userData[indexUser].pizzas[i].pizza.price}</h3><br><br>`
-        document.getElementById("CustomerData").innerHTML += `<h2>You have ordered ${i + 1} Pizzas for phone number "${document.getElementById("phone2").value}".</h2>`;
-        document.getElementById("CustomerData").innerHTML += `Price: $`;
+        document.getElementById("CustomerData").innerHTML += `<h2>You have ordered ${i} Pizzas for phone number "${document.getElementById("phone2").value}".</h2>`;
+        document.getElementById("CustomerData").innerHTML += `<h2>Price: $${orderPrice1}</h2>`;
 
 
         document.getElementById("phone2").value = "";
@@ -232,14 +234,14 @@ function getCust() {
 // Gets order Price 
 function orderPrice() {
     let indexUser = getUserPhone();
-    var price;
-    var fullPrice;
+    let orderPrice1 = 0;
     var i;
     for (i = 0; i < userData[indexUser].pizzas.length; i++) {
-
-        fullPrice = Number(price) + Number(price);
+        let price = Number(userData[indexUser].pizzas[i].pizza.price);
+        orderPrice1 += price;
     }
-    return fullPrice;
+    console.log(orderPrice1);
+    return orderPrice1;
 }
 
 
