@@ -203,20 +203,20 @@ function getCust() {
         document.getElementById("CustomerData").innerHTML = `<h2>Phone number: "${document.getElementById("phone2").value}" doesn't exist, please create an account and try again.</h2>`;
         document.getElementById("phone2").value = "";
     } else {
-        document.getElementById("CustomerData").innerHTML = `<h2>Customer Information:</h2><br>`;
-        document.getElementById("CustomerData").innerHTML += `<h3>First Name: ${userData[indexUser].firstName}</h3><br>`;
-        document.getElementById("CustomerData").innerHTML += `<h3>Last Name: ${userData[indexUser].lastName}</h3><br>`;
-        document.getElementById("CustomerData").innerHTML += `<h3>Phone Number: ${userData[indexUser].phone}</h3><br>`;
+        document.getElementById("CustomerData").innerHTML = `<h2>Customer Information:</h2>`;
+        document.getElementById("CustomerData").innerHTML += `<h3>First Name: ${userData[indexUser].firstName}</h3>`;
+        document.getElementById("CustomerData").innerHTML += `<h3>Last Name: ${userData[indexUser].lastName}</h3>`;
+        document.getElementById("CustomerData").innerHTML += `<h3>Phone Number: ${userData[indexUser].phone}</h3>`;
         document.getElementById("CustomerData").innerHTML += `<h3>Address: ${userData[indexUser].location.address}, ${userData[indexUser].location.city}, ${userData[indexUser].location.state}</h3><br><br>`;
-        document.getElementById("CustomerData").innerHTML += `<h2>Pizza's Ordered:</h2><br>`;
+        document.getElementById("CustomerData").innerHTML += `<h2>Pizza's Ordered:</h2>`;
 
 
         // Read out Pizzas and Toppings
         var i;
         for (i = 0; i < userData[indexUser].pizzas.length; i++) {
-            document.getElementById("CustomerData").innerHTML += `<h3>Pizza #${i + 1}</h3><br>`;
-            document.getElementById("CustomerData").innerHTML += `<h3>Size: ${userData[indexUser].pizzas[i].pizza.size}</h3><br>`;
-            document.getElementById("CustomerData").innerHTML += `<h3>Toppings: ${userData[indexUser].pizzas[i].pizza.topping}</h3><br>`;
+            document.getElementById("CustomerData").innerHTML += `<h3>Pizza #${i + 1}</h3>`;
+            document.getElementById("CustomerData").innerHTML += `<h3>Size: ${userData[indexUser].pizzas[i].pizza.size}</h3>`;
+            document.getElementById("CustomerData").innerHTML += `<h3>Toppings: ${userData[indexUser].pizzas[i].pizza.topping}</h3>`;
             document.getElementById("CustomerData").innerHTML += `<h3>Sides: ${userData[indexUser].pizzas[i].pizza.sides}</h3><br><br>`;
         }
 
@@ -224,7 +224,7 @@ function getCust() {
         let orderPrice1 = orderPrice();
         // document.getElementById("CustomerData").innerHTML += `<h3>Price: ${userData[indexUser].pizzas[i].pizza.price}</h3><br><br>`
         document.getElementById("CustomerData").innerHTML += `<h2>You have ordered ${i} Pizzas for phone number "${document.getElementById("phone2").value}".</h2>`;
-        document.getElementById("CustomerData").innerHTML += `<h2>Price: $${orderPrice1}</h2>`;
+        document.getElementById("CustomerData").innerHTML += `<h2>Price: $${orderPrice1}</h2><br><br>`;
 
 
         document.getElementById("phone2").value = "";
