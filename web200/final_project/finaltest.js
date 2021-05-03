@@ -55,13 +55,13 @@ function createCust() {
 
 } else {
 
-    document.getElementById("createInfo").innerHTML = "Account Already Exists.";
+    document.getElementById("createInfo").innerHTML = `Account linked with phone number "${document.getElementById("phone").value}" Already Exists.`;
+    document.getElementById("phone").value = "";
 
 }
 }
 
 function orderClick() {
-
     let indexUser = getUserPhone();
 
     if (indexUser < 0) {
@@ -127,6 +127,16 @@ function orderClick() {
        
     }
 
+}
+
+function getCust() {
+    let indexUser = getUserPhone();
+
+    // Doesn't Work yet
+
+    if (indexUser < 0) {
+        document.getElementById("CustomerData").innerHTML = "<h2>User doesn't exist, please create an account and try again.</h2>";
+    }
 }
 
 
