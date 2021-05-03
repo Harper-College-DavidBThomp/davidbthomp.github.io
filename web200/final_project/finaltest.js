@@ -106,12 +106,16 @@ function orderClick() {
             toppings += "Mushrooms ";
         }
 
+        if (toppings === ""){
+            toppings += "None";
+        }
+
         toppings = toppings.trim();
 
         //Get the amount of pizzas ordered and add one
 
         let order = {
-            "pizza1": {
+            "pizza": {
                 "topping": `${toppings}`,
                 "size": `${size}`
             },
@@ -138,6 +142,24 @@ function getCust() {
 
     if (indexUser < 0) {
         document.getElementById("CustomerData").innerHTML = "<h2>User doesn't exist, please create an account and try again.</h2>";
+    } else {
+        document.getElementById("CustomerData").innerHTML = `<h2>Customer Information:</h2><br>`;
+        document.getElementById("CustomerData").innerHTML += `First Name: ${userData[indexUser].firstName}<br>`;
+        document.getElementById("CustomerData").innerHTML += `Last Name: ${userData[indexUser].lastName}<br>`;
+        document.getElementById("CustomerData").innerHTML += `Address: ${userData[indexUser].location.address}, ${userData[indexUser].location.city}, ${userData[indexUser].location.state}<br><br>`;
+        document.getElementById("CustomerData").innerHTML += `<h2>Pizza's Ordered:</h2><br>`;
+
+
+        // Read out Pizzas and Toppings
+        var i;
+        for (i = 0; i < userData[indexUser].pizzas.length; i++) {
+            console.log(userData[indexUser]);
+            console.log(userData[indexUser].pizzas[i].pizza.topping);
+            console.log(userData[indexUser].pizzas[i].pizza.size);
+            document.getElementById("CustomerData").innerHTML += `Pizza #${i + 1}<br>`;
+            document.getElementById("CustomerData").innerHTML += `Toppings: ${userData[indexUser].pizzas[i].pizza.topping}<br>`;
+            document.getElementById("CustomerData").innerHTML += `Toppings: ${userData[indexUser].pizzas[i].pizza.size}<br><br>`;
+        }
     }
 }
 
