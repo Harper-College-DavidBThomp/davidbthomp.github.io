@@ -57,3 +57,7 @@ In this session, I learned about forms and security. The different attributes an
 
 In this session, I learned about AJAX and JSON. I learned how JSON is formatted and why the lightweight data interchange format is preferred. I also learned about JSON by working with MongoDB, I am concurrently doing WEB 250 and this class. While both classes are different in many ways, learning about JSON has taught me how to access JSON from pure JavaScript, which will be useful when trying to access a database JSON in WEB 250. I also learned about AJAX, which is the method used to access information over the web, typically information in JSON format. 
 
+## Final Project / Assignment 16
+
+Over this course, I have learned a lot about JavaScript. Even though the first few sessions served as a great refresher, the later content was interesting and challenging. Learning how to work with the DOM and JSON was the most influential on me. I am currently taking this course concurrently with WEB 250 and this will extend and help me there. I will be able to use all of what I learned to eventually create a fully functioning website from the front end to the back end. Ideally, this site operates at high efficiency and most of the techniques are the best available. Overall JavaScript has taught me so much about object-oriented programming, and this being the standard, has helped me become a more functional programmer. 
+
