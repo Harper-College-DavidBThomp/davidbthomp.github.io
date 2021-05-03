@@ -124,6 +124,11 @@ function orderClick() {
         if (fries) {
             sides += "fires ";
         }
+        if (sides === ""){
+            sides += "None";
+        }
+
+        sides = sides.trim();
 
 
 
@@ -132,7 +137,8 @@ function orderClick() {
         let order = {
             "pizza": {
                 "topping": `${toppings}`,
-                "size": `${size}`
+                "size": `${size}`,
+                "sides": `${sides}`
             },
         }
         userData[indexUser].pizzas.push(order);
@@ -154,6 +160,10 @@ function orderClick() {
         olives = document.getElementById("olives").checked = false;
         bellpepper = document.getElementById("bellpepper").checked = false;
         mushrooms = document.getElementById("mushrooms").checked = false;
+
+        salad = document.getElementById("salad").checked = false;
+        wings = document.getElementById("wings").checked = false;
+        fries = document.getElementById("fries").checked = false;
     }
 
 }
@@ -177,8 +187,10 @@ function getCust() {
         var i;
         for (i = 0; i < userData[indexUser].pizzas.length; i++) {
             document.getElementById("CustomerData").innerHTML += `<h3>Pizza #${i + 1}</h3><br>`;
+            document.getElementById("CustomerData").innerHTML += `<h3>Size: ${userData[indexUser].pizzas[i].pizza.size}</h3><br>`;
             document.getElementById("CustomerData").innerHTML += `<h3>Toppings: ${userData[indexUser].pizzas[i].pizza.topping}</h3><br>`;
-            document.getElementById("CustomerData").innerHTML += `<h3>Size: ${userData[indexUser].pizzas[i].pizza.size}</h3><br><br>`;
+            document.getElementById("CustomerData").innerHTML += `<h3>Sides: ${userData[indexUser].pizzas[i].pizza.sides}</h3><br><br>`;
+
         }
         document.getElementById("phone2").value = "";
     }
