@@ -131,6 +131,14 @@ function orderClick() {
 
         }
         document.getElementById("phone1").value = "";
+        pepperoni = document.getElementById("pepperoni").checked = false;
+        bacon = document.getElementById("bacon").checked = false;
+        sausage = document.getElementById("sausage").checked = false;
+        pineapple = document.getElementById("pineapple").checked = false;
+        onions = document.getElementById("onions").checked = false;
+        olives = document.getElementById("olives").checked = false;
+        bellpepper = document.getElementById("bellpepper").checked = false;
+        mushrooms = document.getElementById("mushrooms").checked = false;
     }
 
 }
@@ -141,7 +149,8 @@ function getCust() {
     // Doesn't Work yet
 
     if (indexUser < 0) {
-        document.getElementById("CustomerData").innerHTML = "<h2>User doesn't exist, please create an account and try again.</h2>";
+        document.getElementById("CustomerData").innerHTML = `<h2>Phone #${document.getElementById("phone2").value} doesn't exist, please create an account and try again.</h2>`;
+        document.getElementById("phone2").value = "";
     } else {
         document.getElementById("CustomerData").innerHTML = `<h2>Customer Information:</h2><br>`;
         document.getElementById("CustomerData").innerHTML += `First Name: ${userData[indexUser].firstName}<br>`;
@@ -153,12 +162,9 @@ function getCust() {
         // Read out Pizzas and Toppings
         var i;
         for (i = 0; i < userData[indexUser].pizzas.length; i++) {
-            console.log(userData[indexUser]);
-            console.log(userData[indexUser].pizzas[i].pizza.topping);
-            console.log(userData[indexUser].pizzas[i].pizza.size);
             document.getElementById("CustomerData").innerHTML += `Pizza #${i + 1}<br>`;
             document.getElementById("CustomerData").innerHTML += `Toppings: ${userData[indexUser].pizzas[i].pizza.topping}<br>`;
-            document.getElementById("CustomerData").innerHTML += `Toppings: ${userData[indexUser].pizzas[i].pizza.size}<br><br>`;
+            document.getElementById("CustomerData").innerHTML += `Size: ${userData[indexUser].pizzas[i].pizza.size}<br><br>`;
         }
     }
 }
