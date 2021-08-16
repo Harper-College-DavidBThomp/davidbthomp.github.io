@@ -1,0 +1,35 @@
+.wrapper{
+    width:960px;
+    margin:auto;
+}
+
+nav{
+    background-color:red;
+    width:960px;
+    height:40px;
+    padding:10px;
+}
+
+header{
+    background-color:green;
+    width:960px;
+    height:360px;
+    padding:10px;
+    margin-top:20px;
+}
+
+.content{
+    background-color: blue;
+    width:960px;
+    height:600px;
+    padding:10px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+footer{
+    background-color: grey;
+    width:960px;
+    height:60px;
+    padding:10px;
+}

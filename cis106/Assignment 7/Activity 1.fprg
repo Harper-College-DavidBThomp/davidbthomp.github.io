@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="david"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-06-09 12:05:55 PM"/>
+        <attribute name="created" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMDE7MDE6NTk6MjkgUE07MjkxNA=="/>
+        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMDk7MTI6MDU6NTUgUE07MTY7MzA3Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calculate Weekly, Monthly, and annual gross pay based on 12 months and 52 weeks per year. End values will include overtime."/>
+            <call expression="instructions"/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <assign variable="hours" expression="getHours()"/>
+            <declare name="pay" type="Integer" array="False" size=""/>
+            <assign variable="pay" expression="getPay()"/>
+            <declare name="week" type="Integer" array="False" size=""/>
+            <assign variable="week" expression="getWeek(hours,pay)"/>
+            <declare name="month" type="Integer" array="False" size=""/>
+            <assign variable="month" expression="getMonth(week)"/>
+            <declare name="year" type="Integer" array="False" size=""/>
+            <assign variable="year" expression="getYear(month)"/>
+            <call expression="output(week,month,year)"/>
+        </body>
+    </function>
+    <function name="getHours" type="Integer" variable="getHours">
+        <parameters/>
+        <body>
+            <declare name="getHours" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter hours per week.&quot;" newline="True"/>
+            <input variable="getHours"/>
+            <if expression="getHours&gt;0">
+                <then/>
+                <else>
+                    <output expression="&quot;Please input value greater than 0&quot;" newline="True"/>
+                    <call expression="getHours"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="getMonth" type="Integer" variable="getMonth">
+        <parameters>
+            <parameter name="week" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="getMonth" type="Integer" array="False" size=""/>
+            <assign variable="getMonth" expression="week * 4"/>
+        </body>
+    </function>
+    <function name="getPay" type="Integer" variable="getPay">
+        <parameters/>
+        <body>
+            <declare name="getPay" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter hourly pay.&quot;" newline="True"/>
+            <input variable="getPay"/>
+            <if expression="getPay&gt;0">
+                <then/>
+                <else>
+                    <output expression="&quot;Please input a value greater than 0&quot;" newline="True"/>
+                    <call expression="getPay"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="getWeek" type="Integer" variable="week">
+        <parameters>
+            <parameter name="hours" type="Integer" array="False"/>
+            <parameter name="pay" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="week" type="Integer" array="False" size=""/>
+            <if expression="hours&gt;40">
+                <then>
+                    <assign variable="week" expression="(pay * hours) +((hours - 40) * (pay * 0.5))"/>
+                </then>
+                <else>
+                    <assign variable="week" expression="pay * hours"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="getYear" type="Integer" variable="getYear">
+        <parameters>
+            <parameter name="month" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="getYear" type="Integer" array="False" size=""/>
+            <assign variable="getYear" expression="month * 13"/>
+        </body>
+    </function>
+    <function name="instructions" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;This program will calculate your payrate, including over time based on average weekly hours and pay.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="output" type="None" variable="">
+        <parameters>
+            <parameter name="week" type="Integer" array="False"/>
+            <parameter name="month" type="Integer" array="False"/>
+            <parameter name="year" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Weekly: $&quot; &amp;week" newline="True"/>
+            <output expression="&quot;Monthly: $&quot; &amp;month" newline="True"/>
+            <output expression="&quot;Annual: $&quot; &amp;year" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

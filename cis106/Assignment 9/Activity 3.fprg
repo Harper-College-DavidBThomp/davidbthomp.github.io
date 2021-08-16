@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="david"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-06-15 02:32:01 PM"/>
+        <attribute name="created" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMDE7MDM6MTM6NTggUE07MjkwOA=="/>
+        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTU7MDI6MzI6MDEgUE07Mjg7MzA2Ng=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Converts miles into metric or US units depending on type requested. Then requests if user wants to enter other distances."/>
+            <declare name="repeat" type="String" array="False" size=""/>
+            <do expression="repeat = &quot;Y&quot;">
+                <declare name="miles" type="Integer" array="False" size=""/>
+                <assign variable="miles" expression="getMiles()"/>
+                <declare name="yards" type="Integer" array="False" size=""/>
+                <assign variable="yards" expression="getYards(miles)"/>
+                <declare name="feet" type="Integer" array="False" size=""/>
+                <assign variable="feet" expression="getFeet(miles)"/>
+                <declare name="inches" type="Integer" array="False" size=""/>
+                <assign variable="inches" expression="getInches(miles)"/>
+                <declare name="kilometer" type="Real" array="False" size=""/>
+                <assign variable="kilometer" expression="getKilometer(miles)"/>
+                <declare name="meters" type="Real" array="False" size=""/>
+                <assign variable="meters" expression="getMeters(kilometer)"/>
+                <declare name="centimeters" type="Real" array="False" size=""/>
+                <assign variable="centimeters" expression="getCentimeters(meters)"/>
+                <declare name="choice" type="String" array="False" size=""/>
+                <assign variable="choice" expression="getChoice()"/>
+                <if expression="choice = &quot;M&quot;">
+                    <then>
+                        <output expression="&quot;That is &quot; &amp;kilometer&amp; &quot; kilometers, &quot; &amp;meters&amp; &quot; meters, and &quot; &amp;centimeters&amp; &quot; centimeters.&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;That is &quot; &amp;yards&amp; &quot; yards, &quot; &amp;feet&amp; &quot; feet, and &quot; &amp;inches&amp; &quot; inches.&quot;" newline="True"/>
+                    </else>
+                </if>
+                <assign variable="repeat" expression="doRepeat()"/>
+            </do>
+        </body>
+    </function>
+    <function name="doRepeat" type="String" variable="repeat">
+        <parameters/>
+        <body>
+            <declare name="repeat" type="String" array="False" size=""/>
+            <output expression="&quot;Would you like to calculate another distance? (Y)es or (N)o?&quot;" newline="True"/>
+            <input variable="repeat"/>
+        </body>
+    </function>
+    <function name="getCentimeters" type="Real" variable="centimeters">
+        <parameters>
+            <parameter name="meters" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="centimeters" type="Real" array="False" size=""/>
+            <assign variable="centimeters" expression="meters * 100"/>
+        </body>
+    </function>
+    <function name="getChoice" type="String" variable="choice">
+        <parameters/>
+        <body>
+            <declare name="choice" type="String" array="False" size=""/>
+            <output expression="&quot;Enter M for metric units or U for US units.&quot;" newline="True"/>
+            <input variable="choice"/>
+        </body>
+    </function>
+    <function name="getFeet" type="Integer" variable="getFeet">
+        <parameters>
+            <parameter name="miles" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="getFeet" type="Integer" array="False" size=""/>
+            <assign variable="getfeet" expression="miles * 5280"/>
+        </body>
+    </function>
+    <function name="getInches" type="Integer" variable="getInches">
+        <parameters>
+            <parameter name="miles" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="getInches" type="Integer" array="False" size=""/>
+            <assign variable="getInches" expression="miles * 63360"/>
+        </body>
+    </function>
+    <function name="getKilometer" type="Real" variable="kilometer">
+        <parameters>
+            <parameter name="miles" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="kilometer" type="Real" array="False" size=""/>
+            <assign variable="kilometer" expression="miles * 1.609344"/>
+        </body>
+    </function>
+    <function name="getMeters" type="Real" variable="meters">
+        <parameters>
+            <parameter name="kilometer" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="meters" type="Real" array="False" size=""/>
+            <assign variable="meters" expression="kilometer *1000"/>
+        </body>
+    </function>
+    <function name="getMiles" type="Integer" variable="getMiles">
+        <parameters/>
+        <body>
+            <declare name="getMiles" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please input miles.&quot;" newline="True"/>
+            <input variable="getMiles"/>
+        </body>
+    </function>
+    <function name="getOutput" type="String" variable="output">
+        <parameters>
+            <parameter name="choice" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="getOutput" type="String" array="False" size=""/>
+            <declare name="output" type="String" array="False" size=""/>
+            <if expression="choice = &quot;M&quot;">
+                <then>
+                    <output expression="&quot;Metric Units&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;US units&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="getYards" type="Integer" variable="getYards">
+        <parameters>
+            <parameter name="miles" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="getYards" type="Integer" array="False" size=""/>
+            <assign variable="getYards" expression="miles * 1760"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="david"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-06-10 02:57:55 PM"/>
+        <attribute name="created" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTA7MDE6NTQ6MjUgUE07MjkwNQ=="/>
+        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTA7MDI6NTc6NTUgUE07MTk7MzA3Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calculates the average of numbers entered."/>
+            <declare name="amount" type="Integer" array="False" size=""/>
+            <assign variable="amount" expression="getAmount()"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <declare name="loop" type="Integer" array="False" size=""/>
+            <assign variable="loop" expression="runLoop(total,count,amount)"/>
+        </body>
+    </function>
+    <function name="getAmount" type="Integer" variable="amount">
+        <parameters/>
+        <body>
+            <declare name="amount" type="Integer" array="False" size=""/>
+            <output expression="&quot;How many numbers will be entered?&quot;" newline="True"/>
+            <input variable="amount"/>
+        </body>
+    </function>
+    <function name="getScores" type="Integer" variable="scores">
+        <parameters/>
+        <body>
+            <declare name="scores" type="Integer" array="False" size=""/>
+            <input variable="scores"/>
+        </body>
+    </function>
+    <function name="runLoop" type="Integer" variable="loop">
+        <parameters>
+            <parameter name="total" type="Integer" array="False"/>
+            <parameter name="count" type="Integer" array="False"/>
+            <parameter name="amount" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="loop" type="Integer" array="False" size=""/>
+            <assign variable="loop" expression="0"/>
+            <output expression="&quot;Please enter scores.&quot;" newline="True"/>
+            <while expression="count &lt; amount">
+                <declare name="scores" type="Integer" array="False" size=""/>
+                <assign variable="scores" expression="getScores()"/>
+                <assign variable="total" expression="total + scores"/>
+                <assign variable="count" expression="count + 1"/>
+            </while>
+            <output expression="&quot;The average is &quot; &amp;total/amount&amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="david"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-05-25 06:22:21 PM"/>
+        <attribute name="created" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDUtMjU7MDU6NDA6MjkgUE07MjkxMw=="/>
+        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDUtMjU7MDY6MjI6MjEgUE07MTszMDE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Take a dogs name and age and converts it into dog years (1 human year = 7 dog years)."/>
+            <declare name="dogName" type="String" array="False" size=""/>
+            <declare name="dogAge" type="Integer" array="False" size=""/>
+            <declare name="dogHumanAge" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Dog's Name!&quot;" newline="True"/>
+            <input variable="dogName"/>
+            <output expression="&quot;Enter Dog's Age!&quot;" newline="True"/>
+            <input variable="dogAge"/>
+            <assign variable="dogHumanAge" expression="dogAge*7"/>
+            <output expression="&quot;That means &quot; &amp; dogName &amp; &quot; is &quot; &amp; dogHumanAge &amp; &quot; in human years!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

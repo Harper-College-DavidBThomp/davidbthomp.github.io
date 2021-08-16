@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="david"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-06-02 02:06:50 PM"/>
+        <attribute name="created" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMDE7MDE6NTk6MjkgUE07MjkxNA=="/>
+        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMDI7MDI6MDY6NTAgUE07MTI7MzA2MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calculate Weekly, Monthly, and annual gross pay based on 12 months and 52 weeks per year."/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <assign variable="hours" expression="getHours()"/>
+            <declare name="pay" type="Integer" array="False" size=""/>
+            <assign variable="pay" expression="getPay()"/>
+            <declare name="week" type="Integer" array="False" size=""/>
+            <assign variable="week" expression="getWeek(hours,pay)"/>
+            <declare name="month" type="Integer" array="False" size=""/>
+            <assign variable="month" expression="getMonth(week)"/>
+            <declare name="year" type="Integer" array="False" size=""/>
+            <assign variable="year" expression="getYear(month)"/>
+            <call expression="output(week,month,year)"/>
+        </body>
+    </function>
+    <function name="getHours" type="Integer" variable="getHours">
+        <parameters/>
+        <body>
+            <declare name="getHours" type="Integer" array="False" size=""/>
+            <output expression="&quot;Hours per week&quot;" newline="True"/>
+            <input variable="getHours"/>
+        </body>
+    </function>
+    <function name="getMonth" type="Integer" variable="getMonth">
+        <parameters>
+            <parameter name="week" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="getMonth" type="Integer" array="False" size=""/>
+            <assign variable="getMonth" expression="week * 4"/>
+        </body>
+    </function>
+    <function name="getPay" type="Integer" variable="getPay">
+        <parameters/>
+        <body>
+            <declare name="getPay" type="Integer" array="False" size=""/>
+            <output expression="&quot;Hourly Pay&quot;" newline="True"/>
+            <input variable="getPay"/>
+        </body>
+    </function>
+    <function name="getWeek" type="Integer" variable="week">
+        <parameters>
+            <parameter name="hours" type="Integer" array="False"/>
+            <parameter name="pay" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="week" type="Integer" array="False" size=""/>
+            <assign variable="week" expression="pay * hours"/>
+        </body>
+    </function>
+    <function name="getYear" type="Integer" variable="getYear">
+        <parameters>
+            <parameter name="month" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="getYear" type="Integer" array="False" size=""/>
+            <assign variable="getYear" expression="month * 13"/>
+        </body>
+    </function>
+    <function name="output" type="None" variable="">
+        <parameters>
+            <parameter name="week" type="Integer" array="False"/>
+            <parameter name="month" type="Integer" array="False"/>
+            <parameter name="year" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Weekly: $&quot; &amp;week" newline="True"/>
+            <output expression="&quot;Monthly: $&quot; &amp;month" newline="True"/>
+            <output expression="&quot;Annual: $&quot; &amp;year" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

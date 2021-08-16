@@ -1,0 +1,61 @@
+... How to make a fried sunny side up egg
+
+Function main
+	
+	Prepare items
+		Open fridge
+			Remove egg from carton
+				Place on room temperature without cracking
+			Remove butter from container
+				Place on room temperature counter-top
+		Close fridge
+		Open cabinet
+			Remove clean Skillet
+				Place on counter-top
+			Remove clean Plate 
+				Place on counter-top
+		Close cabinet
+		Open Drawer
+			Remove clean spatula
+			Remove clean fork
+			Remove lighter
+				Place all on counter-top
+		Close drawer
+	End prepare items
+
+	Begin cooking
+		Turn on oven eye to high heat
+			Use lighter to ignite oven eye
+				Place Lighter on counter-top
+			Place skillet centrally over eye that is on
+		Pick up butter on Fork
+			Place butter in skillet
+			Place fork beside plate
+		Heat butter until melted
+			Pickup spatula by handle
+				Spread butter around skillet using spatula 
+			Place spatula on counter-top
+		Crack egg on flat surface
+			Place unbroken egg yolk and egg white in skillet
+			Discard eggshell into garbage
+				Leave egg for 1 minute 30 seconds
+			Remove egg white and yolk from skillet using spatula without breaking egg yolk
+			Place egg on clean plate
+		Turn off oven eye
+	End cooking
+
+	Begin cleaning
+		Grab skillet handle
+			Place skillet in sink
+			Run cool water over all of skillet
+		Place spatula in sink
+			Run warm water over all of spatula
+		Open dishwasher
+			Place skillet and spatula in Dishwasher
+		Close dishwasher
+		Open drawer
+			Place lighter in drawer
+		Close drawer
+	End cleaning
+
+End Function

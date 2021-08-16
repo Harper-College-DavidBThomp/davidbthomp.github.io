@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Login</h1>
+        <h2>Customer page</h2>
+        <p>Cookie: {{cookie}}<br>Session: {{session}}</p>
+        <p>{{welcome}}</p>
+        <form method="POST">
+            <p><label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="{{username}}">
+            </p>
+            <p><label for="password">Password:</label>
+                <input type="text" id="password" name="password" value="">
+                <p>
+                    <input type="submit" id="log-in" name="log-in" value="Log In">&nbsp;
+                    <input type="submit" id="log-out" name="log-out" value="Log Out">&nbsp;
+                    <input type="submit" id="forget-me" name="forget-me" value="Forget Me">&nbsp;
+                    <input type="submit" id="getAccountCust" name="getAccountCust" value="Get my Info/Orders">
+                </p>
+        </form>
+        <hr>
+        {{{table}}}
+        <hr>
+        <h1>Delete Orders</h1>
+        <form method="POST">
+            <p><label for="orderID">OrderID:</label>
+                <input type="text" id="orderID" name="orderID" required>
+                <input type="submit" id="orderDelete" name="orderDelete" value="OrderDelete">
+            </p>
+        </form>
+        <hr>
+
+        <h1>Order Pizza(s)</h1>
+
+        <h3>Sides:</h3>
+        <form method="POST" id="orderForm">
+            <input type="checkbox" id="salad" name="salad" value="True">
+            <label for="salad">Salad ($5.99)</label><br>
+            <input type="checkbox" id="wings" name="wings" value="True">
+            <label for="wings">Wings ($3.99)</label><br>
+            <input type="checkbox" id="fries" name="fries" value="True">
+            <label for="fries">Fries ($4.99)</label><br>
+            <br>
+
+            <h3>
+                <label>
+                    Pizza Size:
+                </label>
+            </h3>
+            <select id="size" name="size">
+                <option value="Small">Small ($5.99)</option>
+                <option value="Medium">Medium ($7.99)</option>
+                <option value="Large">Large ($9.99)</option>
+                <option value="X-Large">X-Large ($12.99)</option>
+            </select>
+
+            <h3>Pizza Toppings (+$0.99 per topping):</h3>
+            <input type="checkbox" id="pepperoni" name="pepperoni" value="True">
+            <label for="pepperoni">Pepperoni</label><br>
+            <input type="checkbox" id="bacon" name="bacon" value="True">
+            <label for="bacon">Bacon</label><br>
+            <input type="checkbox" id="sausage" name="sausage" value="True">
+            <label for="sausage">Sausage</label><br>
+            <input type="checkbox" id="pineapple" name="pineapple" value="True">
+            <label for="pineapple">Pineapple</label><br>
+            <input type="checkbox" id="onions" name="onions" value="True">
+            <label for="onions">Onions</label><br>
+            <input type="checkbox" id="olives" name="olives" value="True">
+            <label for="olives">Olives</label><br>
+            <input type="checkbox" id="bellpepper" name="bellpepper" value="True">
+            <label for="bellpepper">Bell pepper</label><br>
+            <input type="checkbox" id="mushrooms" name="mushrooms" value="True">
+            <label for="mushrooms">Mushrooms</label><br>
+
+            <h3>Extra Notes:</h3>
+            <textarea id="notes" name="notes"></textarea><br>
+            <input type="submit" id="order" name="order" value="Order">
+        </form>
+        <hr>
+    </div>
+
+</body>
+
+</html>

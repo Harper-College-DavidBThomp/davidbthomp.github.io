@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="david"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-06-17 11:29:19 AM"/>
+        <attribute name="created" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTA7MTI6MzE6NTUgUE07MjkwNQ=="/>
+        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTc7MTE6Mjk6MTkgQU07MjA7MzA2MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Asks user for value and number of expressions to display."/>
+            <call expression="instructions"/>
+            <declare name="value" type="Real" array="False" size=""/>
+            <assign variable="value" expression="getValue()"/>
+            <declare name="expressions" type="Integer" array="False" size=""/>
+            <assign variable="expressions" expression="getExpressions()"/>
+            <declare name="multiplication" type="Real" array="False" size=""/>
+            <assign variable="multiplication" expression="doMultiplication(value, expressions)"/>
+        </body>
+    </function>
+    <function name="doMultiplication" type="Real" variable="multiplication">
+        <parameters>
+            <parameter name="value" type="Real" array="False"/>
+            <parameter name="expressions" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="multiplication" type="Real" array="False" size=""/>
+            <assign variable="multiplication" expression="value * expressions"/>
+            <declare name="countdown" type="Integer" array="False" size=""/>
+            <for variable="expressions" start="value" end="1" direction="dec" step="1">
+                <assign variable="countdown" expression="value * expressions"/>
+                <output expression="value&amp; &quot; * &quot; &amp;expressions&amp; &quot; = &quot; &amp;countdown" newline="True"/>
+            </for>
+            <output expression="&quot;Thank you for using the program!&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="getExpressions" type="Integer" variable="expressions">
+        <parameters/>
+        <body>
+            <declare name="expressions" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please input amount of expressions.&quot;" newline="True"/>
+            <input variable="expressions"/>
+        </body>
+    </function>
+    <function name="getValue" type="Real" variable="value">
+        <parameters/>
+        <body>
+            <declare name="value" type="Real" array="False" size=""/>
+            <output expression="&quot;Please input a value (number).&quot;" newline="True"/>
+            <input variable="value"/>
+        </body>
+    </function>
+    <function name="instructions" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Please input a value, then input the number of expressions from the value you would like. Ex: value 3, expressions 4... (3*1, 3*2, 3*3, 3*4).&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

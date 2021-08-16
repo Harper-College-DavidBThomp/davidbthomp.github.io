@@ -3,6 +3,28 @@
 
 # Portfolio/Projects
 
+## [Computer Information Systems 106 (CIS 106)](https://www.harpercollege.edu/catalog/current/courses/csc.php#CSC-121)
+### JavaScript
+### Flowgorithm
+
+Comprehensive introduction to computer programming.
+
+* Program Logic
+* Subroutines/Functions/Methods
+* Variables, Conditions, Loops, and Arrays
+* File Input/Output
+* Object-Oriented Programming
+
+## [Computer Science 1 (CSC 121)](https://www.harpercollege.edu/catalog/current/courses/csc.php#CSC-121)
+### C++
+
+Introduction to procedural and Object-Oriented design strategies.
+
+* Selection, repetition, and sequence control structures
+* Containers (mathematical manipulation, searching, sorting, etc.)
+* Program design, testing, and documentation
+
+
 ## Overview
 
 Hello, my name is David Thompson and this is my portfolio/project page. It is subdivided to make navigation for what you're looking for a little easier. Each Folder will have a read me with more information about what I learned while working on that assingment and other information reguarding how to run the programs made. 

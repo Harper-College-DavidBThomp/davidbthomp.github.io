@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="david"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-06-17 12:03:41 PM"/>
+        <attribute name="created" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTU7MDI6NDU6MDkgUE07MjkxMw=="/>
+        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMTc7MTI6MDM6NDEgUE07MjI7MzA2NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Calculates average of grade scores."/>
+            <call expression="instructions"/>
+            <declare name="repeat" type="String" array="False" size=""/>
+            <do expression="repeat = &quot;Y&quot;">
+                <declare name="count" type="Integer" array="False" size=""/>
+                <assign variable="count" expression="0"/>
+                <declare name="total" type="Integer" array="False" size=""/>
+                <assign variable="total" expression="0"/>
+                <declare name="scores" type="Integer" array="False" size=""/>
+                <do expression="scores &gt;= 0">
+                    <assign variable="scores" expression="getScores()"/>
+                    <if expression="scores &gt;= 0">
+                        <then>
+                            <assign variable="total" expression="total + scores"/>
+                            <assign variable="count" expression="count + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </do>
+                <call expression="displayOutput(total,count)"/>
+                <assign variable="repeat" expression="doRepeat()"/>
+            </do>
+        </body>
+    </function>
+    <function name="displayOutput" type="None" variable="output">
+        <parameters>
+            <parameter name="total" type="Integer" array="False"/>
+            <parameter name="count" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="output" type="String" array="False" size=""/>
+            <output expression="&quot;The average is &quot; &amp;total/count&amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="doRepeat" type="String" variable="repeat">
+        <parameters/>
+        <body>
+            <declare name="repeat" type="String" array="False" size=""/>
+            <output expression="&quot;Would you like to calculate a different average? (Y)es or (N)o?&quot;" newline="True"/>
+            <input variable="repeat"/>
+        </body>
+    </function>
+    <function name="getScores" type="Integer" variable="scores">
+        <parameters/>
+        <body>
+            <declare name="scores" type="Integer" array="False" size=""/>
+            <input variable="scores"/>
+        </body>
+    </function>
+    <function name="instructions" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Please input scores, when done input any negative number to calculate average.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

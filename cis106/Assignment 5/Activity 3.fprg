@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="david"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-06-01 04:25:56 PM"/>
+        <attribute name="created" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMDE7MDM6MTM6NTggUE07MjkwOA=="/>
+        <attribute name="edited" value="ZGF2aWQ7REVTS1RPUC0zVU9JUlZKOzIwMjAtMDYtMDE7MDQ6MjU6NTYgUE07ODszMDI1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="miles" type="Integer" array="False" size=""/>
+            <assign variable="miles" expression="getMiles()"/>
+            <declare name="yards" type="Integer" array="False" size=""/>
+            <assign variable="yards" expression="getYards(miles)"/>
+            <declare name="feet" type="Integer" array="False" size=""/>
+            <assign variable="feet" expression="getFeet(yards)"/>
+            <declare name="inches" type="Integer" array="False" size=""/>
+            <assign variable="inches" expression="getInches(miles)"/>
+            <call expression="resultDisplay(yards,feet,inches)"/>
+        </body>
+    </function>
+    <function name="getFeet" type="Integer" variable="getFeet">
+        <parameters>
+            <parameter name="yards" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="getFeet" type="Integer" array="False" size=""/>
+            <assign variable="getfeet" expression="yards * 3"/>
+        </body>
+    </function>
+    <function name="getInches" type="Integer" variable="getInches">
+        <parameters>
+            <parameter name="miles" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="getInches" type="Integer" array="False" size=""/>
+            <assign variable="getInches" expression="miles * 63360"/>
+        </body>
+    </function>
+    <function name="getMiles" type="Integer" variable="getMiles">
+        <parameters/>
+        <body>
+            <declare name="getMiles" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please input miles&quot;" newline="True"/>
+            <input variable="getMiles"/>
+        </body>
+    </function>
+    <function name="getYards" type="Integer" variable="getYards">
+        <parameters>
+            <parameter name="miles" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="getYards" type="Integer" array="False" size=""/>
+            <assign variable="getYards" expression="miles * 1760"/>
+        </body>
+    </function>
+    <function name="resultDisplay" type="None" variable="">
+        <parameters>
+            <parameter name="yards" type="Integer" array="False"/>
+            <parameter name="feet" type="Integer" array="False"/>
+            <parameter name="inches" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;There are &quot; &amp;yards&amp; &quot; yards, &quot; &amp;feet&amp; &quot; feet, and &quot; &amp;inches&amp; &quot; inches in that distance!&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

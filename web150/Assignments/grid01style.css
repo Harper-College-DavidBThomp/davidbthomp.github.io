@@ -1,0 +1,36 @@
+.wrapper{
+    margin:auto;
+    width: 960px;
+}
+
+header{
+    width: 960px;
+    height: 40px;
+    background-color: rgb(220, 220, 220);
+}
+
+nav{
+    width: 960px;
+    height: 20px;
+    background-color: rgb(200, 200, 200);
+}
+
+.banner{
+    width: 960px;
+    height: 200px;
+    background-color: rgb(180, 180, 180);
+}
+
+.content{
+    width: 960px;
+    height: 600px;
+    margin-top: 10px;
+    background-color: rgb(160, 160, 160);
+}
+
+footer{
+    width: 960px;
+    height: 20px;
+    margin-top: 60px;
+    background-color: rgb(140, 140, 140);
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="nature.html">Nature</a></li>
+                <li><a href="shows.html">Shows</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="#top">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-banner">
+            <h1>Nevada Vegas</h1>
+            <h1 class="lowertitle">Ask for more</h1>
+        </div>
+
+        <div class="banner-image"><img src="img/Contact_Us_Banner.jpg" class="banner"></div>
+        <div>
+            <h2 id="foodtop">We Love to Help</h2>
+            <p id="secondaryfoodtop">
+                Questions, Conecerns, or any other help.
+            </p>
+        </div>
+
+
+        <div id="question-form">
+            <form>
+                <div class="singlelinerow">
+                    <label for="fname"><h3>Name:</h3></label>
+                    <input type="text" id="fname" name="fname"><br>
+                </div>
+                <div class="singlelinerow">
+                    <label for="email"><h3>Email:</h3></label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class="singlelinerow">
+                    <label for="message"><h3></h3></label>
+                    <textarea id="message" name="message" placeholder="What can we help you with?"></textarea>
+                </div>
+                <div class="singlelinerow">
+                    <button onclick="thankForm()">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            function thankForm() {
+                var end = document.getElementById("question-form");
+                end.innerHTML = "<h3>Thank you for contacting us, we will get back to you shortly!<h3>";
+                end.style.textAlign = "center";
+                end.style.margin = "20px";
+            }
+        </script>
+
+        <footer>
+            <ul>
+                <li><a href="#top" id="toplink">Top</a></li>
+                <li>Designed By David Thompson</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+
+</html>

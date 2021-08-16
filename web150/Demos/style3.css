@@ -1,0 +1,38 @@
+/* CSS Document */
+
+
+
+/* Classes */
+.container {
+    border: 6px solid black;
+    display: flex;
+    /* Allows for flexbox code to be used */
+    /* Sets children containers to columns */
+    justify-content: center;
+    /* Aligns content of children */
+}
+
+.flex-item {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* 1rem = defualt font size (16px) */
+
+.item-1 {
+    background-color: #f90;
+}
+
+.item-2 {
+    background-color: #f60;
+}
+
+.item-3 {
+    background-color: #f40;
+}
+
+.item-4 {
+    background-color: #f20;
+}
