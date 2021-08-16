@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 16</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="..\index.html">Home</a></li>
+            <li><a href="..\web110\assignment1.html">Assignment 1</a></li>
+            <li><a href="..\web110\assignment2.html">Assignment 2</a></li>
+            <li><a href="..\web110\assignment3.html">Assignment 3</a></li>
+            <li><a href="..\web110\assignment4.html">Assignment 4</a></li>
+            <li><a href="..\web110\assignment5.html">Assignment 5</a></li>
+            <li><a href="..\web110\assignment6.html">Assignment 6</a></li>
+            <li><a href="..\web110\assignment7.html">Assignment 7</a></li>
+            <li><a href="..\web110\assignment8.html">Assignment 8</a></li>
+            <li><a href="..\web110\assignment9.html">Assignment 9</a></li>
+            <li><a href="..\web110\assignment10.html">Assignment 10</a></li>
+            <li><a href="..\web110\assignment11.html">Assignment 11</a></li>
+            <li><a href="..\web110\assignment12.html">Assignment 12</a></li>
+            <li><a href="..\web110\assignment13.html">Assignment 13</a></li>
+            <li><a href="..\web110\assignment14.html">Assignment 14</a></li>
+            <li><a href="..\web110\assignment15.html">Assignment 15</a></li>
+            <li><a href="..\web110\assignment16.html">Final Project</a></li>
+        </ul>
+    </header>
+
+    <h1>
+        Top level Heading
+    </h1>
+
+    <h2 id="js"></h2>
+
+    <script>
+        document.getElementById("js").innerHTML = ("David Thompson");
+    </script>
+
+    <h2>Assignment 16</h2>
+
+    <img class="logo1" src="WEB110 BMP Image.bmp" alt="WEB110 Banner">
+    <img class="logo2" src="WEB110 SVG Image.svg" alt="WEB110 Banner">
+
+    <p>
+        In this course, I learned various basic aspects of many parts of the Internet. Whether it be some of the basic
+        infrastructure functions such as IP addresses or the different coding that goes into a webpage that I haven't
+        found out about yet. Some of the tools such as embedded videos and audio correctly into webpages will be
+        something I likely will use forever. In general, the course taught me that being versed in basic skills all
+        across the internet can prove beneficial to the projects I will have to do in the future. If I need to know how
+        to upload Youtube videos or run basic network diagnosis, I will have a starting point for both.
+    </p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3-a36x5z55Y" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <p id="time">
+    </p>
+
+    <script>
+        document.getElementById("time").innerHTML = "Written at " + (Date());
+    </script>
+
+    <video width="320" height="240" controls>
+        <source src="http://media.w3.org/2010/05/video/movie_5.mp4" type="video/mp4">
+    </video>
+
+    <audio controls>
+        <source src="https://www.computerhope.com/jargon/m/example.mp3" type="audio/mp3">
+    </audio>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fc1P-AEaEp8" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe><br>
+
+    <canvas id="draw" width="200" height="200" style="border:1px solid #000000;">
+    </canvas>
+
+    <script>
+        var a = document.getElementById("draw");
+        var c = a.getContext("2d");
+        c.beginPath();
+        c.moveTo(25, 25);
+        c.lineTo(105, 25);
+        c.lineTo(25, 105);
+        c.stroke();
+        c.fillRect(100, 100, 100, 100);
+        c.beginPath();
+        c.arc(95, 50, 40, 0, 2 * Math.PI);
+        c.stroke();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 13</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="..\index.html">Home</a></li>
+            <li><a href="..\web110\assignment1.html">Assignment 1</a></li>
+            <li><a href="..\web110\assignment2.html">Assignment 2</a></li>
+            <li><a href="..\web110\assignment3.html">Assignment 3</a></li>
+            <li><a href="..\web110\assignment4.html">Assignment 4</a></li>
+            <li><a href="..\web110\assignment5.html">Assignment 5</a></li>
+            <li><a href="..\web110\assignment6.html">Assignment 6</a></li>
+            <li><a href="..\web110\assignment7.html">Assignment 7</a></li>
+            <li><a href="..\web110\assignment8.html">Assignment 8</a></li>
+            <li><a href="..\web110\assignment9.html">Assignment 9</a></li>
+            <li><a href="..\web110\assignment10.html">Assignment 10</a></li>
+            <li><a href="..\web110\assignment11.html">Assignment 11</a></li>
+            <li><a href="..\web110\assignment12.html">Assignment 12</a></li>
+            <li><a href="..\web110\assignment13.html">Assignment 13</a></li>
+            <li><a href="..\web110\assignment14.html">Assignment 14</a></li>
+            <li><a href="..\web110\assignment15.html">Assignment 15</a></li>
+            <li><a href="..\web110\assignment16.html">Assignment 16</a></li>
+        </ul>
+    </header>
+
+    <h1>
+        Top level Heading
+    </h1>
+
+    <h2 id="js"></h2>
+
+    <script>
+        document.getElementById("js").innerHTML = ("David Thompson");
+    </script>
+
+    <h2>Assignment 12</h2>
+
+    <img class="logo1" src="WEB110 BMP Image.bmp" alt="WEB110 Banner">
+    <img class="logo2" src="WEB110 SVG Image.svg" alt="WEB110 Banner">
+
+    <p>
+        Select Statements
+        <ul>
+            SELECT * FROM CUSTOMERS;<br>
+            SELECT CustomerID FROM Customers;<br>
+            SELECT CustomerName, Address, City, Postalcode FROM Customers WHERE Country='UK';<br>
+            SELECT ContactName, CustomerName FROM [Customers] ORDER BY ContactName;<br>
+            SELECT COUNT(CustomerID) FROM [Customers];<br>
+            SELECT COUNT (CustomerID), Country FROM [Customers] GROUP BY Country;<br>
+            SELECT COUNT (CustomerID), Country FROM [Customers] GROUP BY Country ORDER BY COUNT(Country);<br>
+            SELECT COUNT (CustomerID), Country FROM [Customers] GROUP BY Country HAVING COUNT(CustomerID) Greater Than 9 ORDER BY
+            COUNT(Country);<br>
+        </ul>
+    </p>
+
+    <p>
+        Insert, Update, and Delete Statements
+        <ul>
+            INSERT INTO Shippers (ShipperID, ShipperName, Phone) VALUES (4, 'On Time Delivery', '(503) 555-0123');<br>
+            UPDATE [Products] SET Price = Price + 1 WHERE Price;<br>
+            UPDATE [Products] SET Price = Price - 1 WHERE Price;<br>
+            UPDATE [Shippers] SET ShipperName = 'On-Time Delivery' WHERE ShipperID = 4;<br>
+            DELETE FROM Shippers WHERE ShipperID = 4;<br>
+        </ul>
+    </p>
+
+
+    <p>
+        This session focused on SQL and relations in databases. This lesson came at the right time because we are
+        learning more about it in CIS 143. I learned the formatting of how to select data, insert, update, and delete
+        from a SQL database. I initially thought we had to create a server with a database but what we did was much
+        simpler, using a database already on Microsoft Access. In the future, understanding these basics of how to query
+        and create databases will be critical in back end development for websites. I know that not only for websites
+        but internally in organizations databases will have to be organized and managed.
+    </p>
+
+    <p id="time">
+    </p>
+
+    <script>
+        document.getElementById("time").innerHTML = "Written at " + (Date());
+    </script>
+
+    <video width="320" height="240" controls>
+        <source src="http://media.w3.org/2010/05/video/movie_5.mp4" type="video/mp4">
+    </video>
+
+    <audio controls>
+        <source src="https://www.computerhope.com/jargon/m/example.mp3" type="audio/mp3">
+    </audio>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fc1P-AEaEp8" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe><br>
+
+    <canvas id="draw" width="200" height="200" style="border:1px solid #000000;">
+    </canvas>
+
+    <script>
+        var a = document.getElementById("draw");
+        var c = a.getContext("2d");
+        c.beginPath();
+        c.moveTo(25, 25);
+        c.lineTo(105, 25);
+        c.lineTo(25, 105);
+        c.stroke();
+        c.fillRect(100, 100, 100, 100);
+        c.beginPath();
+        c.arc(95, 50, 40, 0, 2 * Math.PI);
+        c.stroke();
+    </script>
+
+</body>
+
+</html>

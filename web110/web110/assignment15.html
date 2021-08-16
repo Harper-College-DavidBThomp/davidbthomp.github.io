@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 15</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="..\index.html">Home</a></li>
+            <li><a href="..\web110\assignment1.html">Assignment 1</a></li>
+            <li><a href="..\web110\assignment2.html">Assignment 2</a></li>
+            <li><a href="..\web110\assignment3.html">Assignment 3</a></li>
+            <li><a href="..\web110\assignment4.html">Assignment 4</a></li>
+            <li><a href="..\web110\assignment5.html">Assignment 5</a></li>
+            <li><a href="..\web110\assignment6.html">Assignment 6</a></li>
+            <li><a href="..\web110\assignment7.html">Assignment 7</a></li>
+            <li><a href="..\web110\assignment8.html">Assignment 8</a></li>
+            <li><a href="..\web110\assignment9.html">Assignment 9</a></li>
+            <li><a href="..\web110\assignment10.html">Assignment 10</a></li>
+            <li><a href="..\web110\assignment11.html">Assignment 11</a></li>
+            <li><a href="..\web110\assignment12.html">Assignment 12</a></li>
+            <li><a href="..\web110\assignment13.html">Assignment 13</a></li>
+            <li><a href="..\web110\assignment14.html">Assignment 14</a></li>
+            <li><a href="..\web110\assignment15.html">Assignment 15</a></li>
+            <li><a href="..\web110\assignment16.html">Assignment 16</a></li>
+        </ul>
+    </header>
+
+    <h1>
+        Top level Heading
+    </h1>
+
+    <h2 id="js"></h2>
+
+    <script>
+        document.getElementById("js").innerHTML = ("David Thompson");
+    </script>
+
+    <h2>Assignment 15</h2>
+
+    <img class="logo1" src="WEB110 BMP Image.bmp" alt="WEB110 Banner">
+    <img class="logo2" src="WEB110 SVG Image.svg" alt="WEB110 Banner">
+
+    <p>
+        My career plan/objective is to get my associates in web development at Harper College and then work in the field
+        for a few years. This should be enough based on my budgeting to possibly go back to a university one day for a
+        bachelor's degree possibly in computer science or electrical engineering. But if web development is what I turn
+        out to like which I am so far, I will probably keep sharpening my skills using online resources and in-person
+        boot-camps. The debt of schooling is what honestly scares me so this degree and the next few years are possibly
+        more of a stepping stone either into a career or a higher paying field. For now, here is my <a
+            href="https://www.linkedin.com/in/david-brendan-thompson-34a66a166?challengeId=AQFNHNlAOwPB2gAAAXVRIhRqd3A67kQdbBn2KqymA-NLvjHEbGPIPBWTXVMRL4Ds5HwHCZVO9yojGe4d_O0fpjfZ8RuVq5uIuA&submissionId=39a5f032-3e5d-4016-5a00-12f70ec02e37"
+            target="_blank">LinkedIn.</a>
+    </p>
+
+    <p>
+        In this session I learned about the prospects and outlook of the field, I was already aware that it seems quite
+        good but some extra research into base salaries and skills expected was informative. I also got some good
+        resources for learning about the field such as MyPlan and CareerOneStop. I am someone who frequently will think
+        about the future and my plans for it, right now I am just focused on getting this degree out of the way, but
+        these tools are always going to be in my back pocket for use.
+    </p>
+
+    <p id="time">
+    </p>
+
+    <script>
+        document.getElementById("time").innerHTML = "Written at " + (Date());
+    </script>
+
+    <video width="320" height="240" controls>
+        <source src="http://media.w3.org/2010/05/video/movie_5.mp4" type="video/mp4">
+    </video>
+
+    <audio controls>
+        <source src="https://www.computerhope.com/jargon/m/example.mp3" type="audio/mp3">
+    </audio>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Fc1P-AEaEp8" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe><br>
+
+    <canvas id="draw" width="200" height="200" style="border:1px solid #000000;">
+    </canvas>
+
+    <script>
+        var a = document.getElementById("draw");
+        var c = a.getContext("2d");
+        c.beginPath();
+        c.moveTo(25, 25);
+        c.lineTo(105, 25);
+        c.lineTo(25, 105);
+        c.stroke();
+        c.fillRect(100, 100, 100, 100);
+        c.beginPath();
+        c.arc(95, 50, 40, 0, 2 * Math.PI);
+        c.stroke();
+    </script>
+
+</body>
+
+</html>
