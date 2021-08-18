@@ -67,7 +67,7 @@ Basic navigation skills and web browser. (Maybe website to execute code in)...?
 <!-- CONTACT -->
 ## Contact
 
-<a href="https://github.com/DavidBThomp" target="_blank">GitHub - DavidBThomp</a>
+<a href="https://github.com/DavidBThomp" target="_blank">GitHub - DavidBThomp</a><br>
 <a href="https://www.linkedin.com/in/david-brendan-thompson-34a66a166/" target="_blank">LinkedIn - David Thompson</a>
 
 ## Assignment Analysis
