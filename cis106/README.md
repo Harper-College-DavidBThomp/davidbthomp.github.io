@@ -67,9 +67,8 @@ Basic navigation skills and web browser. (Maybe website to execute code in)...?
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-GitHub - [DavidBThomp](https://github.com/DavidBThomp)
-LinkedIn - [David Thompson](https://www.linkedin.com/in/david-brendan-thompson-34a66a166/)
+* GitHub - [DavidBThomp](https://github.com/DavidBThomp)
+& LinkedIn - [David Thompson](https://www.linkedin.com/in/david-brendan-thompson-34a66a166/)
 
 ## Assignment Analysis
 
