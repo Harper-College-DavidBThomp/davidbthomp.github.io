@@ -38,8 +38,6 @@ This class (Computer Information Systems 106) served as a starting point for som
 * [Flowgorithm](http://www.flowgorithm.org/)
 * JavaScript
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -49,17 +47,29 @@ The software needed to run the programs and instructions to run the program.
 
 Basic navigation skills and web browser. (Maybe website to execute code in)...?
 
-### Installations
+### Instructions
 
 * Download Flowgorithm for free at [Flowgorithm](http://www.flowgorithm.org/download/index.htm)
+  * Open .fprg file code and save as .txt file
+  * Open Flowgorithm and open the .txt file
+  * Run the code!
+
+* JavaScript code can be ran multiple ways, for simplicity we will use CodePen for what can be natively ran in there, and the must will be ran in browser
+  * [CodePen Click Here!](https://codepen.io/collection/RzNOLo)
+
+* JavaScript in browser
+  * Open Chrome or development environment
+  * Open Chrome Web Dev Tools (ctrl + shift + i)
+    * Make sure the console tab is selected
+  * Copy and Paste JavaScript code into console and hit enter to run!
 
 
 <!-- CONTACT -->
 ## Contact
 
 Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+GitHub - [DavidBThomp](https://github.com/DavidBThomp)
+LinkedIn - [David Thompson](https://www.linkedin.com/in/david-brendan-thompson-34a66a166/)
 
 ## Assignment Analysis
 
