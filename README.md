@@ -1,4 +1,4 @@
-# davidbthomp.github.io
+# davidbthomp.github.io/index.html
 
 ### [WEB 110](davidbthomp.github.io/web110/index.html)
 ### [WEB 150](davidbthomp.github.io/web150/index.html)
