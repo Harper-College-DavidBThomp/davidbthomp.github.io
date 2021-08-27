@@ -20,7 +20,6 @@ Hello, my name is David Thompson and this is my portfolio/project page. It is su
 * CSS
 * C++
 * SQL
-* NoSQL
 
 ### Software
 * MongoDB
