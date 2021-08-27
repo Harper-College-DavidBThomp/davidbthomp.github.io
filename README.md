@@ -27,7 +27,6 @@ Hello, my name is David Thompson and this is my portfolio/project page. It is su
 * Flowgorithm
 * Adobe Suite
 * Figma
-* 
 
 # Portfolio/Projects
 
