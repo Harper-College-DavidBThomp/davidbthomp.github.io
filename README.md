@@ -1,4 +1,11 @@
 # davidbthomp.github.io
+
+### [WEB 110](davidbthomp.github.io/web110/index.html)
+### [WEB 150](davidbthomp.github.io/web150/index.html)
+### [WEB 200](davidbthomp.github.io/web200/index.html)
+### [WEB 210](davidbthomp.github.io/web210/index.html)
+### [WEB 250](davidbthomp.github.io/web250/index.html)
+
 # David Thompson
 
 ## Overview
@@ -33,6 +40,7 @@ Hello, my name is David Thompson and this is my portfolio/project page. It is su
 * User Authentication (WEB 250)
 * File Conversion (WEB 250)
 * Basic Math Conversions (WEB 250)
+
 ## [Computer Information Systems 106 (CIS 106)](https://www.harpercollege.edu/catalog/current/courses/csc.php#CSC-121)
 
 Comprehensive introduction to computer programming using Flowgorithm and JavaScript.
@@ -80,7 +88,7 @@ Builds on foundations of development with a focus on development of useable and 
 * Web Accessibility Initiative guidelines (WCAG)
 * Usability testing
 
-## [Server-Side Scripting](https://www.harpercollege.edu/catalog/current/courses/web.php#WEB-250)
+## [Server-Side Scripting (WEB 250)](https://www.harpercollege.edu/catalog/current/courses/web.php#WEB-250)
 
 Introduction to server-side scripting and web data access using a currently popular server application platform and database. Uses NodeJS, JavaScript/NPM, HTML, CSS, MongoDB, and Docker. Touches on concepts such as SQL, Redis, and RESTful applcations.
 * Authentication management
