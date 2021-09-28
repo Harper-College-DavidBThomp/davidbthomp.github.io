@@ -5,228 +5,283 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css
+    2?family=Open+Sans:wght@300;400;700&family=Roboto&display=swap" rel="stylesheet">
+    <script src="myscripts.js"></script>
     <!-- Font family Open San Roboto -->
     <title>David's Portfolio</title>
 </head>
 
-<body>
+<body class="container bg-light">
     <header>
         <div class="banner">
-            <div class="nameImg">
-                <h1>David Thompson</h1>
-                <img src="max and me.jpg" alt="Me and Dog">
-                <h2>Jr. Web Developer</h2>
+            <div class="nameImg container">
+                <div class="row justify-content-center align-items-center">
+                    <h1 class="col-12 text-center">David Thompson</h1>
+                    <img id="profile-img" class="col-12 img-fluid p-0" src="David portfolio Cover square.jpg"
+                        alt="Me and Dog">
+                </div>
             </div>
-            <p>
-                A couple of things before browsing. This page is in a rough draft and is not final, the CSS and
-                JavaScript
-                are
-                both missing for now, as well as some broken links throughout. This is intentional, as I will polish
-                this
-                when
-                done with my fall semester of school,
-                after which I will 1 class away from graduation! Also, some of the links/pages are incomplete, likewise,
-                with
-                this page, I will be going back to make everything pretty and nice, so check back in 2022 and it will
-                all
-                look
-                great. If I did send you this it's because I hope you can the potential from the progress I've made
-                already,
-                thanks!
-            </p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-lg-8 text-center">
+                    <h2>Jr. Web Developer</h2>
+                    <p>
+                        A couple of things before browsing; this page is not final. It is missing a lot of the
+                        interactivity with JavaScript and the CSS could use some polishing, but I digress. This is due
+                        to completing classes out of order, so some pages will have more interactivity and look better.
+                        This is the first responsive page in my portfolio, and I plan to update a lot of my work by
+                        Spring 2022 (graduation). I hope you can my the potential and progress I've made.
+                    </p>
+                </div>
+            </div>
         </div>
     </header>
 
 
     <main>
-        <section>
-            <h2>Introduction</h2>
-            <h3><a href="https://docs.google.com/document/d/1nk0jLBRRXSG2T5h4uEl0wyDy25zxy8RsW4qT5v5QsRA/edit?usp=sharing"
-                    target="_blank" rel="noopener noreferrer">Resume</a></h3>
-            <p>
-                Hello, my name is David Thompson and this is my portfolio/project page. The page is subdivided to make
-                navigation for what you're looking for a little easier. To get more information, documentation, or just
-                plain
-                code visit my <a href="https://github.com/DavidBThomp" target="_blank" rel="noopener noreferrer">GitHub
-                    profile</a> rather than this site.
-            </p>
-        </section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <section>
+                        <h2>Introduction</h2>
+                        <p>
+                            Hello, my name is David Thompson and this is my portfolio/project page. To get more
+                            information, documentation, or just plain code visit my <a
+                                href="https://github.com/DavidBThomp" target="_blank" rel="noopener noreferrer">GitHub
+                                profile</a> rather than this
+                            site. Here is my <a
+                                href="https://docs.google.com/document/d/1nk0jLBRRXSG2T5h4uEl0wyDy25zxy8RsW4qT5v5QsRA/edit?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">Resume</a> as well.
+                        </p>
+                    </section>
+                </div>
 
-        <section>
-            <h2>Languages</h2>
-            <ul>
-                <li>JavaScript/NodeJS</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>C++</li>
-                <li>SQL</li>
-            </ul>
-        </section>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <section>
+                        <h2>Languages</h2>
+                        <div class="row">
+                            <div class="col-3"></div>
+                            <p class="col-3 fs-5">HTML</p>
+                            <p class="col-3 fs-5">CSS</p>
+                            <div class="col-3"></div>
+                            <p class="fs-5">JavaScript/NodeJS</p>
+                            <div class="col-3"></div>
+                            <p class="col-3 fs-5">C++</p>
+                            <p class="col-3 fs-5">SQL</p>
+                            <div class="col-3"></div>
+                        </div>
+                    </section>
+                </div>
 
-        <section>
-            <h2>Software</h2>
-            <ul>
-                <li>MongoDB</li>
-                <li>Flowgoithm</li>
-                <li>Adobe Suite</li>
-                <li>Figma</li>
-            </ul>
-        </section>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <section>
+                        <h2>Software</h2>
+                        <p class="fs-5">MongoDB</p>
+                        <p class="fs-5">Flowgoithm</p>
+                        <p class="fs-5">Adobe Suite</p>
+                        <p class="fs-5">Figma</p>
+
+                    </section>
+                </div>
+            </div>
+        </div>
 
         <section>
             <h2>Projects</h2>
-            <div class="project">
-                <a href="/web150/Projects/Project01/index.html" target="_blank"
-                    rel="noopener noreferrer">Recovery/Health
-                    (WEB 150) <img src="400400placeholder.jpg" alt="laptop" class="preview"></a>
-            </div>
-            <hr>
-            <div class="project">
-                <a href="/web150/Projects/Project02/index.html" target="_blank" rel="noopener noreferrer">Vegas/Nevada
-                    (WEB
-                    150) <img src="400400placeholder.jpg" alt="laptop" class="preview"></a>
-            </div>
-            <hr>
-            <div class="project">
-                <a href="/web200/final_project/final.html" target="_blank" rel="noopener noreferrer">Page
-                    with
-                    JavaScript
-                    Interaction (WEB 200) <img src="400400placeholder.jpg" alt="laptop" class="preview"></a>
-            </div>
-            <hr>
-            <div class="project">
-                <a href="/web210/mod11/index.html" target="_blank" rel="noopener noreferrer">Accesibility
-                    Bride
-                    Page
-                    (WEB
-                    210) <img src="400400placeholder.jpg" alt="laptop" class="preview"></a>
-            </div>
-            <hr>
-            <div class="project">
-                <a href="http://assignment1-env-1.eba-4pch38an.us-east-2.elasticbeanstalk.com/lesson12" target="_blank"
-                    rel="noopener noreferrer">Pizza Order (WEB 250 <img src="400400placeholder.jpg" alt="laptop"
-                        class="preview"></a>
-            </div>
-            <hr>
+            <div class="row text-center">
 
-            <div class="project">
-                <a href="http://assignment1-env-1.eba-4pch38an.us-east-2.elasticbeanstalk.com/lesson9" target="_blank"
-                    rel="noopener noreferrer">User Authentication (WEB 250) <img src="400400placeholder.jpg"
-                        alt="laptop" class="preview"></a>
-            </div>
+                <div class="card col-md-6 col-xl-3">
+                    <a href="/web150/Projects/Project02/index.html" class="card-link" target="_blank"> <img
+                            src="nevadaVegas.png" class="card-img-top mt-2 project-img border border-dark"
+                            alt="Vegas Nevada Website"></a>
+                    <div class="card-body">
+                        <h5 class="card-title mt-3">WEB 150</h5>
+                        <p class="card-text">Foundational skills used to create webpages using HTML and CSS.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Grid layout planning</li>
+                        <li class="list-group-item">Multimedia on the web</li>
+                        <li class="list-group-item">Wireframing and Prototyping</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="/web150/Projects/Project02/index.html" class="card-link"
+                            target="_blank">Vegas/Nevada</a>
+                        <a href="/web150/index.html" class="card-link" target="_blank">Class Page</a>
+                    </div>
+                </div>
 
-            <hr>
-            <div class="project">
-                <a href="http://assignment1-env-1.eba-4pch38an.us-east-2.elasticbeanstalk.com/lesson7" target="_blank"
-                    rel="noopener noreferrer">File Conversion (WEB 250) <img src="400400placeholder.jpg"
-                        alt="laptop"></a>
+                <div class="card col-md-6 col-xl-3">
+                    <a href="/web200/final_project/final.html" class="card-link" target="_blank"> <img
+                            src="WEB 200 Pizza.png" class="card-img-top mt-2 project-img border border-dark"
+                            alt="WEB 200 Pizza Website"></a>
+
+                    <div class="card-body">
+                        <h5 class="card-title">WEB 200</h5>
+                        <p class="card-text">User-centric websites using JavaScript, HTML, and CSS.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">AJAX and JSON</li>
+                        <li class="list-group-item">DOM Manipulation</li>
+                        <li class="list-group-item">Local Data Storage</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="/web200/final_project/final.html" class="card-link" target="_blank">Pizza Site</a>
+                        <a href="/web200/index.html" class="card-link" target="_blank">Class Page</a>
+                    </div>
+                </div>
+
+                <div class="card col-md-6 col-xl-3">
+                    <a href="/web210/mod11/index.html" class="card-link" target="_blank"> <img src="brideSite.png"
+                            class="card-img-top mt-2 project-img border border-dark" alt="Bride Website"></a>
+
+                    <div class="card-body">
+                        <h5 class="card-title">WEB 210</h5>
+                        <p class="card-text">Builds on foundations of development with a focus on development of useable
+                            and accessible web sites.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Section 508 Accessibility compliance</li>
+                        <li class="list-group-item">Web Accessibility Initiative guidelines</li>
+                        <li class="list-group-item">Usability testing</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="/web210/mod11/index.html" class="card-link" target="_blank">Acessibile Bride Site</a>
+                        <a href="/web210/index.html" class="card-link" target="_blank">Class Page</a>
+                    </div>
+                </div>
+
+                <div class="card col-md-6 col-xl-3">
+                    <a href="http://assignment1-env-1.eba-4pch38an.us-east-2.elasticbeanstalk.com/lesson12"
+                        class="card-link" target="_blank"> <img src="web250 page.png"
+                            class="card-img-top mt-2 project-img border border-dark"
+                            alt="WEB250 Server-Side Pizza Site"></a>
+
+                    <div class="card-body">
+                        <h5 class="card-title">WEB 250</h5>
+                        <p class="card-text">Server-side scripting and web data access using a currently popular server
+                            application platform and database. </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Authentication management</li>
+                        <li class="list-group-item">RestFUL concepts</li>
+                        <li class="list-group-item">Cookies and Sessions</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="http://assignment1-env-1.eba-4pch38an.us-east-2.elasticbeanstalk.com/lesson12"
+                            class="card-link" target="_blank">Live Pizza Site</a>
+                        <a href="http://assignment1-env-1.eba-4pch38an.us-east-2.elasticbeanstalk.com/"
+                            class="card-link" target="_blank">Class Page</a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <section>
-            <h2>Classes</h2>
-            <h3><a href="https://www.harpercollege.edu/catalog/current/courses/cis.php#CIS-106" target="_blank"
-                    rel="noopener noreferrer">Computer Information Systems 106 (CIS 106)</a></h3>
-            <!-- Wrong LINK FOR CIS 106 -->
-            <p>Comprehensive introduction to computer programming using Flowgorithm and JavaScript.</p>
-            <ul>
-                <li>Progam Logic</li>
-                <li>Subroutines/Functions/Methods</li>
-                <li>Variables, Conditions, Loops, and Arrays</li>
-                <li>File Input/Output</li>
-                <li>Object-Oriented Programming</li>
-            </ul>
+            <h2 class="mt-4">Classes Completed</h2>
+            <h3 class="text-center">Degree Completes Spring 2022</h3>
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 p-3">
+                    <h3><a href="https://www.harpercollege.edu/catalog/current/courses/cis.php#CIS-106" target="_blank"
+                            rel="noopener noreferrer">Computer Information Systems 106 (CIS 106)</a></h3>
+                    <p>Comprehensive introduction to computer programming using Flowgorithm and JavaScript.</p>
+                    <ul>
+                        <li>Progam Logic</li>
+                        <li>Subroutines/Functions/Methods</li>
+                        <li>Variables, Conditions, Loops, and Arrays</li>
+                        <li>File Input/Output</li>
+                        <li>Object-Oriented Programming</li>
+                    </ul>
+                </div>
 
-            <hr>
+                <div class="col-sm-6 col-lg-4 p-3">
+                    <h3><a href="https://www.harpercollege.edu/catalog/current/courses/csc.php#CSC-121" target="_blank"
+                            rel="noopener noreferrer">Computer Science 1 (CSC 121)</a></h3>
+                    <p>Introduction to procedural and Object-Oriented design strategies using C++.</p>
+                    <ul>
+                        <li>Selection, repetition, and sequence control structures</li>
+                        <li>Containers (mathematical manipulation, searching, sorting, etc.)</li>
+                        <li>Program design, testing, and documentation</li>
+                    </ul>
+                </div>
 
-            <h3><a href="https://www.harpercollege.edu/catalog/current/courses/csc.php#CSC-121" target="_blank"
-                    rel="noopener noreferrer">Computer Science 1 (CSC 121)</a></h3>
-            <p>Introduction to procedural and Object-Oriented design strategies using C++.</p>
-            <ul>
-                <li>Selection, repetition, and sequence control structures</li>
-                <li>Containers (mathematical manipulation, searching, sorting, etc.)</li>
-                <li>Program design, testing, and documentation</li>
-            </ul>
+                <div class="col-sm-6 col-lg-4 p-3">
+                    <h3><a href="https://www.harpercollege.edu/catalog/current/courses/web.php#WEB-150" target="_blank"
+                            rel="noopener noreferrer">Web Foundations (WEB 150)</a></h3>
+                    <p>Introduces the foundational skills used to create webpages using HTML and CSS.</p>
+                    <ul>
+                        <li>Web design best practices</li>
+                        <li>Internet protocols</li>
+                        <li>Media and security</li>
+                        <li>Project scope planning and proposals</li>
+                        <li>Grid layout planning</li>
+                    </ul>
+                </div>
 
-            <hr>
+                <hr class="d-none d-lg-block">
 
-            <h3><a href="https://www.harpercollege.edu/catalog/current/courses/web.php#WEB-110" target="_blank"
-                    rel="noopener noreferrer">Internet Fundamentals (WEB 110)</a></h3>
-            <p>Introduces the fundamental skills and knowledge needed to use the Internet and build basic web pages
-                using
-                HTML
-                and CSS.</p>
-            <ul>
-                <li>Internet communications</li>
-                <li>Functions of the web</li>
-                <li>Project management concepts</li>
-                <li>Multimedia on the web</li>
-            </ul>
+                <div class="col-sm-6 col-lg-4 p-3">
+                    <h3><a href="https://www.harpercollege.edu/catalog/current/courses/web.php#WEB-200" target="_blank"
+                            rel="noopener noreferrer">Web Scripting Foundations(WEB 200)</a></h3>
+                    <p>Introduces the developer to user-centric websites using JavaScript, HTML, and CSS.</p>
+                    <ul>
+                        <li>DOM Manipulations</li>
+                        <li>JSON data and storage</li>
+                        <li>Basic local website (HTML, CSS, JavaScript)</li>
+                    </ul>
+                </div>
 
-            <hr>
+                <div class="col-sm-6 col-lg-4 p-3">
 
-            <h3><a href="https://www.harpercollege.edu/catalog/current/courses/web.php#WEB-150" target="_blank"
-                    rel="noopener noreferrer">Web Foundations (WEB 150)</a></h3>
-            <p>Introduces the foundational skills used to create webpages using HTML and CSS.</p>
-            <ul>
-                <li>Web design best practices</li>
-                <li>Internet protocols</li>
-                <li>Media and security</li>
-                <li>Project scope planning and proposals</li>
-                <li>Grid layout planning</li>
-            </ul>
+                    <h3><a href="https://www.harpercollege.edu/catalog/current/courses/web.php#WEB-210" target="_blank"
+                            rel="noopener noreferrer">Web Accessibility (WEB 210)</a></h3>
+                    <p>Builds on foundations of development with a focus on development of useable and accessible web
+                        sites.
+                    </p>
+                    <ul>
+                        <li>Section 508 Accessibility compliance</li>
+                        <li>Web Accessibility Initiative guidelines (WCAG)</li>
+                        <li>Usability testing</li>
+                    </ul>
+                </div>
 
-            <hr>
+                <div class="col-sm-6 col-lg-4 p-3">
+                    <h3><a href="https://www.harpercollege.edu/catalog/current/courses/web.php#WEB-250" target="_blank"
+                            rel="noopener noreferrer">Server-Side Scripting (WEB 250)</a></h3>
+                    <p>Introduction to server-side scripting and web data access using a currently popular server
+                        application
+                        platform
+                        and database. Uses NodeJS, JavaScript/NPM, HTML, CSS, MongoDB, and Docker. Touches on concepts
+                        such
+                        as
+                        SQL,
+                        Redis, and RESTful applcations.</p>
+                    <ul>
+                        <li>Authentication management</li>
+                        <li>Software Testing</li>
+                        <li>GET/POST Methods</li>
+                        <li>Cookies and Sessions</li>
+                    </ul>
+                </div>
 
-            <h3><a href="https://www.harpercollege.edu/catalog/current/courses/web.php#WEB-200" target="_blank"
-                    rel="noopener noreferrer">Web Scripting Foundations(WEB 200)</a></h3>
-            <p>Introduces the developer to user-centric websites using JavaScript, HTML, and CSS.</p>
-            <ul>
-                <li>DOM Manipulations</li>
-                <li>JSON data and storage</li>
-                <li>Basic local website (HTML, CSS, JavaScript)</li>
-            </ul>
-
-            <hr>
-
-            <h3><a href="https://www.harpercollege.edu/catalog/current/courses/web.php#WEB-210" target="_blank"
-                    rel="noopener noreferrer">Web Accessibility (WEB 210)</a></h3>
-            <p>Builds on foundations of development with a focus on development of useable and accessible web sites.
-            </p>
-            <ul>
-                <li>Section 508 Accessibility compliance</li>
-                <li>Web Accessibility Initiative guidelines (WCAG)</li>
-                <li>Usability testing</li>
-            </ul>
-
-            <hr>
-
-            <h3><a href="https://www.harpercollege.edu/catalog/current/courses/web.php#WEB-250" target="_blank"
-                    rel="noopener noreferrer">Server-Side Scripting (WEB 250)</a></h3>
-            <p>Introduction to server-side scripting and web data access using a currently popular server
-                application
-                platform
-                and database. Uses NodeJS, JavaScript/NPM, HTML, CSS, MongoDB, and Docker. Touches on concepts such
-                as
-                SQL,
-                Redis, and RESTful applcations.</p>
-            <ul>
-                <li>Authentication management</li>
-                <li>Software Testing</li>
-                <li>GET/POST Methods</li>
-                <li>Cookies and Sessions</li>
-            </ul>
+            </div>
         </section>
     </main>
-    <hr>
-    <footer>
-        <h3>&copy;Copy Right ME</h3>
-    </footer>
+    <!-- <hr>
+    <footer class="text-center">
+        <h3>David Thompson</h3>
+    </footer> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
