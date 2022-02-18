@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        David Thompson
+        11/26/2021
+        WEB 190 - Fall 2021
+        Module 14 Lab
+     -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB 190 - Module 14</title>
+    <!-- W3 CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <nav>
+        <div class="w3-bar w3-pink">
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="form.html" class="w3-bar-item w3-button w3-hide-small">Form</a>
+            <a href="accordion.html" class="w3-bar-item w3-button w3-hide-small">Accordion</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+            <a href="form.html" class="w3-bar-item w3-button">Form</a>
+            <a href="accordion.html" class="w3-bar-item w3-button">Accordion</a>
+        </div>
+    </nav>
+
+    <main class="w3-grey">
+        <div class="w3-display-container w3-content w3-green">
+            <div class="w3-row">
+                <h1 class="w3-center">Slideshow of Nature, Tech, and Animals</h1>
+                <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                <img src="https://placeimg.com/960/540/nature" alt="" class="mySlides" style="width: 100%;">
+                <img src="https://placeimg.com/960/540/tech" alt="" class="mySlides" style="width: 100%;">
+                <img src="https://placeimg.com/960/540/animals" alt="" class="mySlides" style="width: 100%;">
+                <p>Page refresh will get new images...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="w3-container w3-khaki w3-center w3-text-indigo">
+            <h3>WEB 190 - W3.CSS</h3>
+            <p>Copyright&copy;2021 - David Thompson</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        //JavaScript for Nav
+        function myFunction() {
+            var x = document.getElementById("demo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        //JavaScript for Slideshow
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

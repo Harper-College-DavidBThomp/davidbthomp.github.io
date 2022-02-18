@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        David Thompson
+        WEB 190
+        Module Lab 4
+        Completed: 09/16/2021
+     -->
+    <title>Image Gallery</title>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            /* Font Stack if user doesn't have one of the fonts */
+        }
+
+        #wrapper {
+            margin: auto;
+            width: 90%;
+            border: thin solid black;
+        }
+
+        header {
+            background-color: deepskyblue;
+            color: white;
+            padding: 20px;
+        }
+
+        main {
+            background-color: deepskyblue;
+            color: white;
+            border-top: thin solid black;
+            border-bottom: thin solid black;;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: cyan;
+            border-top: thin solid black;;
+        }
+
+        .flex-container>div>figure {
+            background-color: #f1f1f1;
+            width: 250px;
+            margin: 10px;
+            text-align: center;
+            line-height: 25px;
+            font-size: 1.1em;
+        }
+
+        .flex-container>div>figure>img {
+            width: 100%;
+            height: auto;
+            /* This is for responsive Images */
+        }
+
+        footer {
+            background-color: deepskyblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        figcaption {
+            color: black;
+        }
+
+        #info {
+            background-color: white;
+            color: black;
+            /* padding: 10px 0; */
+        }
+
+        #info > h2,
+        #info > p {
+            padding: 10px;
+            margin: 0px;
+        }
+
+        @media screen and (max-width: 700px) {
+            #wrapper {
+                width: 100%;
+            }
+
+            .flex-container>div>figure {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Web 190 - Fall 2020: Module 4</h1>
+        </header>
+
+        <main>
+            <div id="info">
+                <h2>The justify-content Property</h2>
+                <p>
+                    The "justify-content: space-around;" declaration displays the flex items with space before, between,
+                    and
+                    after the lines:
+                </p>
+            </div>
+
+            <div class="flex-container">
+
+                <div>
+                    <figure>
+                        <img src="IMG_0456.jpg" alt="The Lake Express at the dock in Milwaukee">
+                        <figcaption>The Lake Express at the dock in Milwaukee</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="IMG_0457.jpg" alt="Top Deck of Lake Express">
+                        <figcaption>Top Deck of Lake Express</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="IMG_0458.jpg" alt="Leaving Milwaukee">
+                        <figcaption>Leaving Milwaukee</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="IMG_0460.jpg" alt="Wake">
+                        <figcaption>Wake</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="IMG_0470.jpg" alt="The Beach at Goderich, Ontario, Canada">
+                        <figcaption>The Beach at Goderich, Ontario, Canada</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="IMG_0477.jpg" alt="The Harbor at Tobermory, Ontario, Canada">
+                        <figcaption>The Harbor at Tobermory, Ontario, Canada</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="IMG_0477.jpg" alt="Boat Dock, Tobermory">
+                        <figcaption>Boat Dock, Tobermory</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="IMG_0482.jpg" alt="Monarch Butterfly">
+                        <figcaption>Monarch Butterfly</figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <figure>
+                        <img src="IMG_0484.jpg" alt="The Chi-Cheemaun approaching the dock in Tobermory">
+                        <figcaption>The Chi-Cheemaun approaching the dock in Tobermory</figcaption>
+                    </figure>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; Thompson LLC 2021</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+    David Thompson
+    WEB 190 - Fall 2021
+    Module Lab 7
+    Completed: 10/07/2021
+    -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Lab 9-2</title>
+
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+
+        #wrapper {
+            width: 82%;
+            margin: auto;
+            border: thin solid black;
+        }
+
+        header {
+            background-color: lightgreen;
+            color: white;
+            padding: 15px;
+        }
+
+        header > h1 {
+            margin-top: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+
+        nav > a {
+            background-color: aqua;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            display: flex;
+            background-color: lightcoral;
+        }
+
+        .left {
+            width: 62.5%;
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            background-color: lightblue;
+        }
+
+        .right {
+            width: 37.5%;
+            padding: 10px;
+            margin: 5px;
+            background-color: lightblue;
+        }
+
+        .left>p>img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+            float: right;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        @media screen and (max-width:525px) {
+
+            /* Don't need to call display because inherits anything above */
+            #wrapper {
+                width: 100%;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav > a {
+                margin: 3px 5px;
+            }
+
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .right {
+                width: 95%;
+            }
+
+            .left {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="top">
+            <h1>WEB 190 Lab 9-2</h1>
+            <p>CSS Flexbox Performance Assignment</p>
+        </header>
+
+        <nav>
+            <a href="#top" rel="noopener noreferrer">Link 1</a>
+            <a href="#top" rel="noopener noreferrer">Link 2</a>
+            <a href="#top" rel="noopener noreferrer">Link 3</a>
+            <a href="#top" rel="noopener noreferrer">Link 4</a>
+        </nav>
+
+        <main>
+            <div class="left">
+                <h2>Left Area</h2>
+                <p><img src="food.jpg" alt="food">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
+                    voluptatum ducimus alias libero ut
+                    quia, voluptas eaque reprehenderit molestiae beatae quos modi quas velit accusantium tenetur
+                    corrupti dolorem. Quos, mollitia.
+                    Tempore accusamus architecto earum ratione repudiandae? Aut porro quia minima optio quas, mollitia
+                    iste atque maiores blanditiis eum incidunt possimus eveniet necessitatibus accusantium excepturi
+                    tempora pariatur exercitationem suscipit quis accusamus.
+                </p>
+
+
+            </div>
+            <div class="right">
+                <h2>Right Area</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, dolor qui, atque architecto beatae
+                    ratione nisi, officiis nulla soluta accusamus adipisci et consectetur repudiandae? Quod amet ut
+                    maxime facilis dolores.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Copyright&copy;2021</p>
+        </footer>
+    </div>
+</body>
+
+</html>

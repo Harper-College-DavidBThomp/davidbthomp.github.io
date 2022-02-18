@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        David Thompson
+        WEB 190
+        Module Lab 3
+        09/09/2021
+     -->
+    <title>Responsive Page 2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #wrapper {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #79A9D1;
+        }
+
+        header {
+            background-color: #7D8CA3;
+            width: 90%;
+            margin: 10px auto;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 10px;
+        }
+
+        h2 {
+            color: darkslategray;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #59544B;
+            width: 90%;
+            margin: auto;
+        }
+
+        nav>a {
+            padding: 10px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+        }
+
+        nav>a:hover {
+            color: #000000;
+            background-color: white;
+        }
+
+        .row {
+            display: flex;
+            width: 90%;
+            background-color: #777DA7;
+            margin: 10px auto;
+        }
+
+        .side {
+            width: 30%;
+            padding: 20px;
+            margin: 10px;
+            background-color: #59544B;
+        }
+
+        .main {
+            width: 70%;
+            padding: 20px;
+            background-color: #7D8CA3;
+            margin: 10px;
+        }
+
+        #address {
+            padding: 10px;
+            background-color: #59544B;
+            width: 90%;
+            margin: auto;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #7D8CA3;
+            width: 90%;
+            margin: auto;
+        }
+
+        @media screen and (max-width: 700px) {
+
+            .row,
+            nav {
+                flex-direction: column;
+            }
+
+            .side,
+            .main {
+                width: 100%;
+                margin: 0px;
+            }
+
+            #wrapper {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Lorem ipsum dolor</h1>
+        </header>
+
+        <nav>
+            <a href="">home</a>
+            <a href="">about</a>
+            <a href="">order</a>
+            <a href="">blog</a>
+            <a href="">more</a>
+        </nav>
+
+        <div class="row">
+            <div class="side">
+                <h1>lorem 1</h1>
+
+                <h2>lorem 2</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit maiores iste mollitia? Facilis
+                    voluptatum nostrum, voluptas quisquam magnam qui nemo modi mollitia esse, temporibus fugiat corporis
+                    dicta. Assumenda, libero ratione!
+                </p>
+
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. In, maiores laboriosam. Velit porro dolore
+                    animi rem aspernatur quod, ex harum, excepturi illum error tempora dolor alias fugiat praesentium
+                    odit
+                    sapiente!
+                </p>
+            </div>
+
+            <div class="main">
+                <h1>lorem 1</h1>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni similique quasi ad id consequatur
+                    voluptate saepe expedita iure, explicabo animi dolorum voluptates quos ipsum voluptatibus fuga
+                    consectetur dicta unde quas?
+                </p>
+
+                <h2>lorem 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi in ipsa odit quam dignissimos.
+                    Voluptates
+                    nulla earum, ea rem sequi facere excepturi itaque, omnis adipisci deserunt harum, neque eaque
+                    asperiores?
+                </p>
+
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo quasi modi iste perspiciatis
+                    aperiam
+                    maiores excepturi voluptates, beatae repellendus autem? Ex perspiciatis, provident excepturi amet
+                    facere
+                    enim tempora vitae itaque!
+                </p>
+
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni quae molestiae cupiditate quod at
+                    libero, ea accusamus molestias non soluta minima commodi, mollitia unde qui, porro maxime maiores
+                    dignissimos repellendus!
+                </p>
+                <div id="address">
+                    <p>Email: <a href="mailto:fakemail@gmail.com">fakemail@gmail.com</a></p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <footer>
+            Lorem ipsum dolor sit amet consectetur
+        </footer>
+
+    </div>
+</body>
+
+</html>

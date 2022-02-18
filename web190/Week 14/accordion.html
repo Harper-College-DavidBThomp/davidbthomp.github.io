@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        David Thompson
+        11/26/2021
+        WEB 190 - Fall 2021
+        Module 14 Lab
+     -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB 190 - Module 14</title>
+    <!-- W3 CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <nav>
+        <div class="w3-bar w3-pink">
+            <a href="index.html" class="w3-bar-item w3-button">Home</a>
+            <a href="form.html" class="w3-bar-item w3-button w3-hide-small">Form</a>
+            <a href="accordion.html" class="w3-bar-item w3-button w3-hide-small">Accordion</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <div id="demo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium">
+            <a href="form.html" class="w3-bar-item w3-button">Form</a>
+            <a href="accordion.html" class="w3-bar-item w3-button">Accordion</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="w3-container w3-margin">
+            <button onclick="myFunc('Demo3')" class="w3-btn w3-block w3-blue">
+                Accordion</button>
+
+            <div id="Demo3" class="w3-hide w3-centered">
+                <div class="w3-row w3-center">
+                    <div class="w3-col l4 m3 s0 w3-container"></div>
+                    <div class="w3-col l4 m6 s12">
+                        <h1>Welcome to this hidden content</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis blanditiis tempora placeat
+                            molestias,
+                            necessitatibus autem enim delectus et quasi totam, perferendis porro, quam maiores amet.
+                            Animi
+                            delectus labore placeat cumque?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="w3-container w3-khaki w3-center w3-text-indigo">
+            <h3>WEB 190 - W3.CSS</h3>
+            <p>Copyright&copy;2021 - David Thompson</p>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript for Nav -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("demo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        //Accordian
+        function myFunc(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+
+</html>
