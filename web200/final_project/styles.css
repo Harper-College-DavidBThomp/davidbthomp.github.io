@@ -13,3 +13,15 @@
 .new {
     border: 1px solid black;
 }
+
+body {
+    margin-top: 70px;
+}
+
+.navbar {
+    background-color: seashell;
+}
+
+h1, h2, h3, h4, h5{
+    color: #D1BA97;
+}
