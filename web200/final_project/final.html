@@ -5,74 +5,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
+
     <title>Final Project</title>
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="container-fluid p-0">
         <header>
-            <img src="" alt="">
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>Orders</li>
-                    <li>Account</li>
-                    <li>Admin</li>
-                </ul>
+
+            <nav class="navbar navbar-light">
+                <div class="container-fluid justify-content-between">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class=""><svg width="34" height="30" viewBox="0 0 34 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <line y1="2.5" x2="34" y2="2.5" stroke="#D1BA97" stroke-width="5" />
+                                <line y1="15.0862" x2="34" y2="15.0862" stroke="#D1BA97" stroke-width="5" />
+                                <line y1="27.5" x2="34" y2="27.5" stroke="#D1BA97" stroke-width="5" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">1)Create Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">2)Order Pizza</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">3)Check Orders</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="navbar-brand" href="#">
+                        <svg width="35" height="45" viewBox="0 0 35 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M34.6803 41.524C34.7965 44.1862 31.6301 45.655 29.6546 43.8552L1.50623 18.2091C-0.077827 16.7659 0.315538 14.1845 2.25674 13.2841L28.7488 0.995598C30.69 0.0951567 32.9307 1.45466 33.0239 3.58944L34.6803 41.524Z"
+                                fill="#D1BA97" />
+                            <path
+                                d="M34.6803 41.5239C34.7965 44.1862 31.6301 45.655 29.6546 43.8551L6.45073 22.714C4.86667 21.2708 5.26003 18.6894 7.20124 17.789L29.0397 7.65907C30.9809 6.75863 33.2217 8.11814 33.3149 10.2529L34.6803 41.5239Z"
+                                fill="#E2BA7D" />
+                            <ellipse cx="12.5094" cy="20.2578" rx="2.12893" ry="2.11774" fill="#A95454" />
+                            <ellipse cx="27.2998" cy="34.0789" rx="2.12893" ry="2.11774" fill="#A95454" />
+                            <ellipse cx="23.9383" cy="22.2641" rx="2.12893" ry="2.11774" fill="#A95454" />
+                            <ellipse cx="27.2998" cy="13.1244" rx="2.12893" ry="2.11774" fill="#A95454" />
+                            <ellipse cx="21.9215" cy="28.5059" rx="2.12893" ry="2.11774" fill="#A95454" />
+                        </svg>
+                    </a>
+                    <a href="#"><svg width="31" height="31" viewBox="0 0 31 31" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.5 15.5C19.6437 15.5 23 12.1437 23 8C23 3.85625 19.6437 0.5 15.5 0.5C11.3562 0.5 8 3.85625 8 8C8 12.1437 11.3562 15.5 15.5 15.5ZM15.5 19.25C10.4937 19.25 0.5 21.7625 0.5 26.75V30.5H30.5V26.75C30.5 21.7625 20.5062 19.25 15.5 19.25Z"
+                                fill="#D1BA97" />
+                        </svg>
+                    </a>
+
+                </div>
             </nav>
         </header>
 
         <main>
+            <hr class="new">
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-pizza" type="button">CREATE ACCOUNT</button>
+                <button class="btn btn-pizza" type="button">ORDER PIZZA</button>
+                <button class="btn btn-pizza" type="button">ORDERS</button>
+            </div>
+            <hr class="new">
 
-            <div class="row">
-                <div class="col create">
-                    <h1>Create Account</h1>
-                    <p><label for="firstName">First Name:</label><br>
-                        <input type="text" id="firstName" name="firstName">
-                    </p>
-                    <p><label for="lastName">Last Name:</label><br>
-                        <input type="text" id="lastName" name="lastName">
-                    </p>
-                    <p><label for="address">Address:</label><br>
-                        <input type="text" id="address" name="address">
-                    </p>
-                    <p><label for="city">City:</label><br>
-                        <input type="text" id="city" name="city">
-                    </p>
-                    <p><label for="state">State:</label><br>
-                        <input type="text" id="state" name="state">
-                    </p>
-                    <p><label for="postCode">Postal Code:</label><br>
-                        <input type="number" id="postCode" name="postCode">
-                    </p>
-                    <p><label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email">
-                    </p>
-                    <p><label for="phone">Phone:</label><br>
-                        <input type="text" id="phone" name="phone">
-                    </p>
-                    <input id="createAccount" type="button" value="Create Account">
+            <div class="">
+                <div class="text-center">
+                    <div class="create"></div>
+                    <h1 class="dark-pizza-color-header mb-0">Create Account</h1>
+                    <label hidden for="firstName">First Name:</label><br>
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" class="mb-3">
+
+                    <label hidden for="lastName">Last Name:</label><br>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" class="mb-3">
+
+                    <label hidden for="address">Address:</label><br>
+                    <input type="text" id="address" name="address" placeholder="Address" class="mb-3">
+
+                    <label hidden for="city">City:</label><br>
+                    <input type="text" id="city" name="city" placeholder="City" class="mb-3">
+
+                    <label hidden for="state">State:</label><br>
+                    <input type="text" id="state" name="state" placeholder="State" class="mb-3">
+
+                    <label hidden for="postCode">Postal Code:</label><br>
+                    <input type="number" id="postCode" name="postCode" placeholder="Postal Code" class="mb-3">
+
+                    <label hidden for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" placeholder="Email" class="mb-3">
+
+                    <label hidden for="phone">Phone:</label><br>
+                    <input type="text" id="phone" name="phone" placeholder="Phone Number" class="mb-3"><br>
+
+                    <input id="createAccount" type="button" value="Create Account" id="button1" class="btn btn-pizza">
 
                     <div id="createInfo"></div>
                 </div>
-                <hr>
+                <hr class="new">
 
-                <div class="col order">
-                    <h1>Order Pizza(s)</h1>
-                    <p><label for="phone3">
-                            <h3>Phone:</h3>
-                        </label><br>
-                        <input type="text" id="phone1" name="phone1">
-                    </p>
+                <div class="text-center">
+                    <h1 class="m-0 dark-pizza-color-header">Order Pizza(s)</h1>
+                    <label hidden for="phone">Phone:</label><br>
+                    <input type="text" id="phone" name="phone" placeholder="Phone Number" class="mb-3"><br>
 
                     <h3>Sides:</h3>
-                    <input type="checkbox" id="salad" name="salad" value="True">
-                    <label for="salad">Salad ($5.99)</label><br>
-                    <input type="checkbox" id="wings" name="wings" value="True">
-                    <label for="wings">Wings ($3.99)</label><br>
-                    <input type="checkbox" id="fries" name="fries" value="True">
-                    <label for="fries">Fries ($4.99)</label><br>
+                    <div class="row">
+                        <input type="checkbox" id="salad" name="salad" value="True">
+                        <label for="salad">Salad ($5.99)</label>
+                        <input type="checkbox" id="wings" name="wings" value="True">
+                        <label for="wings">Wings ($3.99)</label>
+                        <input type="checkbox" id="fries" name="fries" value="True">
+                        <label for="fries">Fries ($4.99)</label>
+                    </div>
                     <br>
 
                     <label for="sides">
@@ -104,7 +160,7 @@
                     <label for="mushrooms">Mushrooms</label><br>
 
                     <h3>Extra Notes:</h3>
-                    <textarea id="notes" style="width:400px; height:200px;"></textarea><br>
+                    <textarea id="notes" style="width:300px; height:200px;"></textarea><br>
                     <input id="order" type="button" value="Order">
 
                     <div id="orderPizzas"></div>
@@ -113,8 +169,8 @@
             <br><br>
             <hr>
 
-            <div class="login">
-                <h1>View orders/Login!</h1>
+            <div class="text-center">
+                <h1 class="dark-pizza-color-header">View orders/Login!</h1>
                 <p><label for="phone2">
                         <h3>Phone:</h3>
                     </label><br>
@@ -130,20 +186,18 @@
         </main>
 
         <footer>
-            <h3>Site Navigation</h3>
-            <ul>
-                <li>Home</li>
-                <li>Orders</li>
-                <li>Account</li>
-                <li>Admin</li>
-            </ul>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            <h3>Confused?</h3>
+            <ol>
+                <li>Create Account</li>
+                <li>Order Food</li>
+                <li>Check Order</li>
+            </ol>
         </footer>
     </div>
     <script src="finaltest.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
