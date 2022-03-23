@@ -21,6 +21,14 @@
     <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
     <style>
+        /* 
+    Red Pallete
+    #F3C5C5
+    #C1A3A3
+    #886F6F
+    #694E4E
+    */
+
         main {
             height: 100%;
         }
@@ -42,7 +50,6 @@
             position: relative;
             opacity: 0;
             transition: opacity 0.8s linear 1s;
-            margin: 5%;
         }
 
         .images-loaded .grid {
@@ -53,6 +60,10 @@
             position: absolute;
             margin: 5px;
             z-index: 1;
+        }
+
+        .item:hover {
+            z-index: 2;
         }
 
         .item.muuri-item-hidden {
@@ -72,13 +83,19 @@
             cursor: pointer;
         }
 
+        .item-content>img:hover {
+            transform: scale(1.25);
+        }
+
+
         .item-content>img {
             display: block;
             border-radius: 6px;
             object-fit: cover;
+            transition: transform .5s;
         }
 
-        @media only screen and (max-width: 440px) {
+        @media only screen and (max-width: 500px) {
             .item-content>img {
                 width: 100%;
                 height: auto;
@@ -107,16 +124,40 @@
             margin: 0;
             padding: 0;
             overflow-x: hidden;
+            background-color: #F3C5C5;
+        }
+
+        .navBG {
+            background: rgb(193, 163, 163);
+            background: linear-gradient(180deg, rgba(193, 163, 163, 1) 0%, rgba(243, 197, 197, 1) 25%);
+        }
+
+        .footerBG {
+            background: rgb(193, 163, 163);
+            background: linear-gradient(0deg, rgba(193, 163, 163, 1) 0%, rgba(243, 197, 197, 1) 25%);
+        }
+
+        .murriBorderImage1 {
+            border: solid 4px #886F6F;
+        }
+
+        .murriBorderImage2 {
+            border: solid 4px #694E4E;
+        }
+
+        .heroBorder {
+            border: solid 4px #694E4E;
+            border-radius: 3%;
         }
     </style>
 </head>
 
 <body>
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light navBG">
         <div class="container-fluid">
             <!-- Logo -->
-            <a class="navbar-brand ms-5" href="#">
+            <a class="navbar-brand ms-5 flex-fill" href="#">
                 <img src="" alt="" width="30" height="24">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -124,7 +165,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Items in ceter -->
-            <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item m-2 lead">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -140,7 +181,7 @@
 
             <!-- Items to Right -->
             <div class="d-flex align-items-center me-5">
-                <button type="button" class="btn btn-primary">Order Now</button>
+                <button type="button" class="btn btn-primary ms-3 ms-lg-0">Order Now</button>
             </div>
 
         </div>
@@ -150,7 +191,8 @@
 
     <main>
         <div class="container">
-            <div class="bg mb-5 d-flex justify-content-around align-items-center text-white text-center">
+            <div class="mx-auto bg d-flex justify-content-around align-items-center text-white text-center heroBorder"
+                style="width: 96%">
                 <div>
                     <h1>Home Made</h1>
                     <p>Small, Local, Delicous.</p>
@@ -160,11 +202,11 @@
             </div>
 
             <!-- Playing with Murri Jquery Plugin-->
-            <div class="grid">
+            <div class="grid ms-1 ms-md-4">
                 <div class="item">
                     <div class="item-content">
                         <!-- Safe zone, enter your custom markup -->
-                        <img src="maccaron.jpeg" alt="" class="" width="195px" height="400px">
+                        <img src="maccaron.jpeg" alt="" class="murriBorderImage1" width="195px" height="400px">
                         <!-- Safe zone ends -->
                     </div>
                 </div>
@@ -172,7 +214,7 @@
                 <div class="item">
                     <div class="item-content">
                         <!-- Safe zone, enter your custom markup -->
-                        <img src="bakeryTable.jpeg" alt="" class="" width="400px" height="195px">
+                        <img src="bakeryTable.jpeg" alt="" class="murriBorderImage1" width="400px" height="195px">
                         <!-- Safe zone ends -->
                     </div>
                 </div>
@@ -180,7 +222,7 @@
                 <div class="item">
                     <div class="item-content">
                         <!-- Safe zone, enter your custom markup -->
-                        <img src="cakeKyle.jpeg" alt="" class="" width="195px" height="400px">
+                        <img src="cakeKyle.jpeg" alt="" class="murriBorderImage2" width="195px" height="400px">
                         <!-- Safe zone ends -->
                     </div>
                 </div>
@@ -188,7 +230,7 @@
                 <div class="item">
                     <div class="item-content">
                         <!-- Safe zone, enter your custom markup -->
-                        <img src="tartRolls.jpeg" alt="" class="" width="400px" height="195px">
+                        <img src="tartRolls.jpeg" alt="" class="murriBorderImage1" width="400px" height="195px">
                         <!-- Safe zone ends -->
                     </div>
                 </div>
@@ -196,7 +238,7 @@
                 <div class="item">
                     <div class="item-content">
                         <!-- Safe zone, enter your custom markup -->
-                        <img src="blueberryMuffins.jpeg" alt="" class="" width="400px" height="195px">
+                        <img src="blueberryMuffins.jpeg" alt="" class="murriBorderImage2" width="400px" height="195px">
                         <!-- Safe zone ends -->
                     </div>
                 </div>
@@ -204,7 +246,7 @@
                 <div class="item">
                     <div class="item-content">
                         <!-- Safe zone, enter your custom markup -->
-                        <img src="dabfest17.jpeg" alt="" class="" width="400px" height="195px">
+                        <img src="dabfest17.jpeg" alt="" class="murriBorderImage2" width="400px" height="195px">
                         <!-- Safe zone ends -->
                     </div>
                 </div>
@@ -212,7 +254,7 @@
                 <div class="item">
                     <div class="item-content">
                         <!-- Safe zone, enter your custom markup -->
-                        <img src="sweetPretz.jpeg" alt="" class="" width="195px" height="400px">
+                        <img src="sweetPretz.jpeg" alt="" class="murriBorderImage2" width="195px" height="400px">
                         <!-- Safe zone ends -->
                     </div>
                 </div>
@@ -220,7 +262,7 @@
                 <div class="item">
                     <div class="item-content">
                         <!-- Safe zone, enter your custom markup -->
-                        <img src="heartBox.jpeg" alt="" class="" width="195px" height="400px">
+                        <img src="heartBox.jpeg" alt="" class="murriBorderImage1" width="195px" height="400px">
                         <!-- Safe zone ends -->
                     </div>
                 </div>
@@ -228,7 +270,7 @@
                 <div class="item">
                     <div class="item-content">
                         <!-- Safe zone, enter your custom markup -->
-                        <img src="strawberryCake.jpeg" alt="" class="" width="195px" height="400px">
+                        <img src="strawberryCake.jpeg" alt="" class="murriBorderImage2" width="195px" height="400px">
                         <!-- Safe zone ends -->
                     </div>
                 </div>
@@ -236,7 +278,7 @@
                 <div class="item">
                     <div class="item-content">
                         <!-- Safe zone, enter your custom markup -->
-                        <img src="logCake.jpeg" alt="" class="" width="400px" height="195px">
+                        <img src="logCake.jpeg" alt="" class="murriBorderImage1" width="400px" height="195px">
                         <!-- Safe zone ends -->
                     </div>
                 </div>
@@ -244,7 +286,8 @@
                 <div class="item">
                     <div class="item-content">
                         <!-- Safe zone, enter your custom markup -->
-                        <img src="christmasBakingSheet.jpeg" alt="" class="" width="195px" height="400px">
+                        <img src="christmasBakingSheet.jpeg" alt="" class="murriBorderImage1" width="195px"
+                            height="400px">
                         <!-- Safe zone ends -->
                     </div>
                 </div>
@@ -252,7 +295,7 @@
                 <div class="item">
                     <div class="item-content">
                         <!-- Safe zone, enter your custom markup -->
-                        <img src="applePieCastIron.jpeg" alt="" class="" width="400px" height="195px">
+                        <img src="applePieCastIron.jpeg" alt="" class="murriBorderImage2" width="400px" height="195px">
                         <!-- Safe zone ends -->
                     </div>
                 </div>
@@ -311,13 +354,13 @@
 
 
     <footer>
-        <div class="row bg-light">
+        <div class="row footerBG mt-3">
 
             <div class="col-3">
                 <div class="text-center">
-                    <ul class="nav justify-content-center">
+                    <ul class="nav justify-content-center mt-5">
                         <li class="nav-item mx-5">
-                            <a class="nav-link" href="#"><svg height="75" viewBox="0 0 250 250" width="75"
+                            <a class="nav-link" href="#"><svg height="50" viewBox="0 0 250 250" width="50"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-rule="evenodd" fill-rule="evenodd">
                                         <path
@@ -350,7 +393,7 @@
                         </li>
                         <li class="nav-item mx-5">
                             <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 3364.7 3364.7" width="75" height="75">
+                                    viewBox="0 0 3364.7 3364.7" width="50" height="50">
                                     <defs>
                                         <radialGradient id="0" cx="217.76" cy="3290.99" r="4271.92"
                                             gradientUnits="userSpaceOnUse">
@@ -375,8 +418,8 @@
                                 </svg></a>
                         </li>
                         <li class="nav-item mx-5">
-                            <a class="nav-link" href="#"><svg height="75"
-                                    viewBox="1.98944755 .3641436 20.02369289 22.52376706" width="75"
+                            <a class="nav-link" href="#"><svg height="50"
+                                    viewBox="1.98944755 .3641436 20.02369289 22.52376706" width="50"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="m21.798 16.987c-2.867-.472-4.151-3.401-4.204-3.526l-.006-.011a1.07 1.07 0 0 1 -.102-.898c.192-.454.83-.656 1.251-.79.106-.033.205-.065.283-.096.763-.3.918-.613.914-.822a.662.662 0 0 0 -.5-.543l-.007-.002a.946.946 0 0 0 -.356-.069.755.755 0 0 0 -.313.063 2.54 2.54 0 0 1 -.955.266.821.821 0 0 1 -.53-.178l.032-.53.004-.065a10.102 10.102 0 0 0 -.24-4.035 5.248 5.248 0 0 0 -4.874-3.14l-.402.005a5.24 5.24 0 0 0 -4.864 3.137 10.09 10.09 0 0 0 -.242 4.031q.02.299.036.598a.848.848 0 0 1 -.584.178 2.453 2.453 0 0 1 -1.014-.268.575.575 0 0 0 -.245-.049.834.834 0 0 0 -.81.533c-.082.43.532.743.906.89.08.032.178.063.283.096.422.134 1.06.336 1.252.79a1.072 1.072 0 0 1 -.102.898l-.006.011a7.028 7.028 0 0 1 -1.069 1.663 5.215 5.215 0 0 1 -3.134 1.863.24.24 0 0 0 -.2.25.38.38 0 0 0 .03.13c.177.411 1.059.75 2.553.981.14.022.198.25.28.622.032.15.066.305.113.465a.293.293 0 0 0 .32.228 2.485 2.485 0 0 0 .424-.06 5.53 5.53 0 0 1 1.12-.127 4.954 4.954 0 0 1 .809.068 3.877 3.877 0 0 1 1.535.784 4.443 4.443 0 0 0 2.69 1.06c.033 0 .067-.001.1-.004.04.002.095.004.151.004a4.448 4.448 0 0 0 2.692-1.06 3.873 3.873 0 0 1 1.533-.784 4.973 4.973 0 0 1 .808-.068 5.593 5.593 0 0 1 1.12.119 2.391 2.391 0 0 0 .425.053h.024a.279.279 0 0 0 .295-.22 6.52 6.52 0 0 0 .114-.462c.081-.371.14-.598.28-.62 1.494-.23 2.377-.57 2.551-.978a.385.385 0 0 0 .032-.13.24.24 0 0 0 -.2-.25z" />
@@ -387,7 +430,7 @@
             </div>
 
             <div class="col-9">
-                <h2>Get in Touch!</h2>
+                <h2 class="text-center">Get in Touch!</h2>
                 <form class="m-3">
                     <div class="row">
                         <div class="col-sm-6">
