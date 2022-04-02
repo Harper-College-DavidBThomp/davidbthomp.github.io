@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <!-- TO DO -->
+<!-- TO DO -->
 
 <!-- 
     Logo
@@ -39,7 +39,8 @@
     <!-- Quicksand & Pacifico Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
         /* 
@@ -200,6 +201,10 @@
         .logoText {
             font-family: 'Pacifico', cursive;
         }
+
+        .orderbtn {
+            transition: transform .250s;
+        }
     </style>
 </head>
 
@@ -234,7 +239,9 @@
 
             <!-- Items to Right -->
             <div class="d-flex align-items-center me-5">
-                <button type="button" class="btn ms-3 ms-lg-0 d-none d-lg-flex fontBold buttonsColor btn-lg">Order Now</button>
+                <button type="button" class="orderbtn btn ms-3 ms-lg-0 d-none d-lg-flex fontBold buttonsColor btn-lg"
+                    id="scrollOrder">Order
+                    Now</button>
             </div>
 
         </div>
@@ -249,7 +256,7 @@
                 <div>
                     <h1>Home Made</h1>
                     <p class="lead fontBold">Small, Local, Delicous.</p>
-                    <button type="button" class="btn fontBold buttonsColor btn-lg">Order Now</button>
+                    <button type="button" class="orderbtn btn fontBold buttonsColor btn-lg">Order Now</button>
                 </div>
 
             </div>
@@ -408,13 +415,13 @@
 
     <footer class="footerBG">
         <div class="container">
-            <div class="row mt-3 flex-column flex-lg-row">
+            <div class="row mt-1 flex-column flex-lg-row">
 
                 <div class="col-lg-3">
                     <div class="text-center">
-                        <ul class="nav mt-5">
+                        <ul class="nav mt-5  justify-content-around">
                             <div class="row flex-row flex-lg-column">
-                                <div class="col-4">
+                                <div class="col-sm-4">
                                     <li class="nav-item mx-5">
                                         <a class="nav-link" href="#"><svg height="50" viewBox="0 0 250 250" width="50"
                                                 xmlns="http://www.w3.org/2000/svg">
@@ -449,7 +456,7 @@
                                             </svg></a>
                                     </li>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-sm-4">
                                     <li class="nav-item mx-5">
                                         <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 3364.7 3364.7" width="50" height="50">
@@ -477,13 +484,14 @@
                                             </svg></a>
                                     </li>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-sm-4">
                                     <li class="nav-item mx-5">
                                         <a class="nav-link" href="#"><svg height="50"
                                                 viewBox="1.98944755 .3641436 20.02369289 22.52376706" width="50"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
-                                                    d="m21.798 16.987c-2.867-.472-4.151-3.401-4.204-3.526l-.006-.011a1.07 1.07 0 0 1 -.102-.898c.192-.454.83-.656 1.251-.79.106-.033.205-.065.283-.096.763-.3.918-.613.914-.822a.662.662 0 0 0 -.5-.543l-.007-.002a.946.946 0 0 0 -.356-.069.755.755 0 0 0 -.313.063 2.54 2.54 0 0 1 -.955.266.821.821 0 0 1 -.53-.178l.032-.53.004-.065a10.102 10.102 0 0 0 -.24-4.035 5.248 5.248 0 0 0 -4.874-3.14l-.402.005a5.24 5.24 0 0 0 -4.864 3.137 10.09 10.09 0 0 0 -.242 4.031q.02.299.036.598a.848.848 0 0 1 -.584.178 2.453 2.453 0 0 1 -1.014-.268.575.575 0 0 0 -.245-.049.834.834 0 0 0 -.81.533c-.082.43.532.743.906.89.08.032.178.063.283.096.422.134 1.06.336 1.252.79a1.072 1.072 0 0 1 -.102.898l-.006.011a7.028 7.028 0 0 1 -1.069 1.663 5.215 5.215 0 0 1 -3.134 1.863.24.24 0 0 0 -.2.25.38.38 0 0 0 .03.13c.177.411 1.059.75 2.553.981.14.022.198.25.28.622.032.15.066.305.113.465a.293.293 0 0 0 .32.228 2.485 2.485 0 0 0 .424-.06 5.53 5.53 0 0 1 1.12-.127 4.954 4.954 0 0 1 .809.068 3.877 3.877 0 0 1 1.535.784 4.443 4.443 0 0 0 2.69 1.06c.033 0 .067-.001.1-.004.04.002.095.004.151.004a4.448 4.448 0 0 0 2.692-1.06 3.873 3.873 0 0 1 1.533-.784 4.973 4.973 0 0 1 .808-.068 5.593 5.593 0 0 1 1.12.119 2.391 2.391 0 0 0 .425.053h.024a.279.279 0 0 0 .295-.22 6.52 6.52 0 0 0 .114-.462c.081-.371.14-.598.28-.62 1.494-.23 2.377-.57 2.551-.978a.385.385 0 0 0 .032-.13.24.24 0 0 0 -.2-.25z" fill="white"/>
+                                                    d="m21.798 16.987c-2.867-.472-4.151-3.401-4.204-3.526l-.006-.011a1.07 1.07 0 0 1 -.102-.898c.192-.454.83-.656 1.251-.79.106-.033.205-.065.283-.096.763-.3.918-.613.914-.822a.662.662 0 0 0 -.5-.543l-.007-.002a.946.946 0 0 0 -.356-.069.755.755 0 0 0 -.313.063 2.54 2.54 0 0 1 -.955.266.821.821 0 0 1 -.53-.178l.032-.53.004-.065a10.102 10.102 0 0 0 -.24-4.035 5.248 5.248 0 0 0 -4.874-3.14l-.402.005a5.24 5.24 0 0 0 -4.864 3.137 10.09 10.09 0 0 0 -.242 4.031q.02.299.036.598a.848.848 0 0 1 -.584.178 2.453 2.453 0 0 1 -1.014-.268.575.575 0 0 0 -.245-.049.834.834 0 0 0 -.81.533c-.082.43.532.743.906.89.08.032.178.063.283.096.422.134 1.06.336 1.252.79a1.072 1.072 0 0 1 -.102.898l-.006.011a7.028 7.028 0 0 1 -1.069 1.663 5.215 5.215 0 0 1 -3.134 1.863.24.24 0 0 0 -.2.25.38.38 0 0 0 .03.13c.177.411 1.059.75 2.553.981.14.022.198.25.28.622.032.15.066.305.113.465a.293.293 0 0 0 .32.228 2.485 2.485 0 0 0 .424-.06 5.53 5.53 0 0 1 1.12-.127 4.954 4.954 0 0 1 .809.068 3.877 3.877 0 0 1 1.535.784 4.443 4.443 0 0 0 2.69 1.06c.033 0 .067-.001.1-.004.04.002.095.004.151.004a4.448 4.448 0 0 0 2.692-1.06 3.873 3.873 0 0 1 1.533-.784 4.973 4.973 0 0 1 .808-.068 5.593 5.593 0 0 1 1.12.119 2.391 2.391 0 0 0 .425.053h.024a.279.279 0 0 0 .295-.22 6.52 6.52 0 0 0 .114-.462c.081-.371.14-.598.28-.62 1.494-.23 2.377-.57 2.551-.978a.385.385 0 0 0 .032-.13.24.24 0 0 0 -.2-.25z"
+                                                    fill="white" />
                                             </svg></a>
                                     </li>
                                 </div>
@@ -496,6 +504,11 @@
                 </div>
 
                 <div class="col-lg-9">
+                    <div class="text-center d-grid">
+                        <button type="button" class="my-1 orderbtn btn fontBold buttonsColor btn-lg btn-block">Order
+                            Now</button>
+
+                    </div>
                     <h2 class="text-center">Get in Touch!</h2>
                     <form class="m-3">
                         <div class="row">
@@ -516,7 +529,7 @@
                                 <label for="exampleInputPassword1" class="form-label">Message</label>
                                 <textarea class="form-control" aria-label="With textarea"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn buttonsColor">Submit</button>
                     </form>
                 </div>
             </div>
@@ -529,13 +542,27 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 
+    <script>
+        // JQUERY 
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                $(".orderbtn").css("transform", "scale(1.25)");
+
+                clearTimeout($.data(this, 'scrollTimer'));
+                $.data(this, 'scrollTimer', setTimeout(function () {
+                    $(".orderbtn").css("transform", "scale(1)");
+                }, 250));
+            });
+        });
+    </script>
+
     <!-- Murri Script -->
     <script>
         var grid = new Muuri('.grid', {
             dragEnabled: false,
             layout: {
                 fillGaps: true,
-            }
+            },
         });
 
         // When all items have loaded refresh their
