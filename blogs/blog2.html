@@ -5,22 +5,6 @@
     WEB 235
     Final Project Home Page
     05Apr2022
-
-    To do:
-    Full Page JS on Story
-    Make sure next page button works on mobile
-    More effects on load
-    ScrollMe Effects (maybe on story page as well or Blog)
-
-    All Pages:
-    Images + Alt Attribute
-    S508 Compliance
-    Form Serverside/clientside confirmation - jQuery Form Validation
-
-
-    Page Containing:
-    Table displaying Data
-    Element With Vue
 -->
 
 <head>
@@ -41,14 +25,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <header>
         <a class="skip-to-content-link visuallyhidden" href="#main">Skip to content</a>
         <nav class="navbar navbar-expand-md navbar-light">
-            <div class="container-fluid">
+            <div class="container-fluid align-items-baseline">
                 <a class="navbar-brand d-md-none" href="index.html" style="width: 40px; height: 40px;"
                     aria-describedby="Home Page">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
@@ -125,26 +109,26 @@
 
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link active text-center borderRight fs-5" aria-current="page"
-                                href="index.html">Home</a>
+                            <a class="nav-link text-center borderRight" aria-current="page"
+                                href="../index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="story.html">Story</a>
+                            <a class="nav-link text-center borderRight fs-5" href="../story.html">Story</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="skills.html">Skills</a>
+                            <a class="nav-link text-center borderRight fs-5" href="../skills.html">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="projects.html">Portfolio</a>
+                            <a class="nav-link text-center borderRight fs-5" href="../projects.html">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="aboutMe.html">About</a>
+                            <a class="nav-link text-center borderRight fs-5" href="../aboutMe.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="contact.html">Contact</a>
+                            <a class="nav-link text-center borderRight fs-5" href="../contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center fs-5" href="blog.html">Blog</a>
+                            <a class="nav-link text-center active fs-5" href="../blog.html">Blog</a>
                         </li>
                     </ul>
 
@@ -188,37 +172,69 @@
     </header>
 
     <main id="main">
-        <div class="container d-flex align-content-center" id="topSection">
+        <div class="container text-center">
+            <div class="row">
+                <div id="blog2">
+                    <h1>Looking for FOSS</h1>
+                    <div class="col-lg-6 mx-auto">
+                        <!-- <img src="../images/webdeveloperSource.webp" alt="" class="img-fluid"> -->
+                        <p class="firstP">
+                            Have you heard of F.O.S.S before? That is an acronym for free open-source software. You may
+                            be thinking, what language is this guy speaking, so let me explain.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 mx-auto">
+                        <h2>Proprietary Software</h2>
+                        <p>
+                            So first we must understand the basis for the current software environment we are in, we
+                            can't understand where to go without knowing where we are at. Right now it's pretty likely
+                            you are using a proprietary operating system with proprietary software. Windows, macOS, iOS,
+                            Google Chrome, and Microsoft Word, are all proprietary. These tools are to be used, but not
+                            available to be understood and freely shared. This inhibits one of the fundamental tenants
+                            of the internet, the free sharing of information.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 mx-auto">
+                        <h2>W3Schools</h2>
+                        <p>
+                            I find that the snippets and variety of languages on the site help when refreshing my self
+                            about
+                            concepts. There is a bit of critism when it comes to depth of information, but for simple
+                            problems
+                            you just simply forgot the solution to, this works well.
+                        </p>
+                        <p>
+                            While proprietary tools do an excellent job of allowing more advanced development by
+                            increasing profits, it comes at the cost of the users, you and me. I can't say FOSS is
+                            always the best option, but it is one of the more neglected factors of our everyday
+                            technology use.
+                        </p>
+                    </div>
 
-            <div class="row align-items-center" id="infoTop">
-                <div class="col-xl-6 col-lg-5 col-md-5 order-1 order-md-0 mt-3 mt-md-0">
-                    <h1>Brendan Thompson</h1>
-                    <p>
-                        Welcome to my freelance business. I have been doing web development for about 2 years,
-                        working
-                        on my craft to become better. On these pages you can find out more about who I am, what I
-                        can
-                        do, and how I envision our possible future working togther.
-                    </p>
-
-                    <p>
-                        I did some coding in highschool, learning a little of python and working in the
-                        CNC/Mechanic/Electrical shop. I took interest in how the web functions, but in college
-                        choose to
-                        initally take an IT path. After a few years and a few certificaions, I decided that web
-                        development would be a path to travel to see how much I enjoyed it, which I enjoy a lot!
-                    </p>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-1"></div>
-                <div class="col-xl-4 col-lg-5 col-md-6 order-0 order-md-3 mt-3 mt-md-0">
-                    <img src="./images/Profilecover.jpg" alt="Man looking out window" class="profileImg">
+                    <div class="col-lg-6 mx-auto">
+                        <h2>Why F.O.S.S</h2>
+                        <!-- <img src="../images/github.jpg" alt="github banner" class="img-fluid"> -->
+                        <p>
+                            One of the primary reasons I think the average consumer will benefit from using FOSS is the
+                            ability for others to audit the code being used. If your information is being used in a way
+                            that you may not know, the alarm bells will ring and the consumer will be informed. This
+                            will lead to more transparent actions and give the power back to the consumer.
+                        </p>
+                        <p>
+                            Another reason is that older tools can be continued by a 3rd party. Let's say there's an old
+                            piece of technology that no longer gets updates, A user could theoretically pick up the code
+                            and
+                            start updating it today.
+                        </p>
+                        <p>
+                            As a grim ending to this blog post, I think that we have 3 possible futures. Proprietary
+                            software becoming more and more relevant, leading to less consumer power and other issues.
+                            FOSS becoming relevant once again to form a newer era of technology use. Or this trend of
+                            small FOSS gains while proprietary software continues to dominate the market.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Button at end of main content for next page -->
-        <div class="text-end mb-2">
-            <button class="btn d-lg-none ms-auto" onclick="location.href = 'story.html'">Next
-                page</button>
         </div>
     </main>
 
@@ -270,9 +286,6 @@
                 </div>
             </div>
 
-
-
-
             <div class="text-center mb-1">
                 &copy;HDesigns 2022 LLC. All Rights Reserved.
             </div>
@@ -280,41 +293,21 @@
 
         <button class="btn nextPage d-none d-lg-inline-flex" onclick="location.href = 'story.html'">Next
             page</button>
-
-        <!-- <div id="prevPage">
-            <button class="btn prevPage d-none d-lg-inline-flex"
-                onclick="location.href = 'story.html'">{{ prevButton }}</button>
-        </div> -->
     </footer>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-
-    <!-- VueJS 3 -->
-    <script src="https://unpkg.com/vue@3"></script>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-    <script src="./js/app.js"></script>
-
-    <script>
-        // VUE JS Previous Page
-        // const {
-        //     createApp
-        // } = Vue
-
-        // createApp({
-        //     data() {
-        //         return {
-        //             prevButton: 'Previous Page'
-        //         }
-        //     }
-        // }).mount('#prevPage')
-    </script>
 </body>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+
+<!-- VueJS 3 -->
+<script src="httpsb://unpkg.com/vue@3"></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="../js/app.js"></script>
 
 </html>

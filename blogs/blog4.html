@@ -5,22 +5,6 @@
     WEB 235
     Final Project Home Page
     05Apr2022
-
-    To do:
-    Full Page JS on Story
-    Make sure next page button works on mobile
-    More effects on load
-    ScrollMe Effects (maybe on story page as well or Blog)
-
-    All Pages:
-    Images + Alt Attribute
-    S508 Compliance
-    Form Serverside/clientside confirmation - jQuery Form Validation
-
-
-    Page Containing:
-    Table displaying Data
-    Element With Vue
 -->
 
 <head>
@@ -41,14 +25,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <header>
         <a class="skip-to-content-link visuallyhidden" href="#main">Skip to content</a>
         <nav class="navbar navbar-expand-md navbar-light">
-            <div class="container-fluid">
+            <div class="container-fluid align-items-baseline">
                 <a class="navbar-brand d-md-none" href="index.html" style="width: 40px; height: 40px;"
                     aria-describedby="Home Page">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
@@ -88,7 +72,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                    <a class="d-none d-md-inline" href="index.html" style="width: 40px; height: 40px;">
+                    <a class="d-none d-md-inline" href="#" style="width: 40px; height: 40px;">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
                             <defs>
                                 <style>
@@ -125,26 +109,25 @@
 
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link active text-center borderRight fs-5" aria-current="page"
-                                href="index.html">Home</a>
+                            <a class="nav-link text-center borderRight fs-5" href="../index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="story.html">Story</a>
+                            <a class="nav-link text-center borderRight fs-5" href="../story.html">Story</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="skills.html">Skills</a>
+                            <a class="nav-link text-center borderRight fs-5" href="../skills.html">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="projects.html">Portfolio</a>
+                            <a class="nav-link text-center borderRight fs-5" href="../projects.html">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="aboutMe.html">About</a>
+                            <a class="nav-link text-center borderRight fs-5" href="../aboutMe.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="contact.html">Contact</a>
+                            <a class="nav-link text-center borderRight fs-5" href="../contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center fs-5" href="blog.html">Blog</a>
+                            <a class="nav-link text-center active fs-5" href="../blog.html" aria-current="page">Blog</a>
                         </li>
                     </ul>
 
@@ -188,37 +171,50 @@
     </header>
 
     <main id="main">
-        <div class="container d-flex align-content-center" id="topSection">
-
-            <div class="row align-items-center" id="infoTop">
-                <div class="col-xl-6 col-lg-5 col-md-5 order-1 order-md-0 mt-3 mt-md-0">
-                    <h1>Brendan Thompson</h1>
-                    <p>
-                        Welcome to my freelance business. I have been doing web development for about 2 years,
-                        working
-                        on my craft to become better. On these pages you can find out more about who I am, what I
-                        can
-                        do, and how I envision our possible future working togther.
-                    </p>
-
-                    <p>
-                        I did some coding in highschool, learning a little of python and working in the
-                        CNC/Mechanic/Electrical shop. I took interest in how the web functions, but in college
-                        choose to
-                        initally take an IT path. After a few years and a few certificaions, I decided that web
-                        development would be a path to travel to see how much I enjoyed it, which I enjoy a lot!
-                    </p>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-md-1"></div>
-                <div class="col-xl-4 col-lg-5 col-md-6 order-0 order-md-3 mt-3 mt-md-0">
-                    <img src="./images/Profilecover.jpg" alt="Man looking out window" class="profileImg">
+        <div class="container text-center">
+            <div class="row">
+                <div id="blog4">
+                    <h1>TABG Mechanics</h1>
+                    <div class="col-lg-6 mx-auto">
+                        <p class="firstP">
+                            Totally Accurate Battlegrounds is a first-person shooter game developed by LandFall. This
+                            game is unique because of the movement, physics, and perspective you play from. You're a
+                            person, but you move like spaghetti. I would like to discuss some things that happen in the
+                            game that make it different from other battle royale games, and to that point can help us
+                            make our sites different.
+                        </p>
+                    </div>
+                    <div class="col-lg-6 mx-auto">
+                        <h2>Perspective</h2>
+                        <p>
+                            In TABG the character you look out to the world from can vary in different ways, sometimes
+                            you see behind their head, sometimes you're below your arms, but this changing shift gives
+                            you new ways to look at the game. Have a bit more health, you are now taller and can look
+                            over buildings. Moving fast, you now have a field of view of what feels like 120.
+                        </p>
+                        <p>
+                            This can also be true when making a website. You can lay everything out and see something
+                            one way, but as you work on the process you end up with something completely different. This
+                            new perspective can be used to inform decisions you make on the site, how data is fetched,
+                            what gets loaded, and how responsive parts will react?
+                        </p>
+                    </div>
+                    <div class="col-lg-6 mx-auto">
+                        <h2>Unstable</h2>
+                        <p>
+                            The character you play is spaghetti metaphorically. They move limp like their tendons and
+                            muscles are in different places than our own. This means that you have to account for how
+                            you move within the environment in a much more alert away.
+                        </p>
+                        <p>
+                            While making websites, the way you move is often awkward and unknow while learning. I found
+                            my self trying to use a Jquery fetch method but ended up using something else. It all
+                            sometimes feels strung togther. While learning this is useful because it can lead you to
+                            making new discoveries.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- Button at end of main content for next page -->
-        <div class="text-end mb-2">
-            <button class="btn d-lg-none ms-auto" onclick="location.href = 'story.html'">Next
-                page</button>
         </div>
     </main>
 
@@ -270,9 +266,6 @@
                 </div>
             </div>
 
-
-
-
             <div class="text-center mb-1">
                 &copy;HDesigns 2022 LLC. All Rights Reserved.
             </div>
@@ -280,41 +273,21 @@
 
         <button class="btn nextPage d-none d-lg-inline-flex" onclick="location.href = 'story.html'">Next
             page</button>
-
-        <!-- <div id="prevPage">
-            <button class="btn prevPage d-none d-lg-inline-flex"
-                onclick="location.href = 'story.html'">{{ prevButton }}</button>
-        </div> -->
     </footer>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-
-    <!-- VueJS 3 -->
-    <script src="https://unpkg.com/vue@3"></script>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-    <script src="./js/app.js"></script>
-
-    <script>
-        // VUE JS Previous Page
-        // const {
-        //     createApp
-        // } = Vue
-
-        // createApp({
-        //     data() {
-        //         return {
-        //             prevButton: 'Previous Page'
-        //         }
-        //     }
-        // }).mount('#prevPage')
-    </script>
 </body>
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+
+<!-- VueJS 3 -->
+<script src="httpsb://unpkg.com/vue@3"></script>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="../js/app.js"></script>
 
 </html>

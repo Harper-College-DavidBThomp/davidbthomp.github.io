@@ -6,51 +6,59 @@
     Final Project Home Page
     05Apr2022
 
-    To do:
-    Full Page JS on Story
-    Make sure next page button works on mobile
-    More effects on load
-    ScrollMe Effects (maybe on story page as well or Blog)
-
-    All Pages:
-    Images + Alt Attribute
-    S508 Compliance
-    Form Serverside/clientside confirmation - jQuery Form Validation
-
-
-    Page Containing:
-    Table displaying Data
-    Element With Vue
+    To Do:
+    Jquery Scrolling Effect (Go to section on scroll)
 -->
+
+<!-- 
+
+Story
+    The classes range and varied in skills learned, difficulty, and progress being made. (Overview of whole progress)
+
+    Some of the classes taught more technical skills, excel, flowgorithm, basic computer skills.
+
+    Others delt with langauges like C++, JavaScript, and SQL/NoSQL databases. The primary focus is JavaScript, HTML, and CSS.
+
+    The first classes had me become familiar with how these different things interact with the web. 
+    Some things look bad
+
+    But as I progressed and improved, I learned so much. My favorite part of web development is learning more and more how certain tools are used to make beautiful pages.
+
+    I worked with server-side processing, authentication management, and S508 Accessibility Compliance.
+    Some things looked good.
+
+    But my progress is undeniable and I look forward to learning more.
+
+ -->
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="HDesigns is a local, small, freelance web design studio. We envison a community in which none are left behind in the digital age because of complexity, cost, or time.">
     <title>HDesigns | Web Development</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Share+Tech+Mono&display=swap"
         rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <a class="skip-to-content-link visuallyhidden" href="#main">Skip to content</a>
         <nav class="navbar navbar-expand-md navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand d-md-none" href="index.html" style="width: 40px; height: 40px;"
-                    aria-describedby="Home Page">
+            <div class="container-fluid align-items-baseline">
+                <a class="navbar-brand d-md-none" href="#" style="width: 40px; height: 40px;">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
                         <defs>
                             <style>
@@ -88,7 +96,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                    <a class="d-none d-md-inline" href="index.html" style="width: 40px; height: 40px;">
+                    <a class="d-none d-md-inline" href="#" style="width: 40px; height: 40px;">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
                             <defs>
                                 <style>
@@ -120,37 +128,34 @@
                                 d="M255.48,87.08c23.11,17.28,43.72,41.22,48.49,70.57,2.51,14.93-.61,30.62-5.68,44.56-2.41,6.95-5.18,13.61-7.91,20.21s-5.73,13.63-9,20-7.15,12.55-10.54,18.76c-3.31,6-6.29,12.13-9.22,18.53-5.88,12.93-12,25.55-15.7,38.13a124.66,124.66,0,0,0-4.67,29.24c-1.36,22.45,4.48,45.38,19.39,62.27,16.41,18.84,43.54,30.41,68.46,32.19,33.79,2.11,64.93-15.94,87.92-39.71a135.5,135.5,0,0,0,16.21-19.7,141.08,141.08,0,0,0,7.84-13.23c.74-1.51,2.64-5.49,3.36-7s2.24-5.6,2.93-7.18c.94-2.82,2.52-7,3.27-9.85A158.43,158.43,0,0,0,457,298.16c-.09-3.55-.2-7.1-.47-10.66a145.68,145.68,0,0,1-1.21,69.81c-.5,1.77-1.91,6.2-2.41,7.91s-2.28,6-2.89,7.76c-.94,2.5-2.35,5.12-3.4,7.58-.66,1.79-3,5.63-3.86,7.38-4.4,8.2-10.09,15.62-16,22.7-24.84,29.73-61.49,51.57-101.28,49.14-29.66-2.16-59.83-14.78-79.79-37.33-18.56-20.64-26.11-49.49-23.95-76.54.83-11.5,2.47-22.77,6.1-33.69,4.63-14.21,11.35-27.12,18-40.19a263,263,0,0,1,16.42-28.42,203.52,203.52,0,0,0,12.67-22.36c3.84-7.79,7.83-16,11.23-23.78,4.06-9.41,7.25-18.75,8.09-28.82,2.44-31.35-17.44-60-38.7-81.57Z" />
                         </svg>
                     </a>
-                    <!-- This makes up for space taken by right bar -->
-                    <div style="width: 120px; height: 40px;"></div>
 
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link active text-center borderRight fs-5" aria-current="page"
-                                href="index.html">Home</a>
+                            <a class="nav-link text-center borderRight" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="story.html">Story</a>
+                            <a class="nav-link text-center active borderRight" href="story.html">Story</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="skills.html">Skills</a>
+                            <a class="nav-link text-center borderRight" href="skills.html">Skills</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="projects.html">Portfolio</a>
+                            <a class="nav-link text-center borderRight" href="projects.html">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="aboutMe.html">About</a>
+                            <a class="nav-link text-center borderRight" href="aboutMe.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="contact.html">Contact</a>
+                            <a class="nav-link text-center borderRight" href="contact.html">Contact</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center fs-5" href="blog.html">Blog</a>
+                            <a class="nav-link text-center" href="blog.html">Blog</a>
                         </li>
                     </ul>
 
                     <div class="text-center nav-svg">
                         <a href="https://www.linkedin.com/in/davidbthomp/" target="_blank" rel="noopener noreferrer"
-                            class="nav-item" aria-label="LinkedIn">
+                            class="nav-item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
                                 class="svg-colors">
                                 <path
@@ -158,7 +163,7 @@
                             </svg>
                         </a>
                         <a href="https://github.com/DavidBThomp" target="_blank" rel="noopener noreferrer"
-                            class="nav-item" aria-label="GitHub">
+                            class="nav-item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
                                 class="svg-colors">
                                 <path
@@ -166,19 +171,11 @@
                             </svg>
                         </a>
                         <a href="https://www.youtube.com/channel/UC8UpM7AvWuYt5fplTrhKa7w" target="_blank"
-                            rel="noopener noreferrer" class="nav-item" aria-label="YouTube">
+                            rel="noopener noreferrer" class="nav-item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
                                 class="svg-colors">
                                 <path
                                     d="M10 9.333l5.333 2.662-5.333 2.672v-5.334zm14-9.333v24h-24v-24h24zm-4 12c-.02-4.123-.323-5.7-2.923-5.877-2.403-.164-7.754-.163-10.153 0-2.598.177-2.904 1.747-2.924 5.877.02 4.123.323 5.7 2.923 5.877 2.399.163 7.75.164 10.153 0 2.598-.177 2.904-1.747 2.924-5.877z" />
-                            </svg>
-                        </a>
-                        <a href="https://docs.google.com/document/d/1qqWj1ts5MBEd3di6t371YD20yqJu_Q2YuQRpEb3DvCo/edit?usp=sharing"
-                            target="_blank" rel="noopener noreferrer" class="nav-item" aria-label="Resume/CV">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
-                                class="svg-colors">
-                                <path
-                                    d="M3 22v-20h18v11.543c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-9.362zm20-7.614v-14.386h-22v24h12.189c3.163 0 9.811-7.223 9.811-9.614zm-11.037-5.525c-.241.705-.242.569 0 1.277l.037.223c0 .225-.111.441-.308.578-.628.435-.545.325-.781 1.033-.099.295-.385.495-.708.495h-.001c-.774-.003-.64-.044-1.265.395-.129.092-.283.138-.437.138s-.308-.046-.438-.138c-.625-.439-.49-.397-1.265-.395h-.002c-.322 0-.608-.2-.706-.495-.236-.709-.156-.599-.781-1.033-.197-.136-.308-.354-.308-.578l.037-.222c.242-.705.242-.569 0-1.277l-.037-.223c0-.225.111-.441.309-.578.625-.435.544-.325.781-1.034.098-.296.384-.495.706-.495h.002c.772.003.636.047 1.264-.395.13-.091.284-.137.438-.137s.308.046.438.137c.625.439.49.397 1.265.395h.001c.323 0 .609.199.708.495.236.708.153.598.781 1.033.196.137.307.354.307.579l-.037.222zm-1.713.639c0-.966-.783-1.75-1.75-1.75s-1.75.784-1.75 1.75.783 1.75 1.75 1.75 1.75-.784 1.75-1.75zm-3.067 3.966c-.383 0-.686-.037-.937-.107-.154 1.534-.68 2.685-1.746 3.796.428.053.975-.047 1.416-.28.159.318.326.715.384 1.125 1.005-1.149 1.633-2.527 1.867-4.035-.472-.091-.617-.248-.984-.499zm2.634 0c-.368.253-.521.41-.983.499.234 1.508.862 2.886 1.866 4.035.058-.41.225-.807.384-1.125.441.232.988.333 1.416.28-1.064-1.109-1.584-2.266-1.739-3.797-.252.07-.556.108-.944.108zm9.183-7.466h-5v1h5v-1zm0 2h-5v1h5v-1zm0 2h-5v1h5v-1zm-2 2h-3v1h3v-1z" />
                             </svg>
                         </a>
                     </div>
@@ -188,41 +185,166 @@
     </header>
 
     <main id="main">
-        <div class="container d-flex align-content-center" id="topSection">
-
-            <div class="row align-items-center" id="infoTop">
-                <div class="col-xl-6 col-lg-5 col-md-5 order-1 order-md-0 mt-3 mt-md-0">
-                    <h1>Brendan Thompson</h1>
-                    <p>
-                        Welcome to my freelance business. I have been doing web development for about 2 years,
-                        working
-                        on my craft to become better. On these pages you can find out more about who I am, what I
-                        can
-                        do, and how I envision our possible future working togther.
-                    </p>
-
-                    <p>
-                        I did some coding in highschool, learning a little of python and working in the
-                        CNC/Mechanic/Electrical shop. I took interest in how the web functions, but in college
-                        choose to
-                        initally take an IT path. After a few years and a few certificaions, I decided that web
-                        development would be a path to travel to see how much I enjoyed it, which I enjoy a lot!
-                    </p>
+        <div class="main">
+            <!-- Carosel above and below auto scrolling -->
+            <section>
+                <div class="container-fluid d-flex align-items-center justify-content-center flex-column"
+                    id="topSection">
+                    <div class="container-fluid d-none d-md-block">
+                        <div class="my-slider1">
+                            <div><img src="./images/CSSlogo.png" alt="CSS logo" class="mx-auto d-block img-fluid"></div>
+                            <div><img src="./images/flowgorithm.png" alt="A flowgorithm chart"
+                                    class="mx-auto d-block img-fluid"></div>
+                            <div><img src="./images/jquerylogo.jpg" alt="Jquery logo" class="mx-auto d-block img-fluid">
+                            </div>
+                            <div><a href="https://davidbthomp.github.io/web110/assignment16.html" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/firstwebsite.png"
+                                        alt="Sreenshot of basic website" class="mx-auto d-block img-fluid"></a></div>
+                            <div><img src="./images/bootstrapLogo.png" alt="Bootstrap Logo"
+                                    class="mx-auto d-block img-fluid">
+                            </div>
+                            <div><img src="./images/nodejsLogo.png" alt="NodeJS Logo" class="mx-auto d-block img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-center mx-auto my-3">
+                        The classes range and varied in skills learned, difficulty, and progress
+                        being made.
+                    </h3>
+                    <div class="container-fluid">
+                        <div class="my-slider">
+                            <div><img src="./images/html5Logo.webp" alt="HTML 5 Logo" class="mx-auto d-block img-fluid">
+                            </div>
+                            <div><a href="https://davidbthomp.github.io/web150/Projects/Project02/index.html"
+                                    target="_blank" rel="noopener noreferrer"><img
+                                        src="./images/vegasNevadaScreenshot.png" alt="Screenshot of Vegas website"
+                                        class="mx-auto d-block img-fluid"></a></div>
+                            <div><a href="https://davidbthomp.github.io/web190/Project%201/index.html" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/drewsBurgersScreenshot.png"
+                                        alt="Screenshot of burger mockup site" class="mx-auto d-block img-fluid"></a>
+                            </div>
+                            <div><a href="https://davidbthomp.github.io/localBakery/" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/bakeryScreenShot.png"
+                                        alt="Screenshot of bakery mockup site" class="mx-auto d-block img-fluid"></a>
+                            </div>
+                            <div><img src="./images/javascriptlogo.png" alt="Javascript Logo"
+                                    class="mx-auto d-block img-fluid">
+                            </div>
+                            <div><a href="https://davidbthomp.github.io/web200/final_project/final.html" target="_blank"
+                                    rel="noopener noreferrer"><img src="./images/web200Screenshot.png"
+                                        alt="Screenshot of Pizza site" class="mx-auto d-block img-fluid"></a></div>
+                            <div><img src="./images/mdbLogo.webp" alt="MonogoDB logo" class="mx-auto d-block img-fluid">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xl-2 col-lg-2 col-md-1"></div>
-                <div class="col-xl-4 col-lg-5 col-md-6 order-0 order-md-3 mt-3 mt-md-0">
-                    <img src="./images/Profilecover.jpg" alt="Man looking out window" class="profileImg">
+            </section>
+
+
+            <section>
+                <div class="container d-flex align-items-center fullSection">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <h3 class="">
+                                Some of the classes taught more technical skills, excel, flowgorithm, basic computer
+                                skills.
+                                Others delt with langauges like C++, JavaScript, and SQL/NoSQL databases. The primary
+                                focus is
+                                JavaScript, HTML, and CSS.
+                            </h3>
+                        </div>
+                        <div class="col-lg-6 border border-3 border-dark p-0 mt-2 mt-lg-0">
+                            <a href="https://davidbthomp.github.io/web200/final_project/final.html" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="./images/web200Screenshot.png" alt="Screenshot of Pizza site"
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section>
+                <div class="container d-flex align-items-center justify-content-end fullSection">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 order-lg-1">
+                            <h3 class="text-end">
+                                The first classes had me become familiar with how these different things interact with
+                                the web.
+                                Some things look bad...
+                            </h3>
+                        </div>
+                        <div class="col-lg-6 order-lg-0 border border-3 border-dark p-0 mt-2 mt-lg-0">
+                            <a href="https://davidbthomp.github.io/web110/assignment16.html" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="./images/firstwebsite.png" alt="Sreenshot of basic website" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container d-flex align-items-center fullSection">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <h3 class="">
+                                But as I progressed and improved, I learned so much. My favorite part of web development
+                                is
+                                learning more and more how certain tools are used to make beautiful pages.
+                            </h3>
+                        </div>
+                        <div class="col-lg-6 border border-3 border-dark p-0 mt-2 mt-lg-0">
+                            <a href="https://davidbthomp.github.io/localBakery/" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="./images/bakeryScreenShot.png" alt="Screenshot of bakery mockup site"
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container d-flex align-items-center justify-content-end fullSection">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 order-lg-1">
+                            <h3 class="text-end">
+                                While the proccess is challenging, it has got my foot in the door on full-stack
+                                javascript
+                                development, which is where my ambitions lay now. I want to continue perfecting the
+                                front-end
+                                and being making production quality code.
+                            </h3>
+                        </div>
+                        <div class="col-lg-6 order-lg-0 border border-3 border-dark p-0 mt-2 mt-lg-0">
+                            <a href="https://davidbthomp.github.io/web190/Project%201/index.html" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="./images/drewsBurgersScreenshot.png" alt="Screenshot of burger mockup site"
+                                    class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container-fluid" id="coder">
+                    <div class="container d-flex align-items-center justify-content-center fullSection">
+                        <h3 class="storyText text-center text-white">But my progress is undeniable and I look forward to
+                            learning more.
+                        </h3>
+                    </div>
+                </div>
+            </section>
         </div>
         <!-- Button at end of main content for next page -->
         <div class="text-end mb-2">
-            <button class="btn d-lg-none ms-auto" onclick="location.href = 'story.html'">Next
-                page</button>
+            <button class="btn d-lg-none ms-auto" onclick="location.href = 'skills.html'">Next page</button>
         </div>
     </main>
 
-    <footer class="">
+    <footer class="mt-1" style="border-top:none;">
         <div class="container px-lg-5">
             <div class="row border-1">
                 <div class="col-lg-2">
@@ -270,22 +392,21 @@
                 </div>
             </div>
 
-
-
-
             <div class="text-center mb-1">
                 &copy;HDesigns 2022 LLC. All Rights Reserved.
             </div>
         </div>
 
-        <button class="btn nextPage d-none d-lg-inline-flex" onclick="location.href = 'story.html'">Next
+        <!-- Next Page Button -->
+        <button class="btn nextPage d-none d-lg-inline-flex" onclick="location.href = 'skills.html'">Next
             page</button>
-
-        <!-- <div id="prevPage">
-            <button class="btn prevPage d-none d-lg-inline-flex"
-                onclick="location.href = 'story.html'">{{ prevButton }}</button>
-        </div> -->
     </footer>
+
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -295,26 +416,78 @@
     <!-- VueJS 3 -->
     <script src="https://unpkg.com/vue@3"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Tiny Slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
 
     <script src="./js/app.js"></script>
 
     <script>
-        // VUE JS Previous Page
-        // const {
-        //     createApp
-        // } = Vue
+        // Slider on Story page
+        var slider = tns({
+            container: '.my-slider',
+            controls: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: false,
+            responsive: {
+                100: {
+                    items: 1
+                },
+                430: {
+                    items: 2
+                },
+                640: {
+                    edgePadding: 20,
+                    gutter: 20,
+                    items: 3
+                },
+                700: {
+                    gutter: 30
+                },
+                900: {
+                    items: 4
+                },
+                1200: {
+                    items: 5
+                },
+            },
+            loop: true
+        });
 
-        // createApp({
-        //     data() {
-        //         return {
-        //             prevButton: 'Previous Page'
-        //         }
-        //     }
-        // }).mount('#prevPage')
+        var slider1 = tns({
+            container: '.my-slider1',
+            controls: false,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: false,
+            responsive: {
+                100: {
+                    items: 1,
+                    edgePadding: 20,
+                    gutter: 20
+                },
+                430: {
+                    items: 2
+                },
+                640: {
+                    items: 3
+                },
+                700: {
+                    gutter: 30
+                },
+                900: {
+                    items: 4
+                },
+                1200: {
+                    items: 5
+                },
+            },
+            loop: true,
+            autoplayDirection: "backward"
+        });
     </script>
+
 </body>
 
 </html>

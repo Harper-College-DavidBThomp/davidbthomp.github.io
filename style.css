@@ -1,0 +1,331 @@
+/* Color Themeing Earthy Pastel
+#463F3A
+#8A817C
+#BCB8B1
+#F4F3EE
+#E0AFA0
+
+Fonts avaliable
+font-family: 'Oswald', sans-serif;
+font-family: 'Share Tech Mono', monospace;
+*/
+
+* {
+    box-sizing: border-box;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+html,
+body {
+    background-color: #F4F3EE;
+    color: #463F3A;
+}
+
+main,
+footer {
+    display: none;
+}
+
+a {
+    color: #463F3A;
+}
+
+a:hover {
+    color: #E0AFA0;
+}
+
+footer {
+    border-top: 2px solid #8A817C;
+}
+
+nav {
+    border-bottom: 2px solid #8A817C;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.textProgressColor {
+    color: #463F3A;
+}
+
+.formComplete {
+    display: none;
+}
+
+.borderRight {
+    border-right: 3px solid #8A817C;
+}
+
+.svg-colors {
+    fill: #8A817C;
+}
+
+.nav-svg>a {
+    color: #F4F3EE;
+}
+
+.profileImg {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    border: 3px solid #E0AFA0;
+}
+
+#topSection {
+    height: calc(100vh - 58px);
+    min-height: 100%;
+}
+
+.nextPage {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+}
+
+.prevPage {
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+}
+
+.mobileNextPage {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+}
+
+/* Possible Story */
+
+.fullSection {
+    height: 100vh;
+    min-height: 100%;
+}
+
+#coder {
+    /*
+        background-image: linear-gradient(0deg, #00000088 40%, #d8d8d844 100%), url("familyChristmas.jpg"); 
+         Linear Gradient, Possibly work on colors to make top darker.
+    */
+
+    /* Make into GIF of Drew cooking */
+    background-image: url("images/coder.gif");
+    /* Background color to darken to */
+    background-color: #00000088;
+    /* Multiply blend mode */
+    background-blend-mode: multiply;
+    width: 100vw;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    /* Place Behind Everything */
+    /* position: absolute;
+    right: 0;
+    top: 0; */
+}
+
+.storyText {
+    width: 50%;
+}
+
+@media only screen and (max-width: 767px) {
+    .storyText {
+        width: 100%;
+    }
+
+    .borderRight {
+        border-right: none;
+    }
+}
+
+/* Story */
+
+.tns-nav,
+.tns-nav+button {
+    display: none;
+}
+
+div>img {
+    min-width: 200px;
+}
+
+/* Background Images */
+
+.coder {
+    /*
+        background-image: linear-gradient(0deg, #00000088 40%, #d8d8d844 100%), url("familyChristmas.jpg"); 
+         Linear Gradient, Possibly work on colors to make top darker.
+    */
+
+    /* Make into GIF of Drew cooking */
+    background-image: url("Profilecover.jpg");
+    /* Background color to darken to */
+    /* background-color: #00000088; */
+    /* Multiply blend mode */
+    /* background-blend-mode: multiply;
+    width: 100vw; */
+
+    /* Center and scale the image nicely */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+    /* Place Behind Everything */
+    /* position: absolute;
+    right: 0;
+    top: 0; */
+}
+
+/* About Me */
+
+.aboutMeWriting {
+    font-size: 18px;
+    width: 75%;
+}
+
+.aboutMeTitle {
+    width: 75%;
+}
+
+@media only screen and (max-width: 998px) {
+    .aboutMeWriting {
+        width: 100%;
+    }
+
+    .aboutMeTitle {
+        width: 100%;
+    }
+}
+
+.aboutMeList>li {
+    list-style-type: circle;
+}
+
+/* Projects */
+.bg-svg {
+    background: white;
+    border-radius: 50%;
+}
+
+.bg-svg1 {
+    background: transparent url("shape.svg") no-repeat 50% 50%/300px auto;
+}
+
+.project-bg {
+    /* width: auto; */
+    height: 400px;
+
+
+    /* Make into GIF */
+    background-image: url("images/coder.gif");
+    /* Background color to darken to */
+    background-color: #00000088;
+    /* Multiply blend mode */
+    background-blend-mode: multiply;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* S508 Compliance */
+.skip-to-content-link {
+    left: 50%;
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+.visuallyhidden {
+    font-size: 0;
+    margin: 0;
+}
+
+.btn {
+    background-color: #463F3A;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #8A817C;
+    color: white;
+}
+
+/* Projects Page */
+
+/* Include style background image */
+.project-bgNoImage {
+    /* width: auto; */
+    height: 400px;
+
+
+    /* Make into GIF */
+    /* background-image: url("images/coder.gif"); */
+    /* Background color to darken to */
+    background-color: #00000088;
+    /* Multiply blend mode */
+    background-blend-mode: multiply;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: transform .250s;
+}
+
+.project-bgNoImage:hover {
+    transform: scale(1.2);
+}
+
+/* Blog */
+.blogPeek > div,
+.hoverScale,
+.nav-svg > a > svg{
+    transition: transform .250s;
+}
+
+.blogPeek > div:hover,
+.hoverScale:hover,
+.nav-svg > a > svg:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.borderColor1 {
+    border: 3px solid #E0AFA0;
+}
+
+.borderColor2 {
+    border: 3px solid #463F3A;
+}
+
+/* Google Maps */
+/* Credit to https://stackoverflow.com/questions/15668762/google-maps-with-bootstrap-not-responsive */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+
+.iframe-container>* {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}

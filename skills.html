@@ -5,22 +5,6 @@
     WEB 235
     Final Project Home Page
     05Apr2022
-
-    To do:
-    Full Page JS on Story
-    Make sure next page button works on mobile
-    More effects on load
-    ScrollMe Effects (maybe on story page as well or Blog)
-
-    All Pages:
-    Images + Alt Attribute
-    S508 Compliance
-    Form Serverside/clientside confirmation - jQuery Form Validation
-
-
-    Page Containing:
-    Table displaying Data
-    Element With Vue
 -->
 
 <head>
@@ -40,7 +24,6 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -48,9 +31,8 @@
     <header>
         <a class="skip-to-content-link visuallyhidden" href="#main">Skip to content</a>
         <nav class="navbar navbar-expand-md navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand d-md-none" href="index.html" style="width: 40px; height: 40px;"
-                    aria-describedby="Home Page">
+            <div class="container-fluid align-items-baseline">
+                <a class="navbar-brand d-md-none" href="index.html" style="width: 40px; height: 40px;">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
                         <defs>
                             <style>
@@ -125,14 +107,14 @@
 
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link active text-center borderRight fs-5" aria-current="page"
+                            <a class="nav-link text-center borderRight fs-5" aria-current="page"
                                 href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-center borderRight fs-5" href="story.html">Story</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-center borderRight fs-5" href="skills.html">Skills</a>
+                            <a class="nav-link text-center active borderRight fs-5" href="skills.html">Skills</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-center borderRight fs-5" href="projects.html">Portfolio</a>
@@ -150,7 +132,7 @@
 
                     <div class="text-center nav-svg">
                         <a href="https://www.linkedin.com/in/davidbthomp/" target="_blank" rel="noopener noreferrer"
-                            class="nav-item" aria-label="LinkedIn">
+                            class="nav-item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
                                 class="svg-colors">
                                 <path
@@ -158,7 +140,7 @@
                             </svg>
                         </a>
                         <a href="https://github.com/DavidBThomp" target="_blank" rel="noopener noreferrer"
-                            class="nav-item" aria-label="GitHub">
+                            class="nav-item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
                                 class="svg-colors">
                                 <path
@@ -166,7 +148,7 @@
                             </svg>
                         </a>
                         <a href="https://www.youtube.com/channel/UC8UpM7AvWuYt5fplTrhKa7w" target="_blank"
-                            rel="noopener noreferrer" class="nav-item" aria-label="YouTube">
+                            rel="noopener noreferrer" class="nav-item">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
                                 class="svg-colors">
                                 <path
@@ -187,42 +169,221 @@
         </nav>
     </header>
 
-    <main id="main">
-        <div class="container d-flex align-content-center" id="topSection">
-
-            <div class="row align-items-center" id="infoTop">
-                <div class="col-xl-6 col-lg-5 col-md-5 order-1 order-md-0 mt-3 mt-md-0">
-                    <h1>Brendan Thompson</h1>
-                    <p>
-                        Welcome to my freelance business. I have been doing web development for about 2 years,
-                        working
-                        on my craft to become better. On these pages you can find out more about who I am, what I
-                        can
-                        do, and how I envision our possible future working togther.
-                    </p>
-
-                    <p>
-                        I did some coding in highschool, learning a little of python and working in the
-                        CNC/Mechanic/Electrical shop. I took interest in how the web functions, but in college
-                        choose to
-                        initally take an IT path. After a few years and a few certificaions, I decided that web
-                        development would be a path to travel to see how much I enjoyed it, which I enjoy a lot!
-                    </p>
+    <main>
+        <h1 class="text-center">My Skills</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <img src="./images/bootstrapLogo.png" alt="" class="img-thumbnail mx-auto d-block"
+                        style="max-width: 200px;">
+                    <h3 class="text-center">Front-end Development</h3>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">Intermediate
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <p class="mb-1">Ability to create basic static webpages, or translating
+                            mock-ups into
+                            static pages.</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <ul>
+                                <li>Bootstrap 5</li>
+                            </ul>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="col-xl-2 col-lg-2 col-md-1"></div>
-                <div class="col-xl-4 col-lg-5 col-md-6 order-0 order-md-3 mt-3 mt-md-0">
-                    <img src="./images/Profilecover.jpg" alt="Man looking out window" class="profileImg">
+
+                <div class="col-lg-4 col-md-6">
+                    <img src="./images/nodejsLogo.png" alt="" class="img-thumbnail mx-auto d-block"
+                        style="max-width: 200px;">
+                    <h3 class="text-center">Back-End Devlopment</h3>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+                            role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 20%">Beginner</div>
+                    </div>
+                    <div class="mt-2">
+                        <p class="mb-1">
+                            Create back-end services using RESTful techniques and other industry standard techniques.
+                        </p>
+                        <ul>
+                            <li>Node JS</li>
+                            <li>Express JS</li>
+                            <li>Amazon Web Services (AWS)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <img src="./images/figma.webp" alt="" class="img-thumbnail mx-auto d-block"
+                        style="max-width: 200px;">
+                    <h3 class="text-center">Wireframing & Mock-ups</h3>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning textProgressColor"
+                            role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 40%">Novice</div>
+                    </div>
+                    <div class="mt-2">
+                        <p class="mb-1">Wireframe pages and prototype using software starting from blank.</p>
+                        <ul>
+                            <li>Figma</li>
+                            <li>Adobe XD</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <img src="./images/comptiaA.png" alt="" class="img-thumbnail mx-auto d-block"
+                        style="max-width: 200px;">
+                    <h3 class="text-center">Computer Networking & Repair</h3>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">Intermediate
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <p class="mb-1">
+                            Understanding of networking protcols, computer repair (soldering, part replacement,
+                            installation), and Windows operating system.
+                        </p>
+                        <ul>
+                            <li>Windows</li>
+                            <li>A+ Certification</li>
+                            <li>Teaching</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img src="./images/adobeSuite.png" alt="" class="img-thumbnail mx-auto d-block"
+                        style="max-width: 200px;">
+                    <h3 class="text-center">Adobe Suite</h3>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning textProgressColor"
+                            role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 40%">Novice</div>
+                    </div>
+                    <div class="mt-2">
+                        <p class="mb-1">
+                            Using tools within adobe suite to edit, create, and revise media.
+                        </p>
+                        <ul>
+                            <li>Illistrator</li>
+                            <li>Photoshop</li>
+                            <li>Adobe XD</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <img src="./images/Windows10.jpg" alt="" class="img-thumbnail mx-auto d-block"
+                        style="max-width: 200px;">
+                    <h3 class="text-center">Microsoft Suite/Software</h3>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">Intermediate
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <p class="mb-1">
+                            Understanding of Windows operating system and tools created by Microsoft.
+                        </p>
+                        <ul>
+                            <li>Microsoft Suite</li>
+                            <ul>
+                                <li>Word</li>
+                                <li>Excel</li>
+                                <li>Access</li>
+                            </ul>
+                            <li>Outlook</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <h2 class="text-center">Guide</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Skill level</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Beginner
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+                                    role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 20%">Beginner
+                                </div>
+                            </div>
+                        </th>
+                        <td class="w-50">Progress is starting, able to complete a task with research and learning.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Novice
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning textProgressColor"
+                                    role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 40%">Novice
+                                </div>
+                            </div>
+                        </th>
+                        <td>Basic knowledge on key aspects, straightforward tasks completeable.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Intermediate
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                    Intermediate
+                                </div>
+                            </div>
+                        </th>
+                        <td>Strong working background of knowledge, complete most tasks using own judgement.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Advanced
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success textProgressColor"
+                                    role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 80%">
+                                    Advanced
+                                </div>
+                            </div>
+                        </th>
+                        <td>Depth of understanding, work with complex situations related to skill.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Expert
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-info textProgressColor"
+                                    role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                                    style="width: 100%">
+                                    Expert
+                                </div>
+                            </div>
+                        </th>
+                        <td>Authoritative knowledge on topic, deep tacit understanding.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <!-- Button at end of main content for next page -->
         <div class="text-end mb-2">
-            <button class="btn d-lg-none ms-auto" onclick="location.href = 'story.html'">Next
+            <button class="btn btn-lg d-lg-none mx-auto" onclick="location.href = 'story.html'">Previous
+                Page</button>
+            <button class="btn btn-lg d-lg-none mx-auto" onclick="location.href = 'projects.html'">Next
                 page</button>
         </div>
     </main>
 
-    <footer class="">
+    <footer>
         <div class="container px-lg-5">
             <div class="row border-1">
                 <div class="col-lg-2">
@@ -270,22 +431,24 @@
                 </div>
             </div>
 
-
-
-
             <div class="text-center mb-1">
                 &copy;HDesigns 2022 LLC. All Rights Reserved.
             </div>
         </div>
-
-        <button class="btn nextPage d-none d-lg-inline-flex" onclick="location.href = 'story.html'">Next
-            page</button>
-
-        <!-- <div id="prevPage">
-            <button class="btn prevPage d-none d-lg-inline-flex"
-                onclick="location.href = 'story.html'">{{ prevButton }}</button>
-        </div> -->
     </footer>
+    <!-- Next Page Button -->
+    <button class="btn nextPage d-none d-lg-inline-flex" onclick="location.href = 'projects.html'">Next
+        page</button>
+    <div id="prevPage">
+        <button class="btn prevPage d-none d-lg-inline-flex"
+            onclick="location.href = 'story.html'">{{ prevButton }}</button>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -295,26 +458,7 @@
     <!-- VueJS 3 -->
     <script src="https://unpkg.com/vue@3"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
     <script src="./js/app.js"></script>
-
-    <script>
-        // VUE JS Previous Page
-        // const {
-        //     createApp
-        // } = Vue
-
-        // createApp({
-        //     data() {
-        //         return {
-        //             prevButton: 'Previous Page'
-        //         }
-        //     }
-        // }).mount('#prevPage')
-    </script>
 </body>
 
 </html>
