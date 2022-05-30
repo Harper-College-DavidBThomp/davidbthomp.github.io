@@ -1,0 +1,23 @@
+.header-bg {
+    /* width: auto; */
+    height: 250px;
+
+
+    /* Make into GIF */
+    background-image: url("./imgs/carouselHolder.jpg");
+    /* Background color to darken to */
+    background-color: #00000088;
+    /* Multiply blend mode */
+    background-blend-mode: multiply;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    min-height: calc(50vh);
+}
+
+.vertical {
+    min-height: calc(50vh);
+}
