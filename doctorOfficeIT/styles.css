@@ -15,3 +15,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#list1 {
+    list-style-position: inside;
+    list-style-image: url('./imgs/arrow-right-square.svg');
+}
