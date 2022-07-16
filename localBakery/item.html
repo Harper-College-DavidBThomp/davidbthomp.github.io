@@ -28,9 +28,6 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"
         integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
 
-    <!-- Murri Jquery -->
-    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
 
     <!-- Quicksand & Pacifico Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,6 +48,10 @@
     Font
     font-family: 'Quicksand', sans-serif;
      */
+
+        * {
+            box-sizing: border-box;
+        }
 
         main {
             height: 100%;
@@ -201,6 +202,49 @@
         .orderbtn {
             transition: transform .250s;
         }
+
+        .bgImg1 {
+            background: url(applePieCastIron.jpeg);
+        }
+
+        .bgImg2 {
+            background: url(strawberryCake.jpeg);
+        }
+
+        .bgImg3 {
+            background: url(chocolateDripCake.jpeg);
+        }
+
+        .bgImg4 {
+            background: url(blueberryMuffins.jpeg);
+        }
+
+        .bgImg {
+            height: 35vh;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* Background color to darken to */
+            background-color: #00000088;
+            /* Multiply blend mode */
+            background-blend-mode: multiply;
+
+            transition: .5s ease;
+        }
+
+        .bgImg:hover {
+            transform: scale(1.25);
+            /* Background color to darken to */
+            background-color: #00000088;
+            /* Multiply blend mode */
+            background-blend-mode: normal;
+        }
+
+        .hiddenText {
+            /* display: none; */
+        }
     </style>
 </head>
 
@@ -251,161 +295,60 @@
                 style="width: 96%">
                 <div>
                     <h1>Home Made</h1>
-                    <p class="lead fontBold">Small, Local, Delicous.</p>
+                    <p class="lead fontBold">Local & Delicous.</p>
                     <button type="button" class="orderbtn btn fontBold buttonsColor btn-lg">Order Now</button>
                 </div>
 
             </div>
 
-            <!-- Playing with Murri Jquery Plugin-->
-            <div class="grid ms-1 ms-md-4">
-                <div class="item">
-                    <div class="item-content">
-                        <!-- Safe zone, enter your custom markup -->
-                        <img src="maccaron.jpeg" alt="" class="murriBorderImage1" width="195px" height="400px">
-                        <!-- Safe zone ends -->
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-content">
-                        <!-- Safe zone, enter your custom markup -->
-                        <img src="bakeryTable.jpeg" alt="" class="murriBorderImage1" width="400px" height="195px">
-                        <!-- Safe zone ends -->
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-content">
-                        <!-- Safe zone, enter your custom markup -->
-                        <img src="cakeKyle.jpeg" alt="" class="murriBorderImage2" width="195px" height="400px">
-                        <!-- Safe zone ends -->
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-content">
-                        <!-- Safe zone, enter your custom markup -->
-                        <img src="tartRolls.jpeg" alt="" class="murriBorderImage1" width="400px" height="195px">
-                        <!-- Safe zone ends -->
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-content">
-                        <!-- Safe zone, enter your custom markup -->
-                        <img src="blueberryMuffins.jpeg" alt="" class="murriBorderImage2" width="400px" height="195px">
-                        <!-- Safe zone ends -->
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-content">
-                        <!-- Safe zone, enter your custom markup -->
-                        <img src="dabfest17.jpeg" alt="" class="murriBorderImage2" width="400px" height="195px">
-                        <!-- Safe zone ends -->
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-content">
-                        <!-- Safe zone, enter your custom markup -->
-                        <img src="sweetPretz.jpeg" alt="" class="murriBorderImage2" width="195px" height="400px">
-                        <!-- Safe zone ends -->
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-content">
-                        <!-- Safe zone, enter your custom markup -->
-                        <img src="heartBox.jpeg" alt="" class="murriBorderImage1" width="195px" height="400px">
-                        <!-- Safe zone ends -->
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-content">
-                        <!-- Safe zone, enter your custom markup -->
-                        <img src="strawberryCake.jpeg" alt="" class="murriBorderImage2" width="195px" height="400px">
-                        <!-- Safe zone ends -->
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-content">
-                        <!-- Safe zone, enter your custom markup -->
-                        <img src="logCake.jpeg" alt="" class="murriBorderImage1" width="400px" height="195px">
-                        <!-- Safe zone ends -->
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-content">
-                        <!-- Safe zone, enter your custom markup -->
-                        <img src="christmasBakingSheet.jpeg" alt="" class="murriBorderImage1" width="195px"
-                            height="400px">
-                        <!-- Safe zone ends -->
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="item-content">
-                        <!-- Safe zone, enter your custom markup -->
-                        <img src="applePieCastIron.jpeg" alt="" class="murriBorderImage2" width="400px" height="195px">
-                        <!-- Safe zone ends -->
-                    </div>
-                </div>
-
-
-            </div>
-            <!-- End Murri -->
-
-
-            <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="chocolateDripCake.jpeg" class="card-img-top" alt="..." width="200" height="300"
-                            style="object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="whiteCupcakes.jpeg" class="card-img-top" alt="..." width="200" height="300"
-                            style="object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content. This content is a little bit longer.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card border-0">
-                        <img src="bakeryTable.jpeg" class="card-img-top" alt="..." width="200" height="300"
-                            style="object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                to additional content.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-
-            <!-- Social media API + Grid intergration -->
             <div class="container">
+                <div class="row mb-4 justify-content-evenly gx-5">
+
+                    <h2 class="logoText text-white text-center">Summer 2022</h2>
+                    <div class="col-lg-3"></div>
+                    <p class="text-center lead fontBold col-lg-6">This summer, fousing on the changing climate and
+                        variable fruit
+                        patterns,
+                        Chef Drew wanted to cater her baking goods to match these changes.
+                    </p>
+                    <div class="col-lg-3"></div>
+
+                    <div
+                        class="bgImg bgImg1 col-6 col-lg-3 text-white text-center heroBorder d-flex align-items-center justify-content-center">
+                        <h3 class="fontBold hiddenText text-center">Cast-Iron Apple Pie</h3>
+                    </div>
+                    <div
+                        class="bgImg bgImg2 col-6 col-lg-3 text-white text-center heroBorder d-flex align-items-center justify-content-center">
+                        <h3 class="fontBold hiddenText">White Cake</h3>
+                    </div>
+                    <div
+                        class="bgImg bgImg3 col-6 col-lg-3 text-white text-center heroBorder d-flex align-items-center justify-content-center">
+                        <h3 class="fontBold hiddenText">Styled White Cake</h3>
+                    </div>
+                    <div
+                        class="bgImg bgImg4 col-6 col-lg-3 text-white text-center heroBorder d-flex align-items-center justify-content-center">
+                        <h3 class="fontBold hiddenText">Blueberry Muffins</h3>
+                    </div>
+                </div>
 
 
-
+                <!-- <div class="imgHoverText col-6 col-xl-3">
+                    <img src="applePieCastIron.jpeg" alt="Apple Pie in a cast iron" class="img-fluid heroBorder">
+                </div>
+                <div class="imgHoverText col-6 col-xl-3">
+                    <img src="applePieCastIron.jpeg" alt="Apple Pie in a cast iron" class="img-fluid heroBorder">
+                </div>
+                <div class="imgHoverText col-6 col-xl-3">
+                    <img src="applePieCastIron.jpeg" alt="Apple Pie in a cast iron" class="img-fluid heroBorder">
+                </div>
+                <div class="imgHoverText col-6 col-xl-3">
+                    <img src="applePieCastIron.jpeg" alt="Apple Pie in a cast iron" class="img-fluid heroBorder">
+                </div> -->
 
             </div>
+
+
+        </div>
     </main>
 
 
@@ -540,36 +483,14 @@
 
     <script>
         // JQUERY 
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                // $(".orderbtn").css("transform", "scale(1.25)");
-
-                // clearTimeout($.data(this, 'scrollTimer'));
-                // $.data(this, 'scrollTimer', setTimeout(function () {
-                //     $(".orderbtn").css("transform", "scale(1)");
-                // }, 250));
-            });
-        });
-    </script>
-
-    <!-- Murri Script -->
-    <script>
-        var grid = new Muuri('.grid', {
-            dragEnabled: false,
-            layout: {
-                fillGaps: true,
-            },
-        });
-
-        // When all items have loaded refresh their
-        // dimensions and layout the grid.
-        window.addEventListener('load', function () {
-            grid.refreshItems().layout();
-            // For a little finishing touch, let's fade in
-            // the images after all them have loaded and
-            // they are corrertly positioned.
-            document.body.classList.add('images-loaded');
-        });
+        // $(document).ready(function () {
+        //     $(".bgImg").hover(function () {
+        //             $(".hiddenText").fadeIn(500);
+        //         },
+        //         function () {
+        //             $(".hiddenText").fadeOut(500);
+        //         }); // end Hover
+        // }); // end Ready
     </script>
 </body>
 

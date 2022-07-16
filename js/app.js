@@ -9,6 +9,7 @@ $(document).ready(function () {
     // Fade in animation on page load
     $('main').fadeIn(2000);
     $('footer').fadeIn(2000);
+    $('#scrollPage').fadeIn(2000);
 
     // Footer Form Validation
     $('#footerError').hide();

@@ -22,7 +22,8 @@ body {
 }
 
 main,
-footer {
+footer,
+#scrollPage {
     display: none;
 }
 
@@ -78,7 +79,7 @@ h5 {
 }
 
 #topSection {
-    min-height: calc(100vh - 58px);
+    height: calc(100vh - 58px);
     min-height: 100%;
 }
 
@@ -103,7 +104,7 @@ h5 {
 /* Possible Story */
 
 .fullSection {
-    min-height: 100vh;
+    height: 100vh;
     min-height: 100%;
 }
 
