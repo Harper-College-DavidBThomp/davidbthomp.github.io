@@ -1,7 +1,5 @@
 .header-bg {
-    /* width: auto; */
-    height: 250px;
-
+    min-height: 250px;
 
     /* Make into GIF */
     background-image: url("./imgs/carouselHolder.jpg");
@@ -14,10 +12,34 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    min-height: calc(50vh);
 }
 
 .vertical {
     min-height: calc(50vh);
+}
+
+.cover50VH {
+    min-height: calc(50vh);
+}
+
+.blueText {
+    color: #79BEEE;
+}
+
+.headerTextShadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+.navActive {
+    color: #79BEEE;
+    text-decoration: solid #79BEEE 2px;
+}
+
+.navActive:hover {
+    color: white;
+}
+
+/* Hovering Nav text-white items turn blue */
+.nav-item > .text-white:hover {
+    color: #79BEEE !important;
 }

@@ -1,252 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Office IT</title>
+
     <!-- Bootstrap 5.2.0 CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="newStyles.css">
+</head>
 
-    <title>Doctor Office IT</title>
-  </head>
-
-  <body>
+<body class="bg-dark">
     <nav class="navbar navbar-expand-lg bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand ms-lg-5" href="#">
-          <img
-            src="./imgs/DocITLogoCroppedC.png"
-            height="35"
-            class="d-inline-block align-text-top"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto d-lg-flex align-bottom">
-            <a class="nav-link text-white fw-bold fs-5" href="#">Services</a>
-            <li class="nav-item">
-              <a class="nav-link text-white fw-bold fs-5" href="#">Solutions</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link text-white fw-bold fs-5" href="#">Support</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link text-white fw-bold fs-5" href="#">About Us</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link text-white fw-bold fs-5" href="#">Contact</a>
-            </li>
-          </ul>
-
-          <span class="navbar-text fw-bold fs-5 me-lg-5">
-            <a href="tel:+18473599210" class="text-white"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                class="bi bi-telephone-fill mx-1"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
-                />
-              </svg>
-              847-359-9210</a
-            >
-          </span>
+        <div class="container-fluid">
+            <a class="navbar-brand ms-lg-5" href="index.html">
+                <img src="./imgs/DocITLogoCroppedC.png" height="35" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto d-lg-flex align-bottom">
+                    <!-- Individual nav needs white font, apply navActive to those that are active and remove text-white -->
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5 navActive" href="services.html">Services</a>
+                    </li>
+                    <div class="vr text-white d-none d-lg-block"></div>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold fs-5 text-white" href="solutions.html">Solutions</a>
+                    </li>
+                    <div class="vr text-white d-none d-lg-block"></div>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold fs-5" href="support.html">Support</a>
+                    </li>
+                    <div class="vr text-white d-none d-lg-block"></div>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold fs-5" href="about.html">About Us</a>
+                    </li>
+                    <div class="vr text-white d-none d-lg-block"></div>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fw-bold fs-5" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <span class="navbar-text fw-bold fs-5 me-lg-5">
+                    <a href="tel:+18473599210" class="text-white"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                            height="20" fill="currentColor" class="bi bi-telephone-fill mx-1 blueText"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                        </svg>847-359-9210</a>
+                </span>
+            </div>
         </div>
-      </div>
     </nav>
 
     <div class="container-fluid p-0 text-center header-bg text-white p-5">
-      <div class="container">
-        <h1>Services</h1>
-        <p>
-          We offer a number of first-class services for your office or facility.
-          These services range from emergency help to installation.
-        </p>
-      </div>
+        <div class="container">
+            <h1 class="blueText headerTextShadow">Services</h1>
+            <p>
+                We offer a number of first-class services for your office or facility.
+                These services range from emergency help to installation.
+            </p>
+        </div>
     </div>
 
-    <div class="container my-5">
-      <div class="row">
-        <div class="col-sm-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Emergency IT Support</h5>
-              <p class="card-text">
-                Staffed with multiple techs, we not only have excellent response
-                times – we also have a wide variety of expertise to handle any
-                problem your company may face.
-              </p>
+    <!-- Main content  -->
+    <main>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title blueText">Emergency IT Support</h5>
+                            <p class="card-text">
+                                Staffed with multiple techs, we not only have excellent response
+                                times – we also have a wide variety of expertise to handle any
+                                problem your company may face.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title blueText">Emergency Wireless Internet</h5>
+                            <p class="card-text">
+                                When your internet goes down, call us up. We can bring your
+                                office an emergency wireless connection to the internet – at the
+                                same speed as DSL.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-sm-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Emergency Wireless Internet</h5>
-              <p class="card-text">
-                When your internet goes down, call us up. We can bring your
-                office an emergency wireless connection to the internet – at the
-                same speed as DSL.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-sm-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Onsite and Remote Help Desk</h5>
-              <p class="card-text">
-                Our help desk technicians can address or repair problems your
-                office or facility is having with it’s computers, printers,
-                telephones, or multimedia. Support will be avaliable as soon
-                technicians are avaliable.
-              </p>
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title blueText">Onsite and Remote Help Desk</h5>
+                            <p class="card-text">
+                                Our help desk technicians can address or repair problems your
+                                office or facility is having with it’s computers, printers,
+                                telephones, or multimedia. Support will be avaliable as soon
+                                technicians are avaliable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title blueText">Cabling and System Support</h5>
+                            <p class="card-text">
+                                Our techs are experts at installing, adding on, and moving
+                                voice, data, and multimedia cabling. We also specialize in
+                                distributed audio/video and multi-line to VoIP phone systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-sm-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Cabling and System Support</h5>
-              <p class="card-text">
-                Our techs are experts at installing, adding on, and moving
-                voice, data, and multimedia cabling. We also specialize in
-                distributed audio/video and multi-line to VoIP phone systems.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-sm-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Managed Network Service</h5>
-              <p class="card-text">
-                Our systems can catch problems, before they even become a
-                problem. We offer 24/7 monitoring. Our monitoring checks your
-                network every five minutes and reports any issues with your
-                servers, network, or internet connections.
-              </p>
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title blueText">Managed Network Service</h5>
+                            <p class="card-text">
+                                Our systems can catch problems, before they even become a
+                                problem. We offer 24/7 monitoring. Our monitoring checks your
+                                network every five minutes and reports any issues with your
+                                servers, network, or internet connections.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title blueText">Office Adds and Moves</h5>
+                            <p class="card-text">
+                                We manage the entire project, from design, to cabling, to
+                                service-vendor management. Our goal is zero downtime for your
+                                company's move. We’ll let your business focus on the other
+                                details of the move, leave the IT to us!
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Office Adds and Moves</h5>
-              <p class="card-text">
-                We manage the entire project, from design, to cabling, to
-                service-vendor management. Our goal is zero downtime for your
-                company's move. We’ll let your business focus on the other
-                details of the move, leave the IT to us!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </main>
 
     <footer>
-      <div class="container-fluid bg-dark">
-        <div class="container px-lg-5 pt-lg-5">
-          <div class="row">
-            <div class="col-lg-6 text-white text-center mt-3 mt-lg-0">
-              <h3>Get In Touch</h3>
-              <p>
-                Contact us today to see how we can meet the needs of your
-                business. Technicians are always available to answer additional
-                questions relating to services, quotes, and emergency support.
-              </p>
-              <a href="tel:+18473599210" class="text-white"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  class="bi bi-telephone-fill mx-1"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
-                  />
-                </svg>
-                847-359-9210</a
-              >
+        <div class="container-fluid bg-dark">
+            <div class="container px-lg-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 text-white text-center mt-3 mt-lg-0 mb-3 mb-lg-0">
+                        <h3 class="blueText">Get In Touch</h3>
+                        <p>Contact us today to see how we can meet the needs of your business. Technicians are always
+                            available to answer additional questions relating to services, quotes, and emergency
+                            support.</p>
+                        <a href="tel:+18473599210" class="text-white"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" fill="currentColor" class="bi bi-telephone-fill mx-1 blueText"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>847-359-9210</a><br>
 
-              <a href="mailto:helpdesk@doctorofficeit.com" class="text-white"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  fill="currentColor"
-                  class="bi bi-envelope mx-1"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"
-                  />
-                </svg>
-                helpdesk@doctorofficeit.com</a
-              >
+                        <a href="mailto:helpdesk@doctorofficeit.com" class="text-white"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-envelope mx-1 blueText" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                            </svg>helpdesk@doctorofficeit.com</a>
+                    </div>
+                    <div class="col-lg-6 text-white text-center mt-3 mt-lg-0">
+                        <h3 class="blueText">Our Office</h3>
+                        <p>Located at 850 W Bartlett Rd
+                            Suite 7C</p>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.2341720307068!2d-88.20485688431567!3d41.99524966605357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f072604ecde0f%3A0xd214aff70d2046fa!2s850%20W%20Bartlett%20Rd%20%237c%2C%20Bartlett%2C%20IL%2060103!5e0!3m2!1sen!2sus!4v1653945230460!5m2!1sen!2sus"
+                            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <h4 class="text-white text-center mt-2 border-top border-white fs-5" id="copyRightFooter">
+                        &copy;Doctor
+                        Office IT </h4>
+                </div>
             </div>
-            <div class="col-lg-6 text-white text-center mt-3 mt-lg-0">
-              <h3>Our Office</h3>
-              <p>Located at 850 W Bartlett Rd Suite 7C</p>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.2341720307068!2d-88.20485688431567!3d41.99524966605357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f072604ecde0f%3A0xd214aff70d2046fa!2s850%20W%20Bartlett%20Rd%20%237c%2C%20Bartlett%2C%20IL%2060103!5e0!3m2!1sen!2sus!4v1653945230460!5m2!1sen!2sus"
-                width="300"
-                height="200"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-            <h4 class="text-white text-center mt-2">
-              &copy;Doctor Office IT 2022
-            </h4>
-          </div>
         </div>
-      </div>
     </footer>
 
     <!-- Bootstrap 5.2.0 JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <!-- Inject current year into footer -->
+    <script>
+        let date = new Date().getFullYear();
+        let classDate = document.getElementById('copyRightFooter');
+        classDate.innerText += ` ${date}`;
+    </script>
+</body>
+
 </html>
