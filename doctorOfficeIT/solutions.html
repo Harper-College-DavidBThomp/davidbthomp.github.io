@@ -29,11 +29,11 @@
                 <ul class="navbar-nav me-auto d-lg-flex align-bottom">
                     <!-- Individual nav needs white font, apply navActive to those that are active and remove text-white -->
                     <li class="nav-item">
-                        <a class="nav-link fw-bold fs-5 navActive" href="services.html">Services</a>
+                        <a class="nav-link fw-bold fs-5 text-white" href="services.html">Services</a>
                     </li>
                     <div class="vr text-white d-none d-lg-block"></div>
                     <li class="nav-item">
-                        <a class="nav-link fw-bold fs-5 text-white" href="solutions.html">Solutions</a>
+                        <a class="nav-link fw-bold fs-5 navActive" href="solutions.html">Solutions</a>
                     </li>
                     <div class="vr text-white d-none d-lg-block"></div>
                     <li class="nav-item">
@@ -82,27 +82,38 @@
                 providing the highest level of support with our team of caring, local experts, experienced in supporting
                 health-care information and communication systems.
             </p>
-            <div class="row justify-content-around">
-                <div class="col-lg-4 border border-1 rounded">
-                    <h3 class="blueText">Supporting:</h3>
-                    <p class="text-white">Computer Networks</p>
-                    <p class="text-white">Telephone & Paging & Overhead Music Systems</p>
-                    <p class="text-white">Data & Voice & Multimedia Cabling</p>
-                    <p class="text-white">Website, E-mail, & Exchange Hosting</p>
-                    <p class="text-white">Offsite Data Backup & Cloud Disaster Recovery</p>
+
+
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title blueText">Dental Support:</h5>
+                            <p class="card-text">Eaglesoft, Easy Dental</p>
+                            <p class="card-text">Dentrix, Dexis</p>
+                            <p class="card-text">Dolphin X-Ray & Imagine Hardware</p>
+                            <p class="card-text">Quickbooks</p>
+                            <p class="card-text">Peachtree</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-4 border border-1 rounded">
-                    <h3 class="blueText">Dental Support:</h3>
-                    <p class="text-white">Eaglesoft, Easy Dental</p>
-                    <p class="text-white">Dentrix, Dexis</p>
-                    <p class="text-white">Dolphin X-Ray & Imagine Hardware</p>
-                    <p class="text-white">Quickbooks, Peachtree</p>
+                <div class="col-sm-6 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title blueText">Supporting:</h5>
+                            <p class="card-text">Computer Networks</p>
+                            <p class="card-text">Telephone & Paging & Overhead Music Systems</p>
+                            <p class="card-text">Data & Voice & Multimedia Cabling</p>
+                            <p class="card-text">Website, E-mail, & Exchange Hosting</p>
+                            <p class="card-text">Offsite Data Backup & Cloud Disaster Recovery</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="mt-3 border-top">
         <div class="container-fluid bg-dark">
             <div class="container px-lg-5">
                 <div class="row align-items-center">
@@ -134,7 +145,7 @@
                             width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
-                    <h4 class="text-white text-center mt-2 border-top border-white fs-5" id="copyRightFooter">
+                    <h4 class="text-white text-center mt-2 fs-6" id="copyRightFooter">
                         &copy;Doctor
                         Office IT </h4>
                 </div>
