@@ -2,7 +2,7 @@
     min-height: 250px;
 
     /* Make into GIF */
-    background-image: url("./imgs/carouselHolder.jpg");
+
     /* Background color to darken to */
     background-color: #00000088;
     /* Multiply blend mode */
@@ -12,6 +12,34 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#headerImg0 {
+    background-image: url("./imgs/Header\ Image.jpg");
+}
+
+#headerImg1 {
+    background-image: url("./imgs/Header\ Image\ 1.jpg");
+}
+
+#headerImg2 {
+    background-image: url("./imgs/Header\ Image\ 2.jpg");
+}
+
+#headerImg3 {
+    background-image: url("./imgs/Header\ Image\ 3.jpg");
+}
+
+#headerImg4 {
+    background-image: url("./imgs/Header\ Image\ 4.jpg");
+}
+
+#headerImg5 {
+    background-image: url("./imgs/Header\ Image\ 5.jpg");
+}
+
+#contactUsImg {
+    background-image: url("./imgs/contact\ us.jpg");
 }
 
 .vertical {
