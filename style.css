@@ -78,6 +78,11 @@ h5 {
     border: 3px solid #E0AFA0;
 }
 
+.projectImg {
+    border: 3px solid #E0AFA0;
+    overflow: hidden;
+}
+
 #topSection {
     min-height: calc(100vh - 58px);
 }
