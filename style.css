@@ -80,7 +80,9 @@ h5 {
 
 .projectImg {
     border: 3px solid #E0AFA0;
-    overflow: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    height: auto;
 }
 
 #topSection {
