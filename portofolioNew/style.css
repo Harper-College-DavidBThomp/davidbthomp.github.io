@@ -223,7 +223,7 @@ div>img {
 }
 
 .bg-svg1 {
-    background: transparent url("shape.svg") no-repeat 50% 50%/300px auto;
+    background: transparent url("./assets/shape.svg") no-repeat 50% 50%/300px auto;
 }
 
 .project-bg {
