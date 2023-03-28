@@ -78,6 +78,11 @@ h5 {
     border: 3px solid #E0AFA0;
 }
 
+.imgBorder {
+    border: 3px solid #E0AFA0;
+    border-radius: 10%;
+}
+
 .projectImg {
     border: 3px solid #E0AFA0;
     overflow-x: hidden;
@@ -111,7 +116,6 @@ h5 {
 
 .fullSection {
     height: 100vh;
-    min-height: 100%;
 }
 
 #coder {
