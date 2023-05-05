@@ -1,0 +1,531 @@
+/* 
+
+Color Pallet: 
+#dadbf1
+#4C5FD5
+#fff
+#000000
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+font-family: 'Roboto', sans-serif;
+
+To use variable declared in :root
+var(--primary)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #4C5FD5;
+    --seconday: #dadbf1;
+    --lightGrey: #191a1b;
+}
+
+/* 
+    Utility Classes
+*/
+
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* 
+    IDs 
+*/
+
+#logo {
+    background-color: white;
+    padding: 4px;
+    border-radius: 10px;
+    margin: 2px;
+    width: 40px;
+    height: 40px;
+    filter: invert(38%) sepia(94%) saturate(589%) hue-rotate(198deg) brightness(86%) contrast(95%);
+}
+
+#navProps {
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* 
+    Header/Nav
+*/
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 20px 10px;
+    font-size: 1.3rem;
+}
+
+.rightIcons {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(139deg) brightness(103%) contrast(101%);
+}
+
+.navBarLinks {
+    display: none;
+    flex-direction: row;
+    background-color: black;
+    color: white;
+}
+
+.navBarLinks ul {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0;
+    padding: 30px;
+    width: 100%;
+    flex-direction: row;
+    text-align: center;
+}
+
+.navBarLinks li {}
+
+.navBarLinks li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1rem 0.5rem;
+    font-size: 1.5rem;
+}
+
+.navBarLinks li:hover {
+    background-color: #555;
+}
+
+.borderWhiteBtm {
+    border-bottom: white 1px solid;
+}
+
+.active {
+    display: flex;
+}
+
+/* 
+    Main Section
+*/
+
+/* Search Section */
+.searchSection {
+    background-color: var(--seconday);
+    padding: 100px 10px 150px 10px;
+    text-align: center;
+}
+
+.searchSection h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.searchSection h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0 50px;
+}
+
+.searchSection input {
+    width: 100%;
+    height: 55px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+.posRel {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 700px;
+}
+
+#searchArrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto 0;
+}
+
+#searchHelp:focus-visible {
+    border: 2px solid var(--primary);
+    outline: none;
+
+}
+
+.posRel img {
+    width: 30px;
+    height: 40px;
+}
+
+.posRel img {}
+
+
+/* 
+    Items in main
+*/
+
+.itemsContainer {
+    padding: 0 10px;
+    margin: 100px 0 0 0;
+    flex-direction: column;
+}
+
+.itemsContainer>.flex {
+    margin: 0 0 100px 0;
+}
+
+.itemsContainer>.flex>div h2 {
+    font-size: 1.75rem;
+    margin: 0 0 20px 0;
+}
+
+.itemsContainer>.flex>div p {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin: 0 0 15px 0;
+}
+
+.itemsContainer>.flex>div a {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.itemsContainer>.flex>div a::after {
+    padding: 0 0 0 5px;
+    content: "\2192";
+}
+
+.svgItemImg {
+    width: 50px;
+    height: 50px;
+    margin: 0 15px 0 0;
+}
+
+
+
+
+
+/* 
+    Sticky Accessibility
+*/
+
+.stickyAcc {
+    position: fixed;
+
+    background-color: var(--primary);
+    border-radius: 50%;
+
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+/* 
+    Footer
+*/
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footerSec {
+    flex: 50%;
+    margin: 0 0 30px 0;
+}
+
+.footerSec a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font: 1rem;
+    margin: 0 0 2px 0;
+}
+
+.footerSec a:hover {
+    text-decoration: underline;
+}
+
+.footerSec h3 {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+}
+
+.footerSec h4 {
+    margin: 30px 0 0 0;
+}
+
+footer p {
+    font-size: 1.25rem;
+    margin: 0 0 2px 0;
+}
+
+footer .flex {
+    flex-wrap: wrap;
+}
+
+#copyRight {
+    flex-grow: 1;
+}
+
+.footerSec:nth-child(3) {
+    display: none;
+}
+
+.navButtons {
+    display: none;
+}
+
+#shield {
+    filter: invert(30%) sepia(94%) saturate(1069%) hue-rotate(212deg) brightness(93%) contrast(88%);
+}
+
+#netlify {
+    filter: invert(64%) sepia(26%) saturate(7349%) hue-rotate(139deg) brightness(96%) contrast(96%);
+}
+
+
+#heroku {
+    filter: invert(12%) sepia(75%) saturate(4825%) hue-rotate(266deg) brightness(88%) contrast(98%);
+}
+
+#mongoDb {
+    filter: invert(64%) sepia(54%) saturate(1416%) hue-rotate(93deg) brightness(98%) contrast(107%);
+}
+
+#postgre {
+    filter: invert(37%) sepia(8%) saturate(3415%) hue-rotate(165deg) brightness(94%) contrast(89%);
+}
+
+/* Injection Button DevBThom */
+
+#devbthom {
+    font-family: 'Roboto', sans-serif;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: #463F3A;
+    color: #F4F3EE;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: none;
+    border: none;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+#devbthom:hover {
+    background-color: #94877e;
+    color: white;
+    cursor: pointer;
+}
+
+/* End Button Injection */
+
+/*  
+    Media Queries 
+*/
+
+/* Tablet */
+@media (min-width:768px) {
+    nav {
+        padding: 20px 30px;
+    }
+
+    .searchSection h1 {
+        font-size: 3.5rem;
+        font-weight: 400;
+        margin: 0 0 50px;
+    }
+
+    .searchSection input {
+        max-width: 700px;
+    }
+
+    #searchArrow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+    }
+
+    #logo {
+        margin: 0 10px;
+    }
+
+    .itemsContainer {
+        max-width: 600px;
+        margin: 100px auto 0;
+    }
+
+    .footerSec {
+        flex: 33.3%;
+        margin: 0 0 30px 0;
+        flex-grow: 0;
+    }
+
+    #copyRight {
+        /* align-self: flex-end; */
+        flex-grow: 0;
+        width: 33.3%
+    }
+
+    #copyRight #logo {
+        margin: 60px 0 0 0;
+    }
+
+    footer {
+        padding: 60px 40px;
+    }
+}
+
+@media (min-width:1024px) {
+    nav {
+        font-size: 1.5rem;
+    }
+
+    .searchSection h1 {
+        font-size: 4rem;
+        font-weight: 500;
+        margin: 0 0 25px;
+    }
+
+    .itemsContainer .flex {
+        flex: 1 1 50%;
+        padding: 0 10px;
+        margin: 75px auto 0;
+    }
+
+    .itemsContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 900px;
+    }
+
+    footer {
+        margin: 200px 0 0 0;
+    }
+
+    .footerSec {
+        flex: 1;
+    }
+
+    .footerSec:nth-child(3) {
+        display: none;
+    }
+
+    #copyRight #logo {
+        margin: 150px 0 0 10px;
+    }
+
+    /* Remove Hamburger */
+    #rightNav {
+        display: none;
+    }
+
+    .navButtons {
+        display: inline-block;
+    }
+
+    .navButtons ul,
+    .navButtons button,
+    .navButtons li {
+        display: inline-block;
+        text-decoration: none;
+        background-color: black;
+        color: white;
+        list-style-type: none;
+        border: none;
+    }
+
+    .navButtons button {
+        background-color: #111;
+        border-radius: 10px;
+        font-size: 1.5rem;
+        padding: 10px 20px;
+        border: white 1px solid;
+        transition: 0.3s;
+    }
+
+    .navButtons #signIn {
+        background-color: var(--primary);
+        border: none;
+        margin: 0 0 0 10px;
+        transition: 0.3s;
+    }
+
+    .navButtons button:first-child:hover {
+        background-color: var(--seconday);
+        color: black;
+    }
+
+    .navButtons #signIn:hover {
+        background-color: var(--seconday);
+    }
+
+    .navBarLinks {
+        display: none;
+    }
+}
+
+@media (min-width: 1440px) {
+    .itemsContainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1600px;
+    }
+
+    #copyRight {
+        text-align: right;
+    }
+
+    #copyRight #align-left {
+        text-align: left;
+        display: inline-block;
+    }
+
+    #navProps {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    nav {
+        padding: 20px 100px;
+    }
+}
+
+@media (min-width: 1600px) {
+    footer .flex {
+        max-width: 1600px;
+        ;
+        margin: 0 auto;
+    }
+}

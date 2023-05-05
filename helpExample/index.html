@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<!-- 
+
+    Project Info:
+    https://www.frontendpractice.com/projects/abstract
+
+    For me:
+    Make sure Enter Button works to search X
+    Arrow Button on Search doesn't change color
+ -->
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+    <!-- Sticky Accessibility -->
+    <a href="#">
+        <img src="./assets/universal-access.svg" alt="" class="stickyAcc">
+    </a>
+
+
+    <header>
+        <nav>
+            <div class="flex" id="navProps">
+                <div class="flex align-center" id="leftNav">
+                    <a href="#">
+                        <img src="./assets/bxs-server.svg" alt="" id="logo">
+                    </a>
+                    <p>Server King | Help Center</p>
+                </div>
+
+                <div class="flex align-center" id="rightNav">
+                    <img src="./assets/search.svg" alt="" class="rightIcons">
+                    <a href="javascript:void(0);" class="icon" onclick="navToggle()">
+                        <img src="./assets/hamIcon.svg" alt="" class="rightIcons">
+                    </a>
+                </div>
+
+                <div class="navButtons">
+                    <ul>
+                        <li><a href="#" class=""><button>Submit Request</button></a></li>
+                        <li><a href="#"><button id="signIn">Sign In</button></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navBarLinks">
+                <ul>
+                    <li><a href="#" class="borderWhiteBtm">Submit Request</a></li>
+                    <li><a href="#">Sign In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="searchSection">
+            <h1>How can we help?</h1>
+            <h2>This is just an example page, links and searching doesn't work.</h2>
+            <form action="" method="post" class="posRel" onsubmit="return false">
+                <div>
+                    <label for="serachHelp"></label>
+                    <input type="search" name="serachHelp" id="searchHelp" placeholder="Search">
+                    <img src="./assets/right-arrow.svg" alt="" id="searchArrow">
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <div class="flex itemsContainer">
+                <div class="flex">
+                    <img src="./assets/shield-plus.svg" alt="" class="svgItemImg" id="shield">
+                    <div>
+                        <h2>Server Protection</h2>
+                        <p>We use military-grade protection on our servers. Never worry about your data being leaked.
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <img src="./assets/copy-alt.svg" alt="" class="svgItemImg">
+                    <div>
+                        <h2>File Copying</h2>
+                        <p>Server King lets you manage, version, and document your designs in one place.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <img src="./assets/heroku.svg" alt="" class="svgItemImg" id="heroku">
+                    <div>
+                        <h2>Offline Hosting</h2>
+                        <p>Using Heroku we are able to host local servers that aren't reliant on constant connection.
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <img src="./assets/mongodb.svg" alt="" class="svgItemImg" id="mongoDb">
+                    <div>
+                        <h2>Rapid Speeds</h2>
+                        <p>Using MongoDB in the backend enables rapid read and writes to the servers.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <img src="./assets/netlify.svg" alt="" class="svgItemImg" id="netlify">
+                    <div>
+                        <h2>Netlify</h2>
+                        <p>Our partner program gives you a membership to host on netlify as well!</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <img src="./assets/postgresql.svg" alt="" class="svgItemImg" id="postgre">
+                    <div>
+                        <h2>SQL Formatting</h2>
+                        <p>If SQL is your speciality we also have a format to make queries that way.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="flex">
+            <div class="footerSec">
+                <h3>
+                    Server King
+                </h3>
+                <a href="#">Start Trial</a>
+                <a href="#">Pricing</a>
+                <a href="#">Download</a>
+            </div>
+            <div class="footerSec">
+                <h3>
+                    Resources
+                </h3>
+                <a href="#">Blog</a>
+                <a href="#">Help Center</a>
+                <a href="#">Release Notes</a>
+                <a href="#">Status</a>
+            </div>
+            <div class="footerSec"></div>
+            <div class="footerSec">
+                <h3>
+                    Community
+                </h3>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Facebook</a>
+                <a href="#">Dribble</a>
+                <a href="#">Podcast</a>
+            </div>
+            <div class="footerSec">
+                <h3>
+                    Company
+                </h3>
+                <a href="#">About Us</a>
+                <a href="#">Career</a>
+                <a href="#">Legal</a>
+                <h4> Contact Us</h4>
+                <a href="mailto:dev@devbthom.com">Info@serverking.com</a>
+            </div>
+
+            <div id="copyRight">
+                <div id="align-left">
+                    <img src="./assets/bxs-server.svg" alt="" id="logo">
+                    <p>&#169 CopyRight 2023</p>
+                    <p>Server King Managment C.O</p>
+                    <p>All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

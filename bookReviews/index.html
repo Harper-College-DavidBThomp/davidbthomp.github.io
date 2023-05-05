@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    Last gap needs to be less than 10px
+    Color and book selection
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/book.png" type="image/x-icon">
+</head>
+
+<body>
+    <h1 class="title">Brendan's Books</h1>
+    <div class="contact">
+        <a href="mailto:dev@devbthom.com">dev@devbthom.com</a>
+    </div>
+    <main id="fullpage">
+        <section id="firBook" data-color="#0c0c0c" data-anchor="firstBook">
+            <div class="imgContainer">
+                <img src="./images/berserk.webp" alt="">
+            </div>
+            <p class="white">Berserk</p>
+            <p class="white">Kentaro Miura</p>
+            <p class="white"><a href="https://amzn.to/3LDIw9v" target="_blank">Avaliable on Amazon (Affliate Link)</a>
+            </p>
+        </section>
+        <section id="secBook" data-color="#7180a1" data-anchor="secondBook">
+            <div class="imgContainer">
+                <img src="./images/hatchet.webp" alt="">
+            </div>
+            <p class="white">Hatchet</p>
+            <p class="white">Gary Paulsen</p>
+            <p class="white"><a href="#0c0c0c">Avaliable on Amazon (Affliate Link)</a></p>
+        </section>
+        <section id="thiBook" data-color="#0d2b52" data-anchor="thirdBook">
+            <div class="imgContainer">
+                <img src="./images/sleep.webp" alt="">
+            </div>
+            <p class="white">Why We Sleep</p>
+            <p class="white">Matthew Walker</p>
+            <p class="white"><a href="#7180a1">Avaliable on Amazon (Affliate Link)</a></p>
+        </section>
+        <section id="forBook" data-color="#d3431f" data-anchor="forthBook">
+            <div class="imgContainer">
+                <img src="./images/alch.webp" alt="">
+            </div>
+            <p class="white">The Alchemist</p>
+            <p class="white">Paulo Coelho</p>
+            <p class="white"><a href="https://amzn.to/3VCZpph">Avaliable on Amazon (Affliate Link)</a></p>
+        </section>
+        <section id="fifBook" data-color="#9197c9" data-anchor="fifthBook">
+            <div class="imgContainer">
+                <img src="./images/mansSearchForMeaning.webp" alt="">
+            </div>
+            <p class="white">Man Search for Meaning</p>
+            <p class="white">Viktor Frankl</p>
+            <p class="white"><a href="https://amzn.to/418R1PF">Avaliable on Amazon (Affliate Link)</a></p>
+        </section>
+        <section id="sixBook" data-color="#9398a0" data-anchor="sixthBook">
+            <div class="imgContainer">
+                <img src="./images/androidSheep.webp" alt="">
+            </div>
+            <p class="white">Do Androids Dream of Electric Sheep?</p>
+            <p class="white">Philip K. Dick</p>
+            <p class="white"><a href="https://amzn.to/3NHhnoI">Avaliable on Amazon (Affliate Link)</a></p>
+
+        </section>
+    </main>
+
+    <footer class="white">
+        <div class="footerSec">
+            <div>
+                <p>These books are some of my favorites that I've been able to read. I haven't read much recently out of
+                    college
+                    and don't know if I will be reading as consistently again.
+                </p>
+                <p>&copy; DevBThom 2023</p>
+            </div>
+
+            <p><a href="mailto:dev@devbthom.com">dev@devbthom.com</a></p>
+
+            <ul class="books">
+                <li><a href="#firBook">Book #1</a></li>
+                <li><a href="#secBook">Book #2</a></li>
+                <li><a href="#thiBook">Book #3</a></li>
+                <li><a href="#forBook">Book #4</a></li>
+                <li><a href="#fifBook">Book #5</a></li>
+                <li><a href="#sixBook">Book #6</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

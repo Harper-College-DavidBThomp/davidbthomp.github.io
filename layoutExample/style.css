@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/* Google Font */
+/* font-family: 'Roboto', sans-serif; */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #F3F3F3;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+li,
+a,
+button {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.mainContainer {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #FFF;
+}
+
+.logo {
+    cursor: pointer;
+    margin: 0 30px 0 0;
+    height: 50px;
+}
+
+hr {
+    border: 2px solid #F3F3F3;
+}
+
+.navItem {
+    list-style: none;
+    display: inline-block;
+}
+
+.navItem>a {
+    transition: all 0.3s ease 0s;
+    padding: 0px 15px;
+}
+
+.navItem>a:hover {
+    color: blue;
+}
+
+.sectionName {
+    font-size: 1rem;
+    display: inline-block;
+    padding: 19px 20px 0 0;
+}
+
+.fontColorOrange {
+    color: #ff764d
+}
+
+.container {
+    margin: 0 30px 30px 30px;
+}
+
+#fullBanner {
+    aspect-ratio: 16/9;
+    width: 90%;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 50px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(30%);
+}
+
+.topSection {
+    height: 100vh;
+}
+
+.textOverImage {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.textOverImageCenter {
+    font-size: 5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 500;
+}
+
+.groupText {
+    font-size: 1.75rem;
+    font-weight: 500;
+    max-width: 50ch;
+    margin: 30px auto 100px;
+}
+
+/* Very Cheap way of fixing multiple paragraphs */
+.groupText>p:nth-child(2),
+.groupText>p:nth-child(3) {
+    font-size: 1rem;
+    margin: 30px 0;
+    font-weight: normal;
+}
+
+.groupText>p>a {
+    color: blue;
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+
+
+.imageDiv {
+    width: 50%;
+    text-align: center;
+}
+
+.respImg {
+    width: 100%;
+    height: auto;
+
+    z-index: 1;
+}
+
+.images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    height: 100vh;
+
+    margin: 100px 0;
+}
+
+.sectionImage {
+    padding: 50px;
+    width: 50%;
+    z-index: 1;
+}
+
+.smallerImg {
+    height: 400px;
+    width: auto;
+}
+
+#lemonadeBG {
+    background-color: #fbffa7;
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    top: 0;
+    right: -30px;
+    z-index: 0;
+}
+
+#greenBG {
+    background-color: #b6ffc0;
+    position: absolute;
+    height: 100%;
+    width: 55%;
+    top: 0;
+    left: -30px;
+    z-index: 0;
+}
+
+#purpleBG {
+    background-color: #d5b3ff;
+    position: absolute;
+    width: 65%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 0;
+}
+
+
+video {
+    width: 50%;
+    height: auto;
+    margin: 100px 0;
+}
+
+.videoSection {
+    text-align: center;
+}
+
+.imageGrid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px auto;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 125px;
+    padding: 50px 0;
+}
+
+#rightImage {
+    grid-column: 2/3;
+    grid-row: 1/3;
+
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 500px;
+    height: auto;
+}
+
+#bottomLeftImage {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#extraMargin {
+    margin-top: 100px;
+}
+
+#concertImg {
+    max-width: 1200px;
+}
+
+.fullImage {
+    text-align: center;
+    margin: 0 0 100px;
+}
+
+#screenEdge {
+    justify-content: flex-end;
+    height: 75vh;
+}
+
+.noRightPadding {
+    padding: 50px 0 50px 50px;
+}
+
+#screenEdge>.smallerImg {
+    margin-right: 100px;
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+}
+
+.flexChild {
+    width: 550px;
+    background-color: #b1c5ff;
+}
+
+.flexChild>img {
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    height: 100%;
+}
+
+.flexChild>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px;
+    height: 100%;
+}
+
+.flexChild>div>a {
+    color: blue;
+}
+
+.flexChild>div>a::after {
+    padding: 0 0 0 5px;
+    content: "\00a0›";
+}
+
+.flexChild>div>h2,
+.flexChild>div>a {
+    padding: 20px 0;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.flexChild>div>a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    padding: 0 150px 100px 150px;
+    margin: 100px 0 0 0;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+.flexFooter1 {
+    display: flex;
+    margin: 50px 0;
+}
+
+.flexFooter1>.flexFooterChild>ul>li>a>img {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.flexFooter1>.flexFooterChild>ul>li {
+    text-decoration: none;
+    display: inline;
+}
+
+.flexFooterChild {
+    flex: 1 1 0px;
+    font-weight: 300;
+}
+
+.flexFooterChild>a {
+    display: block;
+    margin: 3px 0;
+    font-weight: 300;
+}
+
+.flexFooterChild>a:hover {
+    text-decoration: underline;
+}
+
+.flexFooterChild>a::after {
+    padding: 0 0 0 3px;
+    content: "\00a0›";
+}
+
+
+#inputs {
+    display: flex;
+}
+
+input,
+.flexFooterChild>div>button {
+    margin: 0px;
+    border: black 1px solid;
+}
+
+.flexFooterChild>div>button {
+    background-color: #0000ff;
+    color: white;
+    padding: 5px 20px;
+}
+
+input {
+    padding: 5px;
+    width: 100%;
+    flex: 1;
+}
+
+.flexFooter2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0 0 0;
+    align-items: center;
+}
+
+.flexFooter2>div>a {
+    font-size: 0.75rem;
+    margin: 0 8px;
+
+}
+
+.flexFooter2>div>a:hover {
+    text-decoration: underline;
+}
+
+.flexFooter2>div>p {
+    display: inline-block;
+    font-size: 0.75rem;
+}
+
+.flexFooter2>div>div {
+    width: 50px;
+    display: inline-block;
+}
+
+.textImage {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo1 {
+    margin: 0 0 0 10px;
+}
+
+.flexFooterChild>div>select {
+    margin: 5px 0 0 0;
+    border: grey 1px solid;
+    padding: 2px 30px 2px 2px;
+    background-color: #eee;
+}
+
+.dropDown {
+    padding: 0 15px;
+    cursor: pointer;
+
+    position: relative;
+    display: inline-block;
+}
+
+.dropDownContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    z-index: 1;
+}
+
+.dropDownContent>p {
+    padding: 5px;
+    border: black 1px solid;
+}
+
+.dropDown:hover .dropDownContent {
+    display: block;
+    text-align: center;
+    border: #ff764d solid 1px;
+}
+
+/* Injection Button DevBThom */
+
+#devbthom {
+    font-family: 'Roboto', sans-serif;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: #463F3A;
+    color: #F4F3EE;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: none;
+    border: none;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+}
+
+#devbthom:hover {
+    background-color: #94877e;
+    color: white;
+    cursor: pointer;
+}
+
+/* End Button Injection */
